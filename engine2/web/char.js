@@ -27,6 +27,7 @@ function drawFace(g, S, e) {
   const ex = 92, ey = 228; // eye offset from centre (256)
   const eye = (sx) => {
     const cx = 256 + sx * ex + lx, cy = ey + ly;
+    if (expr === 'out') { g.lineWidth = 14; g.beginPath(); g.moveTo(cx - 26, cy + 4); g.lineTo(cx + 26, cy + 4); g.stroke(); return; }
     if (blink > 0.5 || expr === 'happy' || expr === 'laugh') { g.lineWidth = 15; g.beginPath(); g.arc(cx, cy + 10, 26, Math.PI * 1.15, Math.PI * 1.85); g.stroke(); return; }
     if (expr === 'shock' || expr === 'scared' || expr === 'worried') { const r = expr === 'shock' ? 40 : 34; g.fillStyle = '#fff'; g.lineWidth = 9; g.beginPath(); g.ellipse(cx, cy, r, r * 1.08, 0, 0, 7); g.fill(); g.stroke(); g.fillStyle = '#16121a'; g.beginPath(); g.arc(cx + lx * 0.6, cy + ly * 0.6, expr === 'shock' ? 9 : 12, 0, 7); g.fill(); return; }
     if (expr === 'smug' || expr === 'angry' || expr === 'tired') { g.beginPath(); g.ellipse(cx, cy + 6, 17, 12, 0, 0, 7); g.fill(); return; }

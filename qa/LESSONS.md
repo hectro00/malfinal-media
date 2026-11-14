@@ -11,7 +11,7 @@ Rule (user): each video gets 1 attempt + at most 1 maximized redo, then it gets 
 
 ## Subtitles
 - 2–4 words, cut on punctuation, minimum 0.5 s, numbers as digits (years and counts), NFC accents.
-- Poppins 96, MarginV 560; in shots with a face in the center, move them to the top (\an8).
+- Poppins 96, MarginV 560 (rick style: 132 / MarginV 470 keeps them off faces); in shots with a face in the center, move them to the top (\an8).
 - Hook title (2.8 s) must NOT repeat the first subtitle, and must not cover signs or text in the scene.
 
 ## Image / narrative (the most common failures)
@@ -27,6 +27,8 @@ Rule (user): each video gets 1 attempt + at most 1 maximized redo, then it gets 
 10. On-screen numbers must match the voice (voice "siete hombres" → sign "HUNLEY + 7", not "8 HOMBRES").
 11. A beard on the round-head character reads as a wide grin: skip it when the plan wants a serious/proud face.
 12. Recognizable objects: the crown on the head, iron that looks like iron, candles with a flame.
+13. Big-head chars: an arm raised straight UP hides behind the head — raise it sideways (z≈2.3) or add an extension. Dead/unconscious = expr 'out' (flat closed eyes), never blink (reads as happy ^^).
+14. Props descending onto a head must land exactly at the head anchor (no jump), and seated-on-ground chars need pos.y≈−0.48 + straight shins.
 
 ## Length and A/B
 - 62–75 s (monetization). Never under 61 s.

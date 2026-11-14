@@ -1,6 +1,7 @@
 # Insights (analytics → rules)
 
-Updated: 2026-11-13 23:50 (America/Mexico_City). 23:47 run: all 6 slots Sat 14–Sun 15 already scheduled (+ W46 compilation) → no video produced; YTVP rows (faro→jarabe) still null, TikTok/IG 0 → rules unchanged. Metricool 16/20.
+Updated: 2026-11-14 ~09:00 (America/Mexico_City). Run Sat 07:47: Mon 16 slots empty → produced VID-016 Arraquión ("won the final already dead", new mechanism; ancient Greece, ochre stadium) for Mon 12:00. Metricool YTVP rows (faro→jarabe) still null; TikTok/IG 0 rows → insufficient new data, rules unchanged.
+- Previous: 2026-11-13 23:50 (America/Mexico_City). 23:47 run: all 6 slots Sat 14–Sun 15 already scheduled (+ W46 compilation) → no video produced; YTVP rows (faro→jarabe) still null, TikTok/IG 0 → rules unchanged. Metricool 16/20.
 - Previous: 2026-11-13 16:20. Metricool still returns null YTVP metrics and 0 TikTok rows → insufficient new data, rules unchanged (Studio data below still rules).
 - 2026-11-13 15:47 run: VID-015 Hunley (own invention / tested it himself) scheduled Sun 15 19:00; Tycho moved to 13:00 to avoid adjacency with the lawyer video. Metricool 16/20 used.
 - 2026-11-13 07:50 run ABORTED: Metricool connector failed to connect (CONNECT_TIMEOUT). No inventory, no video produced, count unchanged (14/20).
