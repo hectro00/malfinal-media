@@ -35,6 +35,10 @@ Rule (user): each video gets 1 attempt + at most 1 maximized redo, then it gets 
 - 2 hooks per video (A: YouTube/Facebook, B: TikTok/Instagram).
 
 ## Process
+- Memory: TTS (chatterbox) uses ~5.7 GB of the 7 GB box → NEVER run Chrome (stills/render) while TTS runs (OOM-killed the TTS on 14 Nov). Do both TTS first, then stills/renders; launch long jobs with setsid nohup.
+- Props in hands: `C.hold()` orientation is unreliable; position props each frame at `armR.end.getWorldPosition()` (holdW in examples/anderson.js) with a custom armsOverride.
+- Captions: MarginV 600 sits on faces; use MarginV ≈ 360 (size 118). Encode with crf 22 + maxrate 4.5M so 75 s stays < 50 MB.
+- Fresh raw.githubusercontent URLs on main can 404 for ~1 min after push (CDN); wait and re-check before scheduling.
 - Render watchdog: swiftshader Chrome can hang mid-render (protocol timeout); run renders through a retry loop (timeout per pass + RESUME=1) and re-render only the changed phrase ranges on a redo.
 - Stills at 25 % and 80 % of each phrase BEFORE rendering + a stills review loop (up to 3 rounds, target ≥ 9).
 - Run measure.py (cheap) on every final video. Only run the reviewer agent on the first attempt of new videos.

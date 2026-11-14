@@ -272,11 +272,58 @@
     },
     "post_v2": "redo applied (partial re-render of 8 phrases + bigger/lower subs), published per 1 attempt + 1 redo rule"
    }
+  },
+  "VID-20261116-017": {
+   "title": "Inspiró a Hemingway… y lo mató un PALILLO 🍸",
+   "slotAt": "2026-11-16T18:00",
+   "status": "programado",
+   "metricool_id": 428422128,
+   "uuid": "-6303144973101216901",
+   "project": "/home/claude/v2/s17",
+   "media": "VID-20261116-017.mp4",
+   "durationS": 74.9,
+   "engine": "v2",
+   "hookA": "Inspiró a Hemingway… y lo mató un PALILLO 🍸",
+   "hookB": "Murió por tragarse un PALILLO de martini 🫒",
+   "burned": "B (sign 1 PALILLO)",
+   "scores": {
+    "preprod": 8,
+    "stills": "2 rounds (hook glass, framing, signs)",
+    "post_v1": {
+     "CALIDAD": 8,
+     "PEGADA": 8,
+     "verdict": "PUBLICAR (subs moved below faces, re-encode only)"
+    }
+   }
+  },
+  "VID-20261116-018": {
+   "title": "Le puso una HÉLICE de avión a un tren 🚆",
+   "slotAt": "2026-11-16T20:30",
+   "status": "programado",
+   "metricool_id": 428450010,
+   "uuid": "9077227582155279251",
+   "project": "/home/claude/v2/s18",
+   "media": "VID-20261116-018.mp4",
+   "durationS": 69.2,
+   "engine": "v2",
+   "hookA": "Le puso una HÉLICE de avión a un tren 🚆",
+   "hookB": "Su tren con HÉLICE era rapidísimo… demasiado 🌀",
+   "burned": "A (sign TREN + HÉLICE)",
+   "scores": {
+    "preprod": 8,
+    "stills": "3 rounds (prop size, station light, tree occlusion)",
+    "post_v1": {
+     "CALIDAD": 7.3,
+     "PEGADA": 7.5,
+     "verdict": "REHACER"
+    },
+    "post_v2": "redo: hook/loop reframed with sign on wagon, cab light, propeller+wreck shot; partial re-render 400 frames; published per 1+1 rule"
+   }
   }
  },
- "next_num": 17,
+ "next_num": 19,
  "metricool_month_count": {
-  "2026-11": 17
+  "2026-11": 19
  },
  "compilations": {
   "2026-W46": {
