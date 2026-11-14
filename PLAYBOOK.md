@@ -2,7 +2,14 @@
 
 Goal: there must ALWAYS be scheduled in Metricool every free slot for the rest of today plus the next 2 days.
 **Rhythm: 3 videos per day** (user decision, 11 Nov evening): **Mon–Fri 12:00, 18:00, 20:30 · Sat 11:00, 17:00, 20:00 · Sun 09:00, 13:00, 19:00**. Target: get each video as close to 10 as possible.
-Each video passes through a **pre-production filter**: the reviewer, fed with the real metrics of the videos already published.
+Each video passes through a **pre-production filter** (self-review against the real metrics).
+
+## CREDIT SAVING (user decision 14 Nov: save credits WITHOUT lowering quality)
+- **1 run per day** (14:47 Monterrey) producing up to 3 videos, instead of 3 runs of 1.
+- **No reviewer subagents** (each starts cold and re-reads everything). You do every review yourself, in-session, with the same checklists (`qa/review_prompt.md`, `qa/RICK_STYLE.md`, `qa/LESSONS.md`) and the same score thresholds.
+- **Early exit**: if no post can be published (Metricool at 0 this month and no other route) and there are already ≥ 3 videos `pendiente de publicar`, do NOT produce, NO analytics, NO idea research: just commit nothing and write the 3-line summary. Never make videos that nobody can publish.
+- Renders: wait with ONE until-loop/Monitor that checks every ~10 min; don't poll in short intervals or print logs. While video N renders, write the script/TTS/plan of video N+1 (no stills while rendering).
+- Read only what you need: PLAYBOOK + LESSONS + RICK_STYLE + insights; open example scenes only for the part you are copying.
 
 ## Hard rules (from the user)
 - Spanish channel "morbo educativo": real, absurd deaths, **no gore**. The moment of death is implied (cut away, hat, dust, flash).
@@ -30,7 +37,7 @@ cd pipeline && bash setup.sh && cd engine && npm i --silent three@0.187.0 puppet
 - Slots (America/Mexico_City): **Mon–Fri 12:00, 18:00, 20:30 · Sat 11:00, 17:00, 20:00 · Sun 09:00, 13:00, 19:00**. The Sunday 13:00 slot ALSO carries the weekly compilation (YouTube only), so it still gets a short.
 - `getScheduledPosts` from now to the end of day+2. Count the non-draft future posts.
 - `needed = free slots in that window − count`. If `needed ≤ 0`, do only step 2 and finish.
-- **Produce at most 1 video per run.** Assign it to the earliest free slot.
+- **Produce up to `min(needed, 3, Metricool posts left + allowed pending)` videos per run** (see CREDIT SAVING). Assign them to the earliest free slots.
 
 ## 1b. Metricool free-plan limit (user decision, 11 Nov: do NOT pay; when it runs out, switch to Buffer)
 - The free plan allows **20 posts per calendar month**. In November 2026, 13 had already been used as of 11 Nov (faro + 001–012).
@@ -71,11 +78,9 @@ Write `script.txt` with these rules:
 
 Also write `plan.md`, with one line per phrase: what is SEEN on screen, the camera, and the key action. It also contains the title, the copy and the hook text (≤ 4 words).
 
-Then launch the reviewer subagent (general-purpose) with:
-- `plan.md`, `script.txt`, `state/insights.md`, `qa/LESSONS.md`;
-- the task: "rate 1–10 the hook, clarity of every beat, visual feasibility, and predicted potential based on the metrics. List changes."
+Then review it YOURSELF (no subagent) against `state/insights.md` + `qa/LESSONS.md`: rate 1–10 the hook, clarity of every beat, visual feasibility, and predicted potential based on the metrics; list changes; be strict.
 
-If the score is < 8, apply the changes and evaluate again (up to 2 rounds).
+If the score is < 8, apply the changes and re-rate once.
 
 ## 4b. A/B hooks (applies to every video)
 - Write **2 hooks**: A and B (title + on-screen text of up to 4 words).
@@ -105,12 +110,12 @@ Setup once per session: `bash engine2/fetch_assets.sh` (CC0 Quaternius kits + Po
    - Per frame: pick the phrase `K.at(f)` / progress `K.u(f, i)`; light `K.preset('day|golden|dusk|night|interior|candle|storm', overrides)`; camera `K.move(A, B, u, shake, f)` where A/B come from **`K.frame([feet positions], {yaw, pitch, h, lookY, push, pad})` (auto-fits 9:16 — use it for every character shot)**; `K.focusOn(point)` for depth of field; `K.grade.flash/black/sat/vig`.
    - `hideAll()` at the top of `frame()` must RESET every object you move/scale in any shot (positions, visibility, parents) — a missed reset broke the wings in VID-009.
 4. Stills: `node render.mjs st "<frames at 30% and 85% of each phrase>" 360 PORT` + `python3 engine2/sheet.py st sheet.jpg 11` → Read the sheet. Fix: camera inside geometry, characters cut by the 9:16 frame, the key action not visible, giant/tiny props, dark shots.
-   - **Polish toward 10 (stills are cheap, renders are not):** reviewer subagent with the sheet + `plan.md` + `qa/LESSONS.md`; 1–10 per shot + overall; apply every change; up to 3 rounds or until overall ≥ 9 and every shot ≥ 8.
+   - **Polish toward 10 (stills are cheap, renders are not):** review the sheet YOURSELF against `plan.md` + `qa/RICK_STYLE.md` + `qa/LESSONS.md`; 1–10 per shot + overall; apply every change; up to 2 rounds or until overall ≥ 9 and every shot ≥ 8. Re-render stills only for the shots you changed.
 5. Render: `RESUME=1 node render.mjs frames 0-99999 720 PORT` in ONE background call (≈1.7 s/frame → 50–65 min for 60–70 s). Never two renders at once; don't run stills while a render is going (it halves the speed).
 6. Captions: `python3 qa/captions_gen.py PROJ` (default STYLE=rick: 1–2 words, no hook title). `bash engine2/finish2.sh PROJ audio/final.wav` → `out/final.mp4` (1080×1920, ≤ ~55 MB so GitHub accepts it).
 
 ## 6. Post-production review (once)
-Run the reviewer with `qa/review_prompt.md`.
+Apply `qa/review_prompt.md` YOURSELF (no subagent) on a contact sheet of the final video (`ffmpeg -vf fps=1/3,scale=270:-1` → `sheet.py`) + listen-check via loudness/duration stats.
 - **PUBLICAR**: go to step 7.
 - **REHACER**: one redo applying the whole list, then publish as is.
 - Save the scores in `state/posts.json`.
@@ -131,7 +136,7 @@ cp out/final.mp4 VID-YYYYMMDD-NNN.mp4 && git add VID-*.mp4 && git commit -m "VID
 4. Dashboard: in the `videos` collection add `{num, order, title, story, slotAt, status: programado, durationS, platforms}`, and in `ideas` set status `producido`.
 
 ## 7b. WEEKLY LONG COMPILATION (YouTube only, for watch hours)
-Do this in the **Saturday afternoon run (15:47 Monterrey)**, unless `state/posts.json → compilations` already has one for that week. It replaces producing a short in that run.
+Do this in the **Saturday run (14:47 Monterrey)**, unless `state/posts.json → compilations` already has one for that week. It replaces producing a short in that run.
 1. **Items**: the shorts published Sun–Sat of that week, plus older ones if fewer than 8, never repeating the previous compilation's #1.
    - Order them by performance from `insights.md`: worst first, **best LAST**, as #1.
    - Write an `items.json` with `{file, title (no emojis), thumb_frame}`. `file` is the raw MP4 downloaded from `main` (curl).
