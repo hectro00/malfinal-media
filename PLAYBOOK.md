@@ -1,13 +1,13 @@
 # Mal Final: autopilot (scheduled task)
 
-Goal: the next 3 slots (~24 h) must ALWAYS have a short scheduled (Buffer for YT/TikTok/IG + Metricool for Facebook; see PUBLISHING ROUTES).
+Goal: the next 3 slots (~24 h) must ALWAYS have a short scheduled (Buffer for YT/TikTok/IG + Make for the Facebook page; see PUBLISHING ROUTES).
 **Rhythm: 3 videos per day** (user decision, 11 Nov evening): **Mon–Fri 12:00, 18:00, 20:30 · Sat 11:00, 17:00, 20:00 · Sun 09:00, 13:00, 19:00**. Target: get each video as close to 10 as possible.
 Each video passes through a **pre-production filter** (self-review against the real metrics).
 
 ## CREDIT SAVING (user decision 14 Nov: save credits WITHOUT lowering quality)
 - **1 run per day** (14:47 Monterrey) producing up to 3 videos, instead of 3 runs of 1.
 - **No reviewer subagents** (each starts cold and re-reads everything). You do every review yourself, in-session, with the same checklists (`qa/review_prompt.md`, `qa/RICK_STYLE.md`, `qa/LESSONS.md`) and the same score thresholds.
-- **Early exit**: if no post can be published (Metricool at 0 this month and no other route) and there are already ≥ 3 videos `pendiente de publicar`, do NOT produce, NO analytics, NO idea research: just commit nothing and write the 3-line summary. Never make videos that nobody can publish.
+- **Early exit**: if no post can be published (Buffer connector missing/full and no other route) and there are already ≥ 3 videos `pendiente de publicar`, do NOT produce, NO analytics, NO idea research: just commit nothing and write the 3-line summary. Never make videos that nobody can publish.
 - Renders: wait with ONE until-loop/Monitor that checks every ~10 min; don't poll in short intervals or print logs. While video N renders, write the script/TTS/plan of video N+1 (no stills while rendering).
 - Read only what you need: PLAYBOOK + LESSONS + RICK_STYLE + insights; open example scenes only for the part you are copying.
 
@@ -40,7 +40,7 @@ cd pipeline && bash setup.sh && cd engine && npm i --silent three@0.187.0 puppet
   - Text = same copy as before (hook line, hashtags, "Fuente:", "Animación hecha con apoyo de IA.").
   - **Buffer free plan: max 10 scheduled posts in the org (= 3 videos × 3 channels).** So the window is **the next ~24 h (3 slots)**, not 2 days. Check with `list_posts status:[scheduled]` before creating. Never exceed 10; never pay.
   - Record `buffer_ids {yt, tt, ig}` in `state/posts.json`.
-- **Facebook → Metricool, Facebook ONLY** (Buffer free has only 3 channels). Metricool free = 20 posts/month, shared with the weekly compilation (4/month). So Facebook gets at most 1 short per day and only while `metricool_month_count < 16 + (compilations still due this month adjust)`: keep ≥ 1 post per remaining Sunday for the compilation. Pick the best video of the run. Provider `facebook` only, same copy.
+- **Facebook (page "Mal Final") → Make** (connector `Make`, free plan 1,000 ops/month; set up 15 Nov). For every short add ONE record to data store **202340** ("MalFinal FB queue", team 3447373) with `data-store-records_create`: `{due: "<slot ISO with -06:00>", url: "<raw GitHub mp4 URL>", description: "<same copy as the other networks>", title: "<hookA>", vid: "VID-..."}`. Scenario **7049351** ("Mal Final → Facebook Reels") runs every hour 08:50–21:45 CDMX, takes the oldest record with `due <= now`, publishes it as a Reel on the page and deletes the record (~3 ops per video). No Metricool needed for Facebook. If a run fails, check `executions_list` for scenario 7049351 and note it in the summary.
 - **Weekly compilation → Metricool (YouTube only)**, because it supports the custom thumbnail. If Metricool is at 0, publish it via Buffer YouTube (no custom thumbnail) instead.
 - Posts already scheduled in Metricool on all 4 networks (up to Tue 17 Nov) stay as they are; don't duplicate those slots in Buffer.
 
@@ -49,9 +49,9 @@ cd pipeline && bash setup.sh && cd engine && npm i --silent three@0.187.0 puppet
 - Slots (America/Mexico_City): **Mon–Fri 12:00, 18:00, 20:30 · Sat 11:00, 17:00, 20:00 · Sun 09:00, 13:00, 19:00**. The Sunday 13:00 slot ALSO carries the weekly compilation (YouTube only), so it still gets a short.
 - Window = the next 3 slots from now. A slot is covered if Buffer (`list_posts` scheduled) OR Metricool (`getScheduledPosts`, all-network posts) already has a short for it.
 - `needed = uncovered slots in that window`. If `needed ≤ 0`, do only step 2 and finish.
-- **Produce up to `min(needed, 3, Metricool posts left + allowed pending)` videos per run** (see CREDIT SAVING). Assign them to the earliest free slots.
+- **Produce up to `min(needed, 3)` videos per run** (see CREDIT SAVING). Assign them to the earliest free slots.
 
-## 1b. Metricool free-plan limit (user decision, 11 Nov: do NOT pay). Since 15 Nov Metricool is only Facebook + the weekly compilation
+## 1b. Metricool free-plan limit (user decision, 11 Nov: do NOT pay). Since 15 Nov Metricool is only the weekly compilation
 - The free plan allows **20 posts per calendar month**. In November 2026, 13 had already been used as of 11 Nov (faro + 001–012).
 - Keep the count in `state/posts.json` → `metricool_month_count` (`{"2026-11": 13}`). Add 1 for each `createScheduledPost`.
 - With **2 or fewer** left: tell the user in the final summary ("quedan N publicaciones gratis en Metricool este mes").
@@ -139,7 +139,7 @@ git clone --filter=blob:none --no-checkout --depth 1 https://github.com/nuncaver
 cp out/final.mp4 VID-YYYYMMDD-NNN.mp4 && git add VID-*.mp4 && git commit -m "VID-..." && git push
 ```
 2. Check that `https://raw.githubusercontent.com/nuncaverso-sketch/malfinal-media/main/VID-....mp4` returns 200.
-3. **Buffer** `create_post` ×3 (YT, TikTok, IG) as in PUBLISHING ROUTES. Then, if the Facebook quota allows, Metricool `createScheduledPost` with provider `facebook` only, using the payload shape in `state/posts.json → example_info` (its other networks' fields are reference for copy/flags):
+3. **Buffer** `create_post` ×3 (YT, TikTok, IG) + **Make** queue record for Facebook, as in PUBLISHING ROUTES. Copy reference: `state/posts.json → example_info`:
    - all 4 networks;
    - the AI flags;
    - hashtags `#historia #datoscuriosos #curiosidades #malfinal #historiasreales`;
@@ -160,7 +160,7 @@ Do this in the **Saturday run (14:47 Monterrey)**, unless `state/posts.json → 
    - If it fails because of the thumbnail, retry without it.
    - Copy: hook line, `chapters.txt`, "Fuentes en cada short del canal.", "Animación hecha con apoyo de IA.", hashtags.
    - Title: e.g. "Las N muertes más absurdas de la historia (historias reales)".
-   - It counts toward the Metricool limit (1b). If only 1 post is left, prioritize the short.
+   - It counts toward the Metricool limit (1b). Shorts no longer use Metricool, so the 20/month are for compilations.
 6. Record it in `state/posts.json → compilations`.
 
 ## 8. Save what was learned
