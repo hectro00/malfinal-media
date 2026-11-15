@@ -1,6 +1,6 @@
 # Mal Final: autopilot (scheduled task)
 
-Goal: there must ALWAYS be scheduled in Metricool every free slot for the rest of today plus the next 2 days.
+Goal: the next 3 slots (~24 h) must ALWAYS have a short scheduled (Buffer for YT/TikTok/IG + Metricool for Facebook; see PUBLISHING ROUTES).
 **Rhythm: 3 videos per day** (user decision, 11 Nov evening): **Mon–Fri 12:00, 18:00, 20:30 · Sat 11:00, 17:00, 20:00 · Sun 09:00, 13:00, 19:00**. Target: get each video as close to 10 as possible.
 Each video passes through a **pre-production filter** (self-review against the real metrics).
 
@@ -32,21 +32,33 @@ git clone --depth 1 --single-branch -b pipeline https://github.com/nuncaverso-sk
 cd pipeline && bash setup.sh && cd engine && npm i --silent three@0.187.0 puppeteer-core@25.16.0
 ```
 
-## 1. Inventory (Metricool)
+## PUBLISHING ROUTES (user decision 15 Nov)
+- **Shorts → Buffer** (connector `Buffer`, org `6af9e73c9f120babfafe21fe`, tz America/Monterrey = same clock as Mexico City). Channels: YouTube `6af9e798ece6dfde5fd51537`, TikTok `6af9e836ece6dfde5fd51f21`, Instagram `6af9e755ece6dfde5fd510c7`. One `create_post` PER channel, `mode: customScheduled`, `dueAt` = slot with offset `-06:00`, `schedulingType: automatic`, video asset = raw GitHub URL.
+  - YouTube: `metadata.youtube {title: hookA, categoryId: "27", madeForKids: false, isAiGenerated: true, privacy: "public"}` (Buffer detects Short by itself; tested 15 Nov).
+  - TikTok: `metadata.tiktok {title: hookB, isAiGenerated: true}`.
+  - Instagram: `metadata.instagram {type: "reel", shouldShareToFeed: true, isAiGenerated: true}`.
+  - Text = same copy as before (hook line, hashtags, "Fuente:", "Animación hecha con apoyo de IA.").
+  - **Buffer free plan: max 10 scheduled posts in the org (= 3 videos × 3 channels).** So the window is **the next ~24 h (3 slots)**, not 2 days. Check with `list_posts status:[scheduled]` before creating. Never exceed 10; never pay.
+  - Record `buffer_ids {yt, tt, ig}` in `state/posts.json`.
+- **Facebook → Metricool, Facebook ONLY** (Buffer free has only 3 channels). Metricool free = 20 posts/month, shared with the weekly compilation (4/month). So Facebook gets at most 1 short per day and only while `metricool_month_count < 16 + (compilations still due this month adjust)`: keep ≥ 1 post per remaining Sunday for the compilation. Pick the best video of the run. Provider `facebook` only, same copy.
+- **Weekly compilation → Metricool (YouTube only)**, because it supports the custom thumbnail. If Metricool is at 0, publish it via Buffer YouTube (no custom thumbnail) instead.
+- Posts already scheduled in Metricool on all 4 networks (up to Tue 17 Nov) stay as they are; don't duplicate those slots in Buffer.
+
+## 1. Inventory (Buffer + Metricool)
 - blogId `8014220`, timezone `America/Mexico_City`.
 - Slots (America/Mexico_City): **Mon–Fri 12:00, 18:00, 20:30 · Sat 11:00, 17:00, 20:00 · Sun 09:00, 13:00, 19:00**. The Sunday 13:00 slot ALSO carries the weekly compilation (YouTube only), so it still gets a short.
-- `getScheduledPosts` from now to the end of day+2. Count the non-draft future posts.
-- `needed = free slots in that window − count`. If `needed ≤ 0`, do only step 2 and finish.
+- Window = the next 3 slots from now. A slot is covered if Buffer (`list_posts` scheduled) OR Metricool (`getScheduledPosts`, all-network posts) already has a short for it.
+- `needed = uncovered slots in that window`. If `needed ≤ 0`, do only step 2 and finish.
 - **Produce up to `min(needed, 3, Metricool posts left + allowed pending)` videos per run** (see CREDIT SAVING). Assign them to the earliest free slots.
 
-## 1b. Metricool free-plan limit (user decision, 11 Nov: do NOT pay; when it runs out, switch to Buffer)
+## 1b. Metricool free-plan limit (user decision, 11 Nov: do NOT pay). Since 15 Nov Metricool is only Facebook + the weekly compilation
 - The free plan allows **20 posts per calendar month**. In November 2026, 13 had already been used as of 11 Nov (faro + 001–012).
 - Keep the count in `state/posts.json` → `metricool_month_count` (`{"2026-11": 13}`). Add 1 for each `createScheduledPost`.
 - With **2 or fewer** left: tell the user in the final summary ("quedan N publicaciones gratis en Metricool este mes").
 - With **0 left**, or if Metricool rejects a post for the limit:
   - do NOT create more posts and do NOT get around the limit;
   - save the finished video to the repo and record it as `pendiente de publicar`;
-  - **tell the user clearly**: "Se acabó el plan gratis de Metricool: configuremos Buffer". Do NOT configure Buffer without them: it needs their OAuth / approval.
+  - shorts keep going through Buffer; only Facebook pauses until the 1st of next month. Mention it in the summary.
 - A new month resets the counter.
 
 ## 2. Analytics → `state/insights.md` (filter input)
@@ -127,7 +139,7 @@ git clone --filter=blob:none --no-checkout --depth 1 https://github.com/nuncaver
 cp out/final.mp4 VID-YYYYMMDD-NNN.mp4 && git add VID-*.mp4 && git commit -m "VID-..." && git push
 ```
 2. Check that `https://raw.githubusercontent.com/nuncaverso-sketch/malfinal-media/main/VID-....mp4` returns 200.
-3. `createScheduledPost`, using the same payload shape as the earlier posts (in `state/posts.json`, field `example_info`):
+3. **Buffer** `create_post` ×3 (YT, TikTok, IG) as in PUBLISHING ROUTES. Then, if the Facebook quota allows, Metricool `createScheduledPost` with provider `facebook` only, using the payload shape in `state/posts.json → example_info` (its other networks' fields are reference for copy/flags):
    - all 4 networks;
    - the AI flags;
    - hashtags `#historia #datoscuriosos #curiosidades #malfinal #historiasreales`;
