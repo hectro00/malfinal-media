@@ -4,6 +4,9 @@ Goal: the next 3 slots (~24 h) must ALWAYS have a short scheduled (Buffer for YT
 **Rhythm: 3 videos per day** (user decision, 11 Nov evening): **Mon–Fri 12:00, 18:00, 20:30 · Sat 11:00, 17:00, 20:00 · Sun 09:00, 13:00, 19:00**. Target: get each video as close to 10 as possible.
 Each video passes through a **pre-production filter** (self-review against the real metrics).
 
+## LOCK
+If `state/LOCK.json` exists and its `until` is in the future, its `slots` are being produced by another session: treat them as covered (don't produce for them). Delete the lock when it has expired.
+
 ## CREDIT SAVING (user decision 14 Nov: save credits WITHOUT lowering quality)
 - **1 run per day** (14:47 Monterrey) producing up to 3 videos, instead of 3 runs of 1.
 - **No reviewer subagents** (each starts cold and re-reads everything). You do every review yourself, in-session, with the same checklists (`qa/review_prompt.md`, `qa/RICK_STYLE.md`, `qa/LESSONS.md`) and the same score thresholds.
