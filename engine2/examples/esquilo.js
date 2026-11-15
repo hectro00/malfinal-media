@@ -47,6 +47,8 @@ export async function build(k) {
   for (let i = 0; i < 4; i++) await K.placeH('nature_pack/Rock_' + (i + 1), add(FIELD, [[-4, 11, -7, 8][i], 0, [-6, -14, -12, -10][i]]), i, [1.4, 1.1, 2.2, 1.8][i]).catch(() => {});
   await K.placeH('nature_pack/Rock_6', ROCK, 0.3, 0.75, { tint: 0xc8b8a0 }).catch(() => { K.box(1.4, 0.75, 1.0, 0xb8a890, add(ROCK, [0, 0.37, 0])); });
   for (let i = 0; i < 9; i++) await K.placeH('nature_pack/CommonTree_' + ((i % 5) + 1), add(FIELD, [(i % 2 ? 1 : -1) * (6 + (i % 4) * 3.5), 0, -8 - (i % 3) * 5]), i, 4.5, { tint: 0x9ab07a }).catch(() => {});
+  for (let i = 0; i < 26; i++) await K.placeH(['nature_pack/Bush_1', 'nature_pack/Bush_2', 'nature_pack/BushBerries_1', 'nature_pack/Plant_2', 'nature_pack/Flowers'][i % 5], add(FIELD, [Math.sin(i * 2.3) * (4 + (i % 7) * 3), 0, -3 - (i % 9) * 3.2]), i, [1.0, 1.2, 0.9, 0.7, 0.5][i % 5], { tint: 0xc8d890 }).catch(() => {});
+  for (let i = 0; i < 12; i++) await K.placeH('nature_pack/CommonTree_' + ((i % 5) + 1), add(FIELD, [(i % 2 ? 1 : -1) * (14 + (i % 5) * 6), 0, -22 - (i % 4) * 8]), i, 6, { tint: 0x9ab07a }).catch(() => {});
   for (let i = 0; i < 10; i++) await K.placeH('nature_pack/Grass', add(FIELD, [-3 + (i % 5) * 1.4, 0, 0.8 + Math.floor(i / 5) * 0.8]), i, 0.5).catch(() => {});
   // tiny house with roof he leaves behind (left)
   await K.placeH('medieval_village_pack/House_2', add(FIELD, [-9.5, 0, -3]), 0.6, 4.5).catch(() => {});

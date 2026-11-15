@@ -50,3 +50,10 @@ Rule (user): each video gets 1 attempt + at most 1 maximized redo, then it gets 
 - Avoid flat ground: add texture or props, use a low or diagonal camera, put the horizon high or low.
 - Variety: don't repeat the mechanism, set or palette of the previous video.
 - Publishing threshold: CALIDAD ≥ 8, PEGADA ≥ 8, none < 7. Still the 1 attempt + 1 redo rule, then publish.
+
+## User feedback 15 Nov (realism + polish) — engine v2.2
+- Backgrounds must NOT look like flat painted walls: floors/walls/roofs use `K.pbr('<polyhaven texture>', [rx, ry])` (assets/tex, CC0) and exteriors use a real photo sky `K.preset(name, { photo: '<sky>_2k' })` (+ `K.preloadSkies([...])` in build). Add depth: side walls, beams, windows with `K.ray` light shafts, props in mid/background.
+- `K.plane` default is a FLOOR (rotated −90°). Vertical walls/boards need `[0, 0, 0]` (or a yaw) as 5th arg — a missing rotation made black frames.
+- No clipping: props, benches, aprons, bags must never pass through bodies/heads/camera. No floating boxes as beards/aprons — use the character options (`hair`, `belt`, `buttons`) or skip it.
+- Camera: smooth constant drift (engine eases it now), no shake; never inside furniture (check reverse shots from the stage).
+- Lights: point lights ≤ 6 near faces; avoid blown-out white faces.
