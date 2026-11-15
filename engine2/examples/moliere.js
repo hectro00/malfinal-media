@@ -27,11 +27,16 @@ export async function build(k) {
 
   // ---------------- STAGE: 1673 Paris theatre, red velvet, candle footlights ----------------
   const fl = K.tex(256, 256, (g) => { for (let i = 0; i < 8; i++) { g.fillStyle = i % 2 ? '#8a5a34' : '#a06a3e'; g.fillRect(i * 32, 0, 31, 256); } }, [6, 3]);
-  K.box(16, SH, 8, 0xffffff, add(STAGE, [0, SH / 2, -2]), { map: fl });
+  K.box(16, SH, 8, 0xffffff, add(STAGE, [0, SH / 2, -2])).material = K.pbr('wood_floor', [4, 2]); K.box(16.2, SH - 0.05, 0.2, 0, add(STAGE, [0, SH / 2, 2.0])).material = K.pbr('dark_wood', [6, 0.5]);
   K.box(16, 0.25, 0.3, 0xe0b040, add(STAGE, [0, SH - 0.1, 2.05]));
-  K.plane(40, 30, K.std(0x3a1a14), add(STAGE, [0, 0.01, 6]));
+  K.plane(40, 30, K.pbr('weathered_brown_planks', [8, 6], { tint: 0x8a6a5a }), add(STAGE, [0, 0.01, 6]));
+  // auditorium shell: plaster walls, gilded boxes (balconies) on both sides, back wall with lamps
+  const pl = K.pbr('painted_plaster_wall', [4, 2], { tint: 0xc87a5a }); for (const s of [-1, 1]) { K.plane(24, 12, pl, add(STAGE, [s * 9.5, 6, 8]), [0, -s * Math.PI / 2, 0]); for (let r = 0; r < 2; r++) for (let i = 0; i < 4; i++) { const bx = add(STAGE, [s * 8.9, 3.4 + r * 2.6, 4 + i * 2.6]); K.box(1.2, 0.9, 2.2, 0x6a1a1a, bx); K.box(1.3, 0.12, 2.3, 0xe0b040, add(bx, [0, 0.5, 0]), { metalness: 0.5 }); K.box(0.1, 1.6, 2.2, 0x3a0a0a, add(bx, [-s * 0.6, 1.0, 0])); } }
+  K.plane(20, 12, pl, add(STAGE, [0, 6, 14]), [0, Math.PI, 0]);
+  for (const s of [-1, 1]) { K.box(0.8, 9, 0.8, 0xffffff, add(STAGE, [s * 8.3, 4.5, 2.2])).material = K.pbr('marble_01', [1, 4]); }
+  K.box(17.4, 1.2, 0.8, 0xffffff, add(STAGE, [0, 9.4, 2.2])).material = K.pbr('marble_01', [6, 0.5]);
   const bd = K.tex(512, 256, (g, w, h) => { g.fillStyle = '#e8c890'; g.fillRect(0, 0, w, h); g.fillStyle = '#d0a870'; for (let x = 0; x < w; x += 64) g.fillRect(x, 0, 24, h); g.fillStyle = '#6a8ac8'; g.fillRect(180, 50, 150, 110); g.strokeStyle = '#6a3a1a'; g.lineWidth = 10; g.strokeRect(180, 50, 150, 110); g.beginPath(); g.moveTo(255, 50); g.lineTo(255, 160); g.moveTo(180, 105); g.lineTo(330, 105); g.stroke(); g.fillStyle = '#7a4a24'; g.fillRect(0, h - 40, w, 40); }, [2, 1]);
-  K.plane(16, 9, K.std(0xffffff, { map: bd }), add(STAGE, [0, SH + 4.5, -5.9]));
+  K.plane(16, 9, K.std(0xffffff, { map: bd }), add(STAGE, [0, SH + 4.5, -5.9]), [0, 0, 0]);
   const ct = curtainTex('#c8202a', '#5a0a10'); const cm = K.std(0xffffff, { map: ct });
   for (const s of [-1, 1]) { K.box(3.2, 10, 0.4, 0xffffff, add(STAGE, [s * 6.6, 5, 1.6]), { map: ct }); K.box(1.6, 10, 0.4, 0xffffff, add(STAGE, [s * 7.6, 5, -3]), { map: ct }); }
   K.box(16, 1.8, 0.4, 0xffffff, add(STAGE, [0, 8.4, 1.6]), { map: ct }); K.box(16, 0.3, 0.45, 0xe0b040, add(STAGE, [0, 7.5, 1.6]));
@@ -49,9 +54,9 @@ export async function build(k) {
   for (let r = 0; r < 3; r++) K.box(10, 0.45, 0.5, 0x5a3418, add(STAGE, [0, 0.22, 3.6 + r * 1.6]));
   const cols = [0xb8301e, 0x3a6aa8, 0xe0a030, 0x3a8a3a, 0x8a2a6a, 0xf2ead8];
   for (let r = 0; r < 3; r++) for (let i = 0; i < 9; i++) { if (r === 0 && i > 2 && i < 7) continue; const g = new K.THREE.Group(); K.cyl(0.24, 0.28, 0.65, cols[(i + r) % 6], [0, 0.75, 0], { parent: g }); K.sph(0.27, 0xfffdf8, [0, 1.3, 0], { parent: g }); g.position.set(...add(STAGE, [-4 + i, 0, 3.7 + r * 1.6])); K.scene.add(g); fans.push({ g, ph: i * 1.7 + r }); }
-  K.pointLight(0xffc070, 14, add(STAGE, [0, SH + 2.2, 0.5]), 12); K.pointLight(0xff9050, 5, add(STAGE, [0, 3, 6]), 10);
+  K.pointLight(0xffc070, 5, add(STAGE, [0, SH + 4.5, 2.5]), 14); K.pointLight(0xff9050, 3, add(STAGE, [0, 4, 7]), 12);
   // dressing room corner (stage left, behind the curtain): mirror + friends
-  K.plane(6, 6, K.std(0x5a2a3a), add(STAGE, [-12, 3, -3]), [0, Math.PI / 2, 0]);
+  K.plane(6, 6, K.pbr('painted_plaster_wall', [2, 2], { tint: 0xb87a8a }), add(STAGE, [-12, 3, -3]), [0, Math.PI / 2, 0]); K.pointLight(0xffb870, 5, add(STAGE, [-10.4, SH + 2.6, -1.2]), 8); for (let i = 0; i < 4; i++) K.box(0.08, 0.6, 0.5, [0xc8302a, 0x2a6aa8, 0xe0b040, 0x3a8a3a][i], add(STAGE, [-11.9, SH + 2.4, 0.2 + i * 0.6]));
   K.box(1.4, 1.8, 0.1, 0xe0b040, add(STAGE, [-11.9, SH + 2.2, -2.5]), {}).rotation.y = Math.PI / 2;
   K.box(1.2, 1.6, 0.05, 0xcfe0ec, add(STAGE, [-11.84, SH + 2.2, -2.5]), { metalness: 0.6 }).rotation.y = Math.PI / 2;
   candle(add(STAGE, [-11.4, SH + 0.9, -1.4]), 1.4); K.box(1.0, 0.9, 1.6, 0x6a3a1a, add(STAGE, [-11.4, SH + 0.45, -1.8]));
@@ -60,9 +65,9 @@ export async function build(k) {
 
   // ---------------- PALACE: Versailles blue + gold ----------------
   const pf = K.tex(256, 256, (g) => { for (let y = 0; y < 8; y++) for (let x = 0; x < 8; x++) { g.fillStyle = (x + y) % 2 ? '#1e3a7a' : '#f2e2b0'; g.fillRect(x * 32, y * 32, 32, 32); } }, [8, 8]);
-  K.plane(30, 30, K.std(0xffffff, { map: pf }), add(PAL, [0, 0.01, 0]));
+  K.plane(30, 30, K.pbr('marble_01', [6, 6]), add(PAL, [0, 0.01, 0])); K.plane(5, 12, K.pbr('dirty_carpet', [1, 3], { tint: 0xc83030 }), add(PAL, [0, 0.02, 0]));
   const pw = K.tex(512, 256, (g, w, h) => { g.fillStyle = '#2a4a9a'; g.fillRect(0, 0, w, h); g.fillStyle = '#e0b040'; for (let x = 0; x < w; x += 64) for (let y = 30; y < h; y += 64) { g.beginPath(); g.arc(x + 32, y, 9, 0, 7); g.fill(); g.fillRect(x + 29, y, 6, 22); } g.fillRect(0, 0, w, 14); }, [4, 1]);
-  K.plane(30, 10, K.std(0xffffff, { map: pw }), add(PAL, [0, 5, -6]));
+  K.plane(30, 10, K.std(0xffffff, { map: pw }), add(PAL, [0, 5, -6]), [0, 0, 0]); for (const s of [-1, 1]) { K.plane(14, 10, K.pbr('painted_plaster_wall', [3, 2], { tint: 0x6a8ad8 }), add(PAL, [s * 9, 5, 0]), [0, -s * Math.PI / 2, 0]); for (let i = 0; i < 2; i++) { K.box(0.2, 4, 2, 0xcfe0ff, add(PAL, [s * 8.85, 3.2, -2 + i * 4]), { emissive: 0xfff0d0, emissiveIntensity: 0.8 }); K.ray(add(PAL, [s * 6.5, 2.6, -2 + i * 4]), [0, Math.PI / 2, s * 0.9], 2, 6, 0xfff0c8, 0.12); } }
   K.box(3.2, 0.5, 2.4, 0xb8301e, add(PAL, [0, 0.25, -4.2])); const th = new K.THREE.Group(); K.box(1.5, 0.6, 1.2, 0xe0b040, [0, 0.8, 0], { parent: th }); K.box(1.5, 2.6, 0.25, 0xe0b040, [0, 1.8, -0.5], { parent: th }); K.box(1.2, 2.2, 0.1, 0x1e3a9a, [0, 1.8, -0.36], { parent: th }); th.position.set(...add(PAL, [0, 0, -4.4])); K.scene.add(th);
   for (const x of [-5, 5]) { K.cyl(0.45, 0.5, 9, 0xf2e2b0, add(PAL, [x, 4.5, -5])); K.box(1.2, 0.3, 1.2, 0xe0b040, add(PAL, [x, 9, -5])); }
   await K.placeH('house_interior_pack/Light_Chandelier', add(PAL, [0, 5.4, -1.5]), 0, 1.6).catch(() => {});
@@ -71,8 +76,8 @@ export async function build(k) {
 
   // ---------------- HOME: night bedroom, single candle ----------------
   const hf = K.tex(256, 256, (g) => { for (let i = 0; i < 8; i++) { g.fillStyle = i % 2 ? '#5a3a24' : '#6a4a2e'; g.fillRect(0, i * 32, 256, 31); } }, [5, 5]);
-  K.plane(16, 16, K.std(0xffffff, { map: hf }), add(HOME, [0, 0.01, 0]));
-  K.plane(16, 7, K.std(0x3a4a6a), add(HOME, [0, 3.5, -4])); K.plane(10, 7, K.std(0x3a4a6a), add(HOME, [-5, 3.5, 1]), [0, Math.PI / 2, 0]);
+  K.plane(16, 16, K.pbr('weathered_brown_planks', [4, 4]), add(HOME, [0, 0.01, 0]));
+  const hw = K.pbr('white_plaster_02', [4, 2], { tint: 0x8a9ac8 }); K.plane(16, 7, hw, add(HOME, [0, 3.5, -4]), [0, 0, 0]); K.plane(10, 7, hw, add(HOME, [-5, 3.5, 1]), [0, Math.PI / 2, 0]); for (let i = 0; i < 4; i++) K.box(0.3, 0.3, 10, 0, add(HOME, [-4 + i * 2.6, 5.6, 1])).material = K.pbr('dark_wood', [0.3, 3]); K.ray(add(HOME, [1.6, 1.8, -2.4]), [0.5, 0, 0.3], 1.6, 4, 0x9ab8ff, 0.12);
   await K.placeH('house_interior_pack/Bed_King', add(HOME, [-1.4, 0, -2.6]), 0, 1.1, { tint: 0xb8301e }).catch(() => {});
   await K.placeH('house_interior_pack/Window_Large1', add(HOME, [1.6, 2.4, -3.95]), 0, 2.0).catch(() => {});
   K.box(0.7, 0.8, 0.6, 0x4a2a14, add(HOME, [0.6, 0.4, -3.2])); candle(add(HOME, [0.6, 0.8, -3.2]), 1.3);
@@ -82,9 +87,9 @@ export async function build(k) {
 
   // ---------------- MACRO: playbill on a brick wall ----------------
   const br = K.tex(256, 256, (g) => { g.fillStyle = '#7a3a2a'; g.fillRect(0, 0, 256, 256); g.fillStyle = '#9a4a32'; for (let y = 0; y < 8; y++) for (let x = 0; x < 4; x++) g.fillRect(x * 64 + (y % 2) * 32 + 3, y * 32 + 3, 58, 26); }, [4, 4]);
-  K.plane(12, 12, K.std(0xffffff, { map: br }), add(MAC, [0, 3, -1]));
+  K.plane(12, 12, K.pbr('red_brick', [3, 3]), add(MAC, [0, 3, -1]), [0, 0, 0]);
   const pb = K.tex(512, 720, (g, w, h) => { g.fillStyle = '#f2e6c8'; g.fillRect(0, 0, w, h); g.strokeStyle = '#6a2a1a'; g.lineWidth = 14; g.strokeRect(20, 20, w - 40, h - 40); g.fillStyle = '#6a2a1a'; g.textAlign = 'center'; g.font = '900 54px Poppins, sans-serif'; g.fillText('MOLIÈRE', w / 2, 120); g.font = '900 62px Poppins, sans-serif'; g.fillStyle = '#1e5a3a'; g.fillText('EL ENFERMO', w / 2, 300); g.fillText('IMAGINARIO', w / 2, 380); g.fillStyle = '#b8301e'; g.font = '900 96px Poppins, sans-serif'; g.fillText('1673', w / 2, 560); g.fillStyle = '#6a2a1a'; g.font = '700 34px Poppins, sans-serif'; g.fillText('COMEDIA', w / 2, 640); });
-  K.plane(2.4, 3.4, K.std(0xffffff, { map: pb }), add(MAC, [0, 2.6, -0.95]));
+  K.plane(2.4, 3.4, K.std(0xffffff, { map: pb }), add(MAC, [0, 2.6, -0.95]), [0, 0, 0]);
   candle(add(MAC, [-1.6, 0.6, 0]), 2); candle(add(MAC, [1.6, 0.6, 0]), 2); K.box(5, 0.6, 1, 0x4a2a14, add(MAC, [0, 0.3, 0]));
   K.pointLight(0xffb060, 8, add(MAC, [0, 2.6, 1.5]), 6);
 }
@@ -115,12 +120,12 @@ export function frame(f, k) {
   switch (ph) {
     case 0: { // HOOK: Molière in the armchair, mid-collapse coughing, audience heads laughing in the foreground
       const v = u(0); crowd(t, true); argan(f, t, { expr: 'shock', collapse: 0.35 + 0.25 * Math.sin(t * 5) ** 2, tremble: 2 }); puffs(t, add(S0, [0, 2.3, 0.2]));
-      K.move({ p: add(STAGE, [0.8, 2.1, 4.6]), l: add(S0, [0, 1.9, 0]), fov: 46 }, { p: add(STAGE, [0.4, 2.2, 3.6]), l: add(S0, [0, 1.9, 0]), fov: 44 }, v, 0.8, f); K.focusOn(add(S0, [0, 1.8, 0])); break; }
+      K.move({ p: add(STAGE, [0.9, 2.5, 2.0]), l: add(S0, [0, 1.7, 0]), fov: 46 }, { p: add(STAGE, [0.5, 2.5, 1.3]), l: add(S0, [0, 1.7, 0]), fov: 44 }, v, 0.8, f); K.focusOn(add(S0, [0, 1.8, 0])); break; }
     case 1: { // audience thought it was part of the play: reverse shot, laughing crowd
-      crowd(t, true); const a = add(STAGE, [-1.0, 0, 3.6]), b = add(STAGE, [1.0, 0, 3.6]);
+      crowd(t, true); const a = add(STAGE, [-1.0, 0, 2.9]), b = add(STAGE, [1.0, 0, 2.9]);
       P(A1, { pos: a, yaw: Math.PI * 0 + 0.0, expr: 'laugh', arms: 'point', bounce: 0.8 }, f); P(A2, { pos: b, yaw: 0, expr: 'laugh', arms: 'cross', bounce: 0.8 }, f);
-      P(A3, { pos: add(STAGE, [0, 0, 5.2]), yaw: 0, expr: 'laugh', arms: 'up', bounce: 0.8 }, f);
-      K.move(K.frame([a, b], { yaw: Math.PI - 0.12, h: 3.2, lookY: 1.9, pitch: 0.06, push: 0.9 }), K.frame([a, b], { yaw: Math.PI + 0.05, h: 3.2, lookY: 1.9, pitch: 0.04, push: 0.8 }), u(1), 0.6, f);
+      P(A3, { pos: add(STAGE, [0, 0, 4.5]), yaw: 0, expr: 'laugh', arms: 'up', bounce: 0.8 }, f);
+      K.move({ p: add(STAGE, [0.8, SH + 0.9, 1.4]), l: add(STAGE, [0, 1.6, 4.4]), fov: 48 }, { p: add(STAGE, [-0.4, SH + 0.8, 1.6]), l: add(STAGE, [0, 1.5, 4.4]), fov: 46 }, u(1), 0.6, f);
       // camera on stage looking at audience: characters face +z → rotate them toward stage camera
       A1.root.rotation.y = Math.PI; A2.root.rotation.y = Math.PI; A3.root.rotation.y = Math.PI; K.focusOn(add(STAGE, [0, 1.6, 3.8])); break; }
     case 2: { // most famous comedy author in France: proud bow on stage
@@ -159,15 +164,15 @@ export function frame(f, k) {
       argan(f, t, { expr: 'worried', arms: MOUTH, tremble: 1 }); puffs(t, add(S0, [0, 2.3, 0.2]), 3);
       K.move(K.frame([S0], { yaw: 0.35, h: 2.2, lookY: 1.7, pitch: 0.0, push: 0.8 }), K.frame([S0], { yaw: 0.3, h: 2.1, lookY: 1.7, pitch: 0.0, push: 0.62 }), K.ease(v), 0.3, f); K.focusOn(add(S0, [0, 1.8, 0])); break; }
     case 10: { // 4th show: friends begging him not to go on stage (dressing room)
-      const p = add(STAGE, [-10.6, SH, -2.0]), a = add(STAGE, [-9.6, SH, -0.8]), b = add(STAGE, [-10.0, SH, -3.4]); SG.pul.visible = true;
-      P(MO, { pos: p, yaw: 0.6, expr: 'tired', armsOverride: CHEST }, f); P(F1, { pos: a, yaw: -2.3, expr: 'worried', arms: 'reach' }, f); P(F2, { pos: b, yaw: -0.6, expr: 'scared', arms: 'hold2' }, f);
-      K.move(K.frame([p, a, b], { yaw: -1.1, h: 3.0, lookY: 1.9, pitch: -0.03, push: 0.9 }), K.frame([p, a, b], { yaw: -0.95, h: 3.0, lookY: 1.9, pitch: -0.04, push: 0.82 }), u(10), 0.6, f); K.focusOn(add(p, [0, 2, 0])); break; }
+      const p = add(STAGE, [-4.6, SH, -1.4]), a = add(STAGE, [-3.4, SH, -0.6]), b = add(STAGE, [-5.6, SH, -2.4]);
+      P(MO, { pos: p, yaw: 0.3, expr: 'tired', armsOverride: CHEST }, f); P(F1, { pos: a, yaw: -0.9, expr: 'worried', arms: 'reach' }, f); P(F2, { pos: b, yaw: -0.6, expr: 'scared', arms: 'hold2' }, f);
+      K.move(K.frame([p, a, b], { yaw: 0.35, h: 3.0, lookY: 1.9, pitch: -0.03, push: 0.9 }), K.frame([p, a, b], { yaw: 0.2, h: 3.0, lookY: 1.9, pitch: -0.04, push: 0.82 }), u(10), 0.6, f); K.focusOn(add(p, [0, 2, 0])); break; }
     case 11: { // 50 workers lived from that show: stagehands lined up behind him
       const p = add(STAGE, [0, SH, -0.6]); SG.t50.visible = true; const crew = [A1, A2, A3, A4, F1, F2];
       crew.forEach((c, i) => P(c, { pos: add(STAGE, [-3.0 + i * 1.2, SH, -3.4 + (i % 2) * 0.3]), yaw: 0, expr: i % 2 ? 'worried' : 'neutral', arms: i % 3 === 0 ? 'hold2' : 'cross' }, f));
       for (const fa of fans) fa.g.visible = false;
       P(MO, { pos: p, yaw: 0, expr: 'proud', arms: 'akimbo' }, f);
-      K.move(K.frame([p, add(STAGE, [-3, SH, -3.4]), add(STAGE, [3, SH, -3.4])], { yaw: 0.08, h: 3.2, lookY: 2.0, pitch: -0.05, push: 0.95 }), K.frame([p, add(STAGE, [-3, SH, -3.4]), add(STAGE, [3, SH, -3.4])], { yaw: -0.05, h: 3.2, lookY: 2.0, pitch: -0.06, push: 0.86 }), u(11), 0.5, f); K.focusOn(add(p, [0, 2, -1])); break; }
+      K.move(K.frame([p, add(STAGE, [-3, SH, -3.4]), add(STAGE, [3, SH, -3.4])], { yaw: 0.08, h: 3.2, lookY: 2.0, pitch: -0.05, push: 0.95 }), K.frame([p, add(STAGE, [-3, SH, -3.4]), add(STAGE, [3, SH, -3.4])], { yaw: -0.05, h: 3.2, lookY: 2.0, pitch: -0.06, push: 0.86 }), u(11), 0.5, f); K.focusOn(add(p, [0, 2, -1.2])); K.lens.aperture.value = 0; break; }
     case 12: { // AND HERE IT ALL WENT WRONG: dark, low angle on the armchair
       K.preset('candle', { exposure: 0.85 }); K.grade.vig.value = 0.75; const v = u(12); if (v < 0.08) K.grade.flash.value = 0.4;
       argan(f, t, { expr: 'neutral', arms: CHEST });
@@ -178,10 +183,10 @@ export function frame(f, k) {
       if (v > 0.44 && v < 0.5) K.grade.flash.value = 0.4;
       K.move(K.frame([S0], { yaw: -0.3, h: 2.6, lookY: 1.6, pitch: 0.0, push: 0.78 }), K.frame([S0], { yaw: -0.2, h: 2.6, lookY: 1.5, pitch: 0.02, push: 0.7 }), v, 0.6 + c, f); K.focusOn(add(S0, [0, 1.6, 0])); break; }
     case 14: { // many laughed: they thought it was part of the comedy
-      crowd(t, true); const a = add(STAGE, [-1.0, 0, 3.6]), b = add(STAGE, [1.0, 0, 3.6]), c = add(STAGE, [0, 0, 5.2]);
+      crowd(t, true); const a = add(STAGE, [-1.0, 0, 2.9]), b = add(STAGE, [1.0, 0, 2.9]), c = add(STAGE, [0, 0, 4.5]);
       P(A4, { pos: a, expr: 'laugh', arms: 'point', bounce: 0.9 }, f); P(A2, { pos: b, expr: 'laugh', arms: 'up', bounce: 0.9 }, f); P(A1, { pos: c, expr: 'laugh', arms: 'wave', bounce: 0.9 }, f);
       for (const C of [A4, A2, A1]) C.root.rotation.y = Math.PI;
-      K.move(K.frame([a, b], { yaw: Math.PI + 0.15, h: 3.0, lookY: 1.9, pitch: 0.08, push: 0.85 }), K.frame([a, b], { yaw: Math.PI - 0.05, h: 3.0, lookY: 1.9, pitch: 0.05, push: 0.76 }), u(14), 0.7, f); K.focusOn(add(STAGE, [0, 1.6, 3.8])); break; }
+      K.move({ p: add(STAGE, [-0.8, SH + 0.7, 1.5]), l: add(STAGE, [0, 1.6, 4.4]), fov: 46 }, { p: add(STAGE, [0.3, SH + 0.6, 1.8]), l: add(STAGE, [0, 1.6, 4.4]), fov: 44 }, u(14), 0.7, f); K.focusOn(add(STAGE, [0, 1.6, 3.8])); break; }
     case 15: { // finished the play as he could... hours later he died at home
       const v = u(15);
       if (v < 0.5) { const p = add(STAGE, [0, SH, -0.7]); crowd(t, true); SG.enf.visible = true; P(MO, { pos: p, yaw: 0, expr: 'tired', armsOverride: BOW, lean: 0.4, tremble: 1, sweat: true }, f);
@@ -197,7 +202,7 @@ export function frame(f, k) {
       K.move(K.frame([a, b, S0], { yaw: 0.0, h: 3.0, lookY: 1.8, pitch: -0.04, push: 0.95 }), K.frame([a, b, S0], { yaw: 0.0, h: 3.0, lookY: 1.8, pitch: -0.05, push: 0.82 }), u(16), 0.3, f); K.focusOn(add(S0, [0, 1.6, 0])); break; }
     default: { // loop to hook
       const v = u(17); crowd(t, true); argan(f, t, { expr: 'shock', collapse: 0.35 + 0.25 * Math.sin(t * 5) ** 2, tremble: 2 }); puffs(t, add(S0, [0, 2.3, 0.2]));
-      K.move({ p: add(STAGE, [0.4, 2.2, 3.6]), l: add(S0, [0, 1.9, 0]), fov: 44 }, { p: add(STAGE, [0.8, 2.1, 4.6]), l: add(S0, [0, 1.9, 0]), fov: 46 }, v, 0.8, f); K.focusOn(add(S0, [0, 1.8, 0]));
+      K.move({ p: add(STAGE, [0.5, 2.5, 1.3]), l: add(S0, [0, 1.7, 0]), fov: 44 }, { p: add(STAGE, [0.9, 2.5, 2.0]), l: add(S0, [0, 1.7, 0]), fov: 46 }, v, 0.8, f); K.focusOn(add(S0, [0, 1.8, 0]));
     }
   }
 }

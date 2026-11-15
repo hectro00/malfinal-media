@@ -96,7 +96,7 @@ composer.addPass(new SMAAPass(W, H));
 
 // ---------- toon (RicksClips-like cel shading) ----------
 const TOON = (() => { const d = new Uint8Array([90, 90, 90, 255, 175, 175, 175, 255, 255, 255, 255, 255]); const t = new THREE.DataTexture(d, 3, 1, THREE.RGBAFormat); t.minFilter = t.magFilter = THREE.NearestFilter; t.needsUpdate = true; return t; })();
-const toonOf = (m) => { if (!m || m.isMeshToonMaterial || m.isShaderMaterial || m.isMeshBasicMaterial) return m; const n = new THREE.MeshToonMaterial({ color: m.color ? m.color.clone() : 0xffffff, map: m.map || null, gradientMap: TOON, transparent: m.transparent, opacity: m.opacity ?? 1, side: m.side, emissive: m.emissive ? m.emissive.clone() : 0x000000, emissiveIntensity: m.emissiveIntensity ?? 1, emissiveMap: m.emissiveMap || null, depthWrite: m.depthWrite, polygonOffset: m.polygonOffset, polygonOffsetFactor: m.polygonOffsetFactor }); return n; };
+const toonOf = (m) => { if (!m || m.isMeshToonMaterial || m.isShaderMaterial || m.isMeshBasicMaterial) return m; const n = new THREE.MeshToonMaterial({ color: m.color ? m.color.clone() : 0xffffff, map: m.map || null, gradientMap: TOON, transparent: m.transparent, opacity: m.opacity ?? 1, side: m.side, emissive: m.emissive ? m.emissive.clone() : 0x000000, emissiveIntensity: m.emissiveIntensity ?? 1, emissiveMap: m.emissiveMap || null, normalMap: m.normalMap || null, normalScale: m.normalScale ? m.normalScale.clone() : new THREE.Vector2(1, 1), depthWrite: m.depthWrite, polygonOffset: m.polygonOffset, polygonOffsetFactor: m.polygonOffsetFactor }); return n; };
 // ---------- assets ----------
 const loader = new GLTFLoader(); const cache = {};
 function stylize(root, o = {}) {
@@ -163,13 +163,29 @@ K.sign = (text, pos, o = {}) => { const w = o.w || 3, h = o.h || 1.1; const tx =
   const grp = new THREE.Group(); const b = new THREE.Mesh(new THREE.BoxGeometry(w, h, 0.12), [std(o.frame || 0x4a2a14), std(o.frame || 0x4a2a14), std(o.frame || 0x4a2a14), std(o.frame || 0x4a2a14), new THREE.MeshBasicMaterial({ map: tx }), std(o.frame || 0x4a2a14)]);
   b.castShadow = true; grp.add(b); if (o.posts) for (const s of [-1, 1]) { const p = new THREE.Mesh(new THREE.BoxGeometry(0.12, pos[1] + h / 2, 0.12), std(o.frame || 0x4a2a14)); p.position.set(s * (w / 2 - 0.2), -(pos[1] + h / 2) / 2 + h / 2 - h / 2, -0.02); grp.add(p); }
   grp.position.set(...pos); grp.rotation.y = o.rotY || 0; scene.add(grp); return grp; };
-K.preset = (name, over = {}) => { const L = { ...PRESETS[name], ...over }; if (L.env && envs[L.env]) scene.environment = envs[L.env]; K.light(L); };
+
+// ---- v2.2 realism: CC0 Poly Haven PBR textures (assets/tex/<name>_diff.jpg + _nor_gl.jpg) and photo skies ----
+const _tl = new THREE.TextureLoader(); const _texCache = {};
+K.pbr = (name, rep = [1, 1], o = {}) => { const key = name + rep.join('x');
+  const ld = (suf, srgb) => { const t = _tl.load(`assets/tex/${name}_${suf}.jpg`); t.wrapS = t.wrapT = THREE.RepeatWrapping; t.repeat.set(...rep); t.anisotropy = 8; if (srgb) t.colorSpace = THREE.SRGBColorSpace; return t; };
+  if (!_texCache[key]) _texCache[key] = { map: ld('diff', true), nor: ld('nor_gl', false) };
+  const m = new THREE.MeshStandardMaterial({ color: o.tint ?? 0xffffff, map: _texCache[key].map, normalMap: _texCache[key].nor, normalScale: new THREE.Vector2(o.bump ?? 1.2, o.bump ?? 1.2), roughness: 0.85, side: o.side ?? THREE.FrontSide });
+  return K.TOON_ON && !o.keepPBR ? toonOf(m) : m; };
+const _bgs = {};
+K.photoSky = async (name, o = {}) => { if (!name) { scene.background = null; sky.visible = true; return; }
+  if (!_bgs[name]) { const t = await new RGBELoader().loadAsync(`assets/hdri/${name}.hdr`); t.mapping = THREE.EquirectangularReflectionMapping; _bgs[name] = t; }
+  scene.background = _bgs[name]; scene.backgroundIntensity = o.intensity ?? 1.0; scene.backgroundBlurriness = o.blur ?? 0.0; scene.backgroundRotation.set(0, o.rot ?? 0, 0); sky.visible = false; };
+K.preloadSkies = async (names) => { for (const n of names) if (!_bgs[n]) { const t = await new RGBELoader().loadAsync(`assets/hdri/${n}.hdr`); t.mapping = THREE.EquirectangularReflectionMapping; _bgs[n] = t; } };
+K.useSky = (name, o = {}) => { if (!name || !_bgs[name]) { scene.background = null; sky.visible = true; return; } scene.background = _bgs[name]; scene.backgroundIntensity = o.intensity ?? 1.0; scene.backgroundBlurriness = o.blur ?? 0.0; scene.backgroundRotation.set(0, o.rot ?? 0, 0); sky.visible = false; };
+// soft god-ray shaft (additive, no depth write) from a window/lamp
+K.ray = (pos, rot = [0, 0, 0], w = 1.2, h = 5, col = 0xffd8a0, op = 0.16) => { const g = new THREE.Mesh(new THREE.PlaneGeometry(w, h), new THREE.MeshBasicMaterial({ color: col, transparent: true, opacity: op, blending: THREE.AdditiveBlending, depthWrite: false, side: THREE.DoubleSide })); g.position.set(...pos); g.rotation.set(...rot); g.userData.noDepth = true; scene.add(g); return g; };
+K.preset = (name, over = {}) => { const L = { ...PRESETS[name], ...over }; K.useSky(over.photo); if (L.env && envs[L.env]) scene.environment = envs[L.env]; K.light(L); };
 K.preloadEnvs = async () => { for (const n of new Set(Object.values(PRESETS).map((p) => p.env))) await env(n); scene.environment = envs.venice_sunset; };
 K.timing = async (url = 'timing.json') => { const t = await (await fetch(url)).json(); K.T = t; K.ph = t.phrases.map((p) => ({ a: Math.round(p.start * 30), b: Math.round(p.end * 30), text: p.text })); return t; };
 K.ease = (u) => u < 0 ? 0 : u > 1 ? 1 : u * u * (3 - 2 * u);
 K.lerp = (a, b, u) => Array.isArray(a) ? a.map((x, i) => x + (b[i] - x) * u) : a + (b - a) * u;
 // camera move: from {p,l,fov} to {p,l,fov} over u (0..1, eased); optional handheld shake
-K.move = (A, B, u, shake = 0.6, f = 0) => { const e = K.ease(u); const p = K.lerp(A.p, B.p || A.p, e), l = K.lerp(A.l, B.l || A.l, e), fov = K.lerp(A.fov || 35, (B.fov || A.fov || 35), e);
+K.move = (A, B, u, shake = 0.6, f = 0) => { shake *= 0.45; const uu = Math.min(1, Math.max(0, u)); const e = 0.65 * uu + 0.35 * K.ease(uu); const p = K.lerp(A.p, B.p || A.p, e), l = K.lerp(A.l, B.l || A.l, e), fov = K.lerp(A.fov || 35, (B.fov || A.fov || 35), e);
   const s = 0.01 * shake; p[0] += Math.sin(f * 0.07) * s * 2; p[1] += Math.sin(f * 0.051 + 1) * s * 1.5; K.shot(p, l, fov, Math.sin(f * 0.033) * 0.004 * shake); };
 // phrase helpers: which phrase index is active at frame f, and progress inside it
 K.at = (f) => { let i = 0; for (let k = 0; k < K.ph.length; k++) if (f >= K.ph[k].a - 4) i = k; return i; };
@@ -216,8 +232,8 @@ window.renderFrame = (f) => {
   const s = K.shadowSpan; Object.assign(sun.shadow.camera, { left: -s, right: s, top: s, bottom: -s, near: 1, far: 140 }); sun.shadow.camera.updateProjectionMatrix();
   rim.target.position.copy(look); rim.position.copy(look).add(new THREE.Vector3(-d.x, 0.6, -d.z).multiplyScalar(40));
   skyMat.uniforms.sunDir.value.copy(d); sky.position.copy(cam.position);
-  const nd = []; scene.traverse((o) => { if (o.userData.noDepth && o.visible) { o.visible = false; nd.push(o); } }); scene.overrideMaterial = depthMat; renderer.shadowMap.autoUpdate = false; renderer.setRenderTarget(depthRT); renderer.setClearColor(0xffffff, 1); renderer.clear(); renderer.render(scene, cam);
-  scene.overrideMaterial = null; for (const o of nd) o.visible = true; renderer.shadowMap.autoUpdate = true; renderer.setRenderTarget(null);
+  const nd = []; scene.traverse((o) => { if (o.userData.noDepth && o.visible) { o.visible = false; nd.push(o); } }); const _bg = scene.background, _fog = scene.fog; scene.background = null; scene.fog = null; scene.overrideMaterial = depthMat; renderer.shadowMap.autoUpdate = false; renderer.setRenderTarget(depthRT); renderer.setClearColor(0xffffff, 1); renderer.clear(); renderer.render(scene, cam);
+  scene.overrideMaterial = null; scene.background = _bg; scene.fog = _fog; for (const o of nd) o.visible = true; renderer.shadowMap.autoUpdate = true; renderer.setRenderTarget(null);
   composer.render();
   return renderer.domElement.toDataURL('image/jpeg', 0.93);
 };
