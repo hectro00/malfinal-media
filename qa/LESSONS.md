@@ -57,3 +57,4 @@ Rule (user): each video gets 1 attempt + at most 1 maximized redo, then it gets 
 - No clipping: props, benches, aprons, bags must never pass through bodies/heads/camera. No floating boxes as beards/aprons — use the character options (`hair`, `belt`, `buttons`) or skip it.
 - Camera: smooth constant drift (engine eases it now), no shake; never inside furniture (check reverse shots from the stage).
 - Lights: point lights ≤ 6 near faces; avoid blown-out white faces.
+- 16 Nov: chatterbox OOM can kill TTS silently mid-run (no DONE) → always check `ls frases | wc -l` vs lines and rerun (resumable). Whisper "rey"→"ley": rephrase. Banquet scenes: hang chandeliers high (y≈4.9, behind subjects) or they cover faces; candelabras/trays must not sit between camera and faces. Steam spheres read as bubbles with ink lines: ≤6, small, opacity ≤0.2.

@@ -319,9 +319,33 @@
     },
     "post_v2": "redo: hook/loop reframed with sign on wagon, cab light, propeller+wreck shot; partial re-render 400 frames; published per 1+1 rule"
    }
+  },
+  "VID-20261116-019": {
+   "slot": "2026-11-17T12:00",
+   "status": "programado",
+   "title": "Fue rey de Suecia… y lo mató el POSTRE 🍰",
+   "hookA": "Fue rey de Suecia… y lo mató el POSTRE 🍰",
+   "hookB": "El rey que pidió OTRO postre… y otro… 🍮",
+   "burned": "B",
+   "project": "postre",
+   "media": "VID-20261116-019.mp4",
+   "engine": "v2.2",
+   "durationS": 64.4,
+   "route": "buffer+make",
+   "buffer_ids": {
+    "yt": "6afb81c5e71931620ba24cac",
+    "tt": "6afb81c7c6b697e19187b356",
+    "ig": "6afb81c8e71931620ba24e90"
+   },
+   "make_record": "4f038eadaa92",
+   "qa": {
+    "preprod": 8.25,
+    "calidad": 8,
+    "pegada": 8
+   }
   }
  },
- "next_num": 19,
+ "next_num": 20,
  "metricool_month_count": {
   "2026-11": 19
  },
