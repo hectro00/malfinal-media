@@ -4,6 +4,9 @@ Goal: the next 3 slots (~24 h) must ALWAYS have a short scheduled (Buffer for YT
 **Rhythm: 3 videos per day** (user decision, 11 Nov evening): **Mon–Fri 12:00, 18:00, 20:30 · Sat 11:00, 17:00, 20:00 · Sun 09:00, 13:00, 19:00**. Target: get each video as close to 10 as possible.
 Each video passes through a **pre-production filter** (self-review against the real metrics).
 
+## PREPARED VIDEOS
+If `state/prepared.json` has items, produce those first (script, scene and audio script are ready in engine2/examples). Copy the scene to the project's web/scene.js, run TTS on the script, re-time, stills check (LESSONS 15 Nov), render, publish. Delete the item from prepared.json once scheduled.
+
 ## LOCK
 If `state/LOCK.json` exists and its `until` is in the future, its `slots` are being produced by another session: treat them as covered (don't produce for them). Delete the lock when it has expired.
 
@@ -43,7 +46,7 @@ cd pipeline && bash setup.sh && cd engine && npm i --silent three@0.187.0 puppet
   - Text = same copy as before (hook line, hashtags, "Fuente:", "Animación hecha con apoyo de IA.").
   - **Buffer free plan: max 10 scheduled posts in the org (= 3 videos × 3 channels).** So the window is **the next ~24 h (3 slots)**, not 2 days. Check with `list_posts status:[scheduled]` before creating. Never exceed 10; never pay.
   - Record `buffer_ids {yt, tt, ig}` in `state/posts.json`.
-- **Facebook (page "Mal Final") → Make** (connector `Make`, free plan 1,000 ops/month; set up 15 Nov). For every short add ONE record to data store **202340** ("MalFinal FB queue", team 3447373) with `data-store-records_create`: `{due: "<slot ISO with -06:00>", url: "<raw GitHub mp4 URL>", description: "<same copy as the other networks>", title: "<hookA>", vid: "VID-..."}`. Scenario **7049351** ("Mal Final → Facebook Reels") runs every hour 08:50–21:45 CDMX, takes the oldest record with `due <= now`, publishes it as a Reel on the page and deletes the record (~3 ops per video). No Metricool needed for Facebook. If a run fails, check `executions_list` for scenario 7049351 and note it in the summary.
+- **Facebook (page "Mal Final") → Make** (connector `Make`, free plan 1,000 ops/month; set up 15 Nov). For every short add ONE record to data store **202340** ("MalFinal FB queue", team 3447373) with `data-store-records_create`: `{due: "<slot ISO with -06:00>", url: "<raw GitHub mp4 URL>", description: "<same copy as the other networks>", title: "<hookA>", vid: "VID-..."}`. Scenario **7049351** ("Mal Final → Facebook Reels") — PAUSED 17 Nov: Facebook rejects the upload (error 390/400). Do NOT add Make records until the user says Facebook is fixed. (When active it runs every hour 08:50–21:45 CDMX, takes the oldest record with `due <= now`, publishes it as a Reel on the page and deletes the record (~3 ops per video). No Metricool needed for Facebook. If a run fails, check `executions_list` for scenario 7049351 and note it in the summary.
 - **Weekly compilation → Metricool (YouTube only)**, because it supports the custom thumbnail. If Metricool is at 0, publish it via Buffer YouTube (no custom thumbnail) instead.
 - Posts already scheduled in Metricool on all 4 networks (up to Tue 17 Nov) stay as they are; don't duplicate those slots in Buffer.
 
