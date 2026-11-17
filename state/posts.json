@@ -366,9 +366,32 @@
     "calidad": 8,
     "pegada": 8
    }
+  },
+  "VID-20261117-021": {
+   "slot": "2026-11-17T20:30",
+   "status": "programado",
+   "title": "Murió en el escenario… y el público SE RIÓ 🎭",
+   "hookA": "Murió en el escenario… y el público SE RIÓ 🎭",
+   "hookB": "Hacía de ENFERMO… y murió de verdad 🎭",
+   "burned": "B",
+   "project": "moliere",
+   "media": "VID-20261117-021.mp4",
+   "engine": "v2.2",
+   "durationS": 64.9,
+   "route": "buffer (FB pausado)",
+   "buffer_ids": {
+    "yt": "6afce514bb12698d1581c55f",
+    "tt": "6afce51593fa11d37df0eaea",
+    "ig": "6afce516bb12698d1581c5ba"
+   },
+   "qa": {
+    "preprod": 8.25,
+    "calidad": 8,
+    "pegada": 8
+   }
   }
  },
- "next_num": 21,
+ "next_num": 22,
  "metricool_month_count": {
   "2026-11": 19
  },
