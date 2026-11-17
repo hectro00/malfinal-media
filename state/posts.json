@@ -343,9 +343,32 @@
     "calidad": 8,
     "pegada": 8
    }
+  },
+  "VID-20261117-020": {
+   "slot": "2026-11-17T18:00",
+   "status": "programado",
+   "title": "Empezó a BAILAR… y no pudo parar en días 💃",
+   "hookA": "Empezó a BAILAR… y no pudo parar en días 💃",
+   "hookB": "La cura para el baile mortal: bailar MÁS 🎻",
+   "burned": "A",
+   "project": "baile",
+   "media": "VID-20261117-020.mp4",
+   "engine": "v2.2",
+   "durationS": 67.7,
+   "route": "buffer (FB pausado)",
+   "buffer_ids": {
+    "yt": "6afcd979c68ceea50aac2645",
+    "tt": "6afcd97a8e2194ed032c15f2",
+    "ig": "6afcd97b30b9befce2b5a86d"
+   },
+   "qa": {
+    "preprod": 8.25,
+    "calidad": 8,
+    "pegada": 8
+   }
   }
  },
- "next_num": 20,
+ "next_num": 21,
  "metricool_month_count": {
   "2026-11": 19
  },
