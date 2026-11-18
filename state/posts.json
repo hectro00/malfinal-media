@@ -412,6 +412,31 @@
     "calidad": 7.5,
     "pegada": 8
    }
+  },
+  "VID-20261118-023": {
+   "title": "Inauguró el TREN… y el tren lo atropelló 🚂",
+   "status": "borrador (prueba v3, esperando aprobación del usuario)",
+   "media": "VID-20261118-023.mp4",
+   "durationS": 72.9,
+   "engine": "v2.2 + v3 system",
+   "story": "William Huskisson, Liverpool–Manchester 1830",
+   "hookA": "Inauguró el TREN… y el tren lo atropelló 🚂",
+   "hookB": "Lo atropelló su PROPIO tren 🚂",
+   "buffer_drafts": {
+    "yt": "6afd19b5aa3b065dd96cf28a",
+    "tt": "6afd19b69f3765f6ab2ac204"
+   },
+   "qa100": {
+    "hook": 17,
+    "retencion": 14,
+    "visual": 10,
+    "narracion": 12,
+    "edicion": 6,
+    "originalidad": 8,
+    "titulo": 8,
+    "total": 75,
+    "note": "1 fix round applied (punch-ins, mute hook text, bigger captions)"
+   }
   }
  },
  "next_num": 23,

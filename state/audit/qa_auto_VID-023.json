@@ -1,0 +1,29 @@
+{
+ "file": "out/final.mp4",
+ "duration": 72.86,
+ "size_mb": 43.2,
+ "lufs": -14.9,
+ "true_peak": -1.6,
+ "blacks": [],
+ "silences_in_voice": [],
+ "cuts": 33,
+ "cuts_per_min": 27.2,
+ "longest_static_s": 5.13,
+ "motion_first_2s": 4.85,
+ "hook_words": 8,
+ "gates": {
+  "duration_62_75s": true,
+  "res_1080x1920": true,
+  "size_lt_95MB": true,
+  "loudness_-14±1.5": true,
+  "true_peak_le_-1": true,
+  "no_black_gt_0.3s": true,
+  "no_silence_gt_1.2s_in_voice": true,
+  "captions_present": true,
+  "hook_line_le_10_words": true
+ },
+ "all_gates_pass": true,
+ "auto_points": {
+  "edicion_ritmo_of_10": 6
+ }
+}
