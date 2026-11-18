@@ -1,6 +1,6 @@
 # Mal Final: autopilot (scheduled task)
 
-Goal: the next 3 slots (~24 h) must ALWAYS have a short scheduled (Buffer for YT/TikTok/IG + Make for the Facebook page; see PUBLISHING ROUTES).
+Goal: the next 3 slots (~24 h) must ALWAYS have a short scheduled (Buffer for YT/TikTok/IG + Zapier for the Facebook page; see PUBLISHING ROUTES). USER RULE 18 Nov: 3 VIDEOS PER DAY NO MATTER WHAT — two runs/day (05:47, 14:47); never leave a slot empty if any finished video with QA ≥ 70 exists.
 **Rhythm: 3 videos per day** (user decision, 11 Nov evening): **Mon–Fri 12:00, 18:00, 20:30 · Sat 11:00, 17:00, 20:00 · Sun 09:00, 13:00, 19:00**. Target: get each video as close to 10 as possible.
 Each video passes through a **pre-production filter** (self-review against the real metrics).
 
@@ -14,7 +14,7 @@ Real data (Buffer, 17 Nov, 16 videos): views are flat (YT ~1.1–1.8k, TikTok 0.
 5b. **Series identity**: every video shows the tag "MUERTES ABSURDAS #N" (N = video number) for 1 s at the start corner and on the end frame; titles keep the CAPS keyword + one emoji. This gives a reason to follow ("es una serie").
 6. **QA 1–100**: `qa/QA_RUBRIC.md` + `python3 qa/score.py out/final.mp4 PROJ`. 90+ publish, 80–89 small fixes, 70–79 one fix round and re-score, < 70 or a failed gate → do NOT publish (pendiente). Save `qa_report.json` and the total in `state/posts.json → qa100`.
 7. **Per-platform copy** (step 7): see "Copy v3" in step 7.
-8. Facebook goes through Zapier (1 video per run, see PUBLISHING ROUTES). YouTube shorts 014–016 show ~0 views in Buffer (unexplained; the user must check them in YouTube Studio): if the next 2 YouTube posts also stay < 20 views after 24 h, write it in the summary.
+8. Facebook goes through Zapier (every short that went out on the other networks, max 2 per run, oldest first; see PUBLISHING ROUTES). YouTube shorts 014–016 show ~0 views in Buffer (unexplained; the user must check them in YouTube Studio): if the next 2 YouTube posts also stay < 20 views after 24 h, write it in the summary.
 
 ## PREPARED VIDEOS
 If `state/prepared.json` has items, produce those first (script, scene and audio script are ready in engine2/examples). Copy the scene to the project's web/scene.js, run TTS on the script, re-time, stills check (LESSONS 15 Nov), render, publish. Delete the item from prepared.json once scheduled.
@@ -58,7 +58,7 @@ cd pipeline && bash setup.sh && cd engine && npm i --silent three@0.187.0 puppet
   - Text = same copy as before (hook line, hashtags, "Fuente:", "Animación hecha con apoyo de IA.").
   - **Buffer free plan: max 10 scheduled posts in the org (= 3 videos × 3 channels).** So the window is **the next ~24 h (3 slots)**, not 2 days. Check with `list_posts status:[scheduled]` before creating. Never exceed 10; never pay.
   - Record `buffer_ids {yt, tt, ig}` in `state/posts.json`.
-- **Facebook (page "Mal Final") → Zapier** (connector `Zapier`, free plan 100 tasks/month; works since 18 Nov — Make failed). Zapier posts IMMEDIATELY (no scheduling), so each daily run posts **ONE** video to Facebook: the best-scoring (qa100) short that already went out on the other networks in the last 24 h and is not yet on Facebook. Call: `execute_zapier_write_action(selected_api="FacebookV2CLIAPI", action="page_video", tool_name="facebook_pages_create_page_video", params={page:"1422365030966009", source:"<raw GitHub mp4 URL>", title:"<hookA>", description:"<IG-style caption with the question + AI label + source>"})` (inspect first if the schema changed). Record `fb_id` in posts.json. Make (scenario 7049351) stays OFF.
+- **Facebook (page "Mal Final") → Zapier** (connector `Zapier`, free plan 100 tasks/month; works since 18 Nov — Make failed). Zapier posts IMMEDIATELY (no scheduling), so each run posts to Facebook every short that already went out on the other networks and is not yet on Facebook (max 2 per run, oldest first; 3/day ≈ 90 tasks/month, inside the free 100). Call: `execute_zapier_write_action(selected_api="FacebookV2CLIAPI", action="page_video", tool_name="facebook_pages_create_page_video", params={page:"1422365030966009", source:"<raw GitHub mp4 URL>", title:"<hookA>", description:"<IG-style caption with the question + AI label + source>"})` (inspect first if the schema changed). Record `fb_id` in posts.json. Make (scenario 7049351) stays OFF.
 - **Weekly compilation → Metricool (YouTube only)**, because it supports the custom thumbnail. If Metricool is at 0, publish it via Buffer YouTube (no custom thumbnail) instead.
 - Posts already scheduled in Metricool on all 4 networks (up to Tue 17 Nov) stay as they are; don't duplicate those slots in Buffer.
 

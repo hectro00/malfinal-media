@@ -417,7 +417,7 @@
   },
   "VID-20261118-023": {
    "title": "Inauguró el TREN… y el tren lo atropelló 🚂",
-   "status": "borrador (prueba v3, esperando aprobación del usuario)",
+   "status": "programado",
    "media": "VID-20261118-023.mp4",
    "durationS": 72.9,
    "engine": "v2.2 + v3 system",
@@ -438,6 +438,12 @@
     "titulo": 8,
     "total": 75,
     "note": "1 fix round applied (punch-ins, mute hook text, bigger captions)"
+   },
+   "slot": "2026-11-18T20:30:00-06:00",
+   "buffer_ids": {
+    "youtube": "6afe3446c69bd1cb888d698e",
+    "tiktok": "6afe3452ebd4409dc902de6d",
+    "instagram": "6afe3452ebd4409dc902de9f"
    }
   },
   "VID-20261118-024": {
