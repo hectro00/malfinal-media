@@ -389,9 +389,32 @@
     "calidad": 8,
     "pegada": 8
    }
+  },
+  "VID-20261117-022": {
+   "slot": "2026-11-18T12:00",
+   "status": "programado",
+   "title": "Lo mató una TORTUGA que cayó del cielo 🐢",
+   "hookA": "Lo mató una TORTUGA que cayó del cielo 🐢",
+   "hookB": "Un oráculo le dijo: cuidado con el CIELO… 🦅",
+   "burned": "A",
+   "project": "esquilo",
+   "media": "VID-20261117-022.mp4",
+   "engine": "v2.2",
+   "durationS": 62.9,
+   "route": "buffer (FB pausado)",
+   "buffer_ids": {
+    "yt": "6afceeb6bb12698d15858b73",
+    "tt": "6afceeb7ab47737bddb6031b",
+    "ig": "6afceeb8bb12698d15858bdd"
+   },
+   "qa": {
+    "preprod": 8.25,
+    "calidad": 7.5,
+    "pegada": 8
+   }
   }
  },
- "next_num": 22,
+ "next_num": 23,
  "metricool_month_count": {
   "2026-11": 19
  },

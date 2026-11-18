@@ -1,12 +1,4 @@
 {
  "note": "Videos already written and staged by the interactive session (engine v2.2: PBR textures, photo skies). Use these FIRST, in this order, before inventing new ones. For each: script = engine2/examples/<n>_script.txt, scene = engine2/examples/<n>.js, audio = engine2/examples/<n>_audio.py. Still do TTS, stills check and render. Remove the item when it is scheduled.",
- "items": [
-  {
-   "n": "esquilo",
-   "title": "Esquilo y la tortuga que cayó del cielo",
-   "year": "456 a. C.",
-   "kind": "leyenda",
-   "hookText": "TORTUGA DEL CIELO"
-  }
- ]
+ "items": []
 }
