@@ -4,6 +4,17 @@ Goal: the next 3 slots (~24 h) must ALWAYS have a short scheduled (Buffer for YT
 **Rhythm: 3 videos per day** (user decision, 11 Nov evening): **Mon–Fri 12:00, 18:00, 20:30 · Sat 11:00, 17:00, 20:00 · Sun 09:00, 13:00, 19:00**. Target: get each video as close to 10 as possible.
 Each video passes through a **pre-production filter** (self-review against the real metrics).
 
+## v3 SYSTEM (user audit, 17 Nov) — overrides anything below that contradicts it
+Real data (Buffer, 17 Nov, 16 videos): views are flat (YT ~1.1–1.8k, TikTok 0.6–2.3k, IG 1.3–3k), nothing breaks out. **TikTok average watch 8.5–19.5 s of 62–75 s; IG 19–32 s**; shares ≈ 0, comments 0–2. → The problems are (1) the first 2 s (most people leave at once), (2) the middle (story *told* by a narrator over people standing, not *shown*), (3) no reason to comment/share/follow, (4) same copy on every platform, (5) robotic voice (user).
+1. **Voice v3** (implemented in `tts/gen_blend.py` + `engine/assemble_voice.py`): expressive (exaggeration 0.8/0.9, cfg 0.5, temp 0.75), no tempo lift, word tails kept with a soft fade, subtle room. Don't change these back.
+2. **Hook v3** — frame 0 is the payoff IN MOTION (the object hitting/falling/flooding, a shocked face mid-reaction) + a 2–4 word on-screen text readable on mute + a hit SFX in the first 0.3 s. Line 1 ≤ 9 words with the contrast. Line 2 = the open loop ("y lo que pasó después es peor"). `qa/score.py` gates the hook length.
+3. **Show, don't tell** — `plan.md` must give every line a VISIBLE ACTION (someone doing something, an object moving). ≥ 50 % of shots with action; never 2 consecutive shots from the same set + angle; ≥ 3 sets per video; one visual gag per video. Characters standing and talking is the exception, not the rule.
+4. **Structure** (62–75 s, user rule): 0–2 s payoff tease → 2–8 s who/where in one line → build-up with 2 re-hooks ("Pero eso no fue lo peor", "Y aquí todo salió mal") each on a new set → payoff in the last 8–10 s → final line loops to frame 0 + a question that invites a comment (said as the last line OR shown as end text: "¿Tú habrías…?").
+5. **Series identity**: every video shows the tag "MUERTES ABSURDAS #N" (N = video number) for 1 s at the start corner and on the end frame; titles keep the CAPS keyword + one emoji. This gives a reason to follow ("es una serie").
+6. **QA 1–100**: `qa/QA_RUBRIC.md` + `python3 qa/score.py out/final.mp4 PROJ`. 90+ publish, 80–89 small fixes, 70–79 one fix round and re-score, < 70 or a failed gate → do NOT publish (pendiente). Save `qa_report.json` and the total in `state/posts.json → qa100`.
+7. **Per-platform copy** (step 7): see "Copy v3" in step 7.
+8. Facebook is paused (Make error 390). YouTube shorts 014–016 show ~0 views in Buffer (unexplained; the user must check them in YouTube Studio): if the next 2 YouTube posts also stay < 20 views after 24 h, write it in the summary.
+
 ## PREPARED VIDEOS
 If `state/prepared.json` has items, produce those first (script, scene and audio script are ready in engine2/examples). Copy the scene to the project's web/scene.js, run TTS on the script, re-time, stills check (LESSONS 15 Nov), render, publish. Delete the item from prepared.json once scheduled.
 
@@ -101,7 +112,7 @@ Then review it YOURSELF (no subagent) against `state/insights.md` + `qa/LESSONS.
 If the score is < 8, apply the changes and re-rate once.
 
 ## 4b. A/B hooks (applies to every video)
-- Write **2 hooks**: A and B (title + on-screen text of up to 4 words).
+- Write **2 hooks**: A and B (title + on-screen text of up to 4 words). Each must pass the Hook v3 rules (contrast in ≤ 9 words, readable on mute).
 - A goes to **YouTube + Facebook** (`youtubeData.title`, `facebookData.title`).
 - B goes to **TikTok + Instagram** (`tiktokData.title` and the first line of the copy).
 - The on-screen text alternates by video number: even = A, odd = B. Use the same video for all 4 networks.
@@ -132,10 +143,9 @@ Setup once per session: `bash engine2/fetch_assets.sh` (CC0 Quaternius kits + Po
 5. Render: `RESUME=1 node render.mjs frames 0-99999 720 PORT` in ONE background call (≈1.7 s/frame → 50–65 min for 60–70 s). Never two renders at once; don't run stills while a render is going (it halves the speed).
 6. Captions: `python3 qa/captions_gen.py PROJ` (default STYLE=rick: 1–2 words, no hook title). `bash engine2/finish2.sh PROJ audio/final.wav` → `out/final.mp4` (1080×1920, ≤ ~55 MB so GitHub accepts it).
 
-## 6. Post-production review (once)
-Apply `qa/review_prompt.md` YOURSELF (no subagent) on a contact sheet of the final video (`ffmpeg -vf fps=1/3,scale=270:-1` → `sheet.py`) + listen-check via loudness/duration stats.
-- **PUBLICAR**: go to step 7.
-- **REHACER**: one redo applying the whole list, then publish as is.
+## 6. Post-production QA 1–100 (v3, replaces the old review)
+Run `python3 qa/score.py out/final.mp4 PROJ`, then score with `qa/QA_RUBRIC.md` on a contact sheet of the FINAL video (`fps=1/2`) + the first 3 s at `fps=10`.
+- 90+ → step 7. 80–89 → small fixes without re-render, then step 7. 70–79 → ONE fix round (re-render only the affected phrases), re-score. < 70 or a gate still failing → do NOT publish; status `pendiente`, say why in the summary.
 - Save the scores in `state/posts.json`.
 
 ## 7. Publish
@@ -145,12 +155,12 @@ git clone --filter=blob:none --no-checkout --depth 1 https://github.com/nuncaver
 cp out/final.mp4 VID-YYYYMMDD-NNN.mp4 && git add VID-*.mp4 && git commit -m "VID-..." && git push
 ```
 2. Check that `https://raw.githubusercontent.com/nuncaverso-sketch/malfinal-media/main/VID-....mp4` returns 200.
-3. **Buffer** `create_post` ×3 (YT, TikTok, IG) + **Make** queue record for Facebook, as in PUBLISHING ROUTES. Copy reference: `state/posts.json → example_info`:
-   - all 4 networks;
-   - the AI flags;
-   - hashtags `#historia #datoscuriosos #curiosidades #malfinal #historiasreales`;
-   - a "Fuente:" line;
-   - YouTube `type: short`, category `EDUCATION`, `madeForKids: false`.
+3. **Buffer** `create_post` ×3 (YT, TikTok, IG) as in PUBLISHING ROUTES (Facebook paused). **Copy v3 — different per platform, never the same text pasted 3 times:**
+   - **YouTube**: title = hook A (≤ 55 chars, CAPS keyword, 1 emoji). Description: 2 lines of story + `Muertes absurdas #N` + "Fuente: …" + "Animación hecha con apoyo de IA." + 3 hashtags max: `#muertesabsurdas #historiareal #shorts`.
+   - **TikTok**: caption = hook B + a direct question that invites comments ("¿Tú te habrías subido?") + 4–5 niche hashtags: `#muertesabsurdas #historiasreales #datososcuros #curiosidades #malfinal`; `isAiGenerated: true`.
+   - **Instagram**: caption = hook B + 1 line of story + "Guárdalo para contárselo a alguien 👀" + `Muertes absurdas #N` + 5 hashtags (`#muertesabsurdas #historiareal #curiosidadeshistoricas #datoscuriosos #malfinal`); `firstComment` = the question; `isAiGenerated: true`.
+   - Generic tags like `#historia` alone are not enough; always include the niche tag `#muertesabsurdas`.
+   - YouTube `categoryId: "27"`, `madeForKids: false`, `isAiGenerated: true`.
 4. Dashboard: in the `videos` collection add `{num, order, title, story, slotAt, status: programado, durationS, platforms}`, and in `ideas` set status `producido`.
 
 ## 7b. WEEKLY LONG COMPILATION (YouTube only, for watch hours)

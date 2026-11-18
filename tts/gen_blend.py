@@ -15,18 +15,18 @@ with torch.no_grad():
 CONDS = m.conds
 def norm(s):
     s = unicodedata.normalize('NFD', s.lower()); s = ''.join(c for c in s if unicodedata.category(c) != 'Mn'); return re.sub(r'[^a-z ]', ' ', s).split()
-def trim(w, sr, th=0.012):
+def trim(w, sr, th=0.006):  # v3 voice (17 Nov): keep word tails (user: 'las palabras acaban secas')
     a = w.abs().squeeze(0); idx = (a > th).nonzero()
     if len(idx) == 0: return w
-    return w[:, max(0, int(idx[0]) - int(0.03 * sr)):min(a.shape[0], int(idx[-1]) + int(0.08 * sr))]
+    return w[:, max(0, int(idx[0]) - int(0.03 * sr)):min(a.shape[0], int(idx[-1]) + int(0.22 * sr))]
 for i, t in enumerate(lines):
     fn = f'{out}/{i:02d}.wav'
     if os.path.exists(fn): continue
-    ex = 0.65 if (i >= len(lines) - 2 or i == 0 or '?' in t or '...' in t or len(t) < 28) else 0.56
+    ex = 0.9 if (i >= len(lines) - 2 or i == 0 or '?' in t or '...' in t or '!' in t or len(t) < 28) else 0.8  # v3: expressive (option C)
     best = None
     for att in range(3):
         m.conds = CONDS
-        w = trim(m.generate(t.replace('...', '…'), language_id="es", exaggeration=ex, cfg_weight=0.3, temperature=0.9), m.sr)
+        w = trim(m.generate(t.replace('...', '…'), language_id="es", exaggeration=ex, cfg_weight=0.5, temperature=0.75), m.sr)
         a16 = ta.functional.resample(w, m.sr, 16000).squeeze(0).numpy().astype('float32')
         hyp = ' '.join(s.text for s in wm.transcribe(a16, language='es')[0])
         sc = difflib.SequenceMatcher(None, norm(t), norm(hyp)).ratio(); dur = w.shape[-1] / m.sr
