@@ -1,0 +1,51 @@
+{
+ "auto": {
+  "file": "out/final.mp4",
+  "duration": 72.18,
+  "size_mb": 42.3,
+  "lufs": -14.9,
+  "true_peak": -1.6,
+  "blacks": [],
+  "silences_in_voice": [],
+  "cuts": 29,
+  "cuts_per_min": 24.1,
+  "longest_static_s": 5.13,
+  "motion_first_2s": 14.4,
+  "hook_words": 10,
+  "gates": {
+   "duration_62_75s": true,
+   "res_1080x1920": true,
+   "size_lt_95MB": true,
+   "loudness_-14±1.5": true,
+   "true_peak_le_-1": true,
+   "no_black_gt_0.3s": true,
+   "no_silence_gt_1.2s_in_voice": true,
+   "captions_present": true,
+   "hook_line_le_10_words": true
+  },
+  "all_gates_pass": true,
+  "auto_points": {
+   "edicion_ritmo_of_10": 7
+  }
+ },
+ "scores": {
+  "hook": 16,
+  "retencion": 13,
+  "visual": 11,
+  "narracion": 12,
+  "edicion": 7,
+  "originalidad": 8,
+  "titulo": 9
+ },
+ "total": 76,
+ "evidence": {
+  "hook": "frame 0 mosquito picando mejilla + shock + texto LO MATÓ UN MOSQUITO + boom/zumbido; línea 1 = 10 palabras; el mosquito se lee algo rígido",
+  "retencion": "open loop (noche de su muerte) pagado 52-60 s; re-hooks 30 s y 45 s con set nuevo; causa adelantada por el título",
+  "visual": "5 sets, texturas PBR + cielo foto; afeitado y perro oscuros/simples; sin negros ni clipping visibles",
+  "narracion": "voz v3, Whisper ok; hechos Britannica",
+  "edicion": "auto 7 (29 cortes, estático máx 5.1 s)",
+  "originalidad": "Egipto/maldición nuevo; gag máscara vs mosquito",
+  "titulo": "copy distinto por red, hashtags nicho, etiqueta IA"
+ },
+ "fix_round": "1 ronda: hook mosquito, afeitado, cortes extra en frases 2-3, bloqueo de la zanja en frase 2"
+}

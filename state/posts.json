@@ -437,9 +437,41 @@
     "total": 75,
     "note": "1 fix round applied (punch-ins, mute hook text, bigger captions)"
    }
+  },
+  "VID-20261118-024": {
+   "num": 24,
+   "series": 24,
+   "title": "Abrió la tumba de TUTANKAMÓN… y lo mató un mosquito 🦟",
+   "hookA": "Abrió la tumba de TUTANKAMÓN… y lo mató un mosquito 🦟",
+   "hookB": "Lo mató un MOSQUITO… tras abrir la tumba de Tutankamón 🦟",
+   "burned": "A",
+   "slotAt": "2026-11-18T18:00",
+   "status": "programado",
+   "durationS": 72.2,
+   "qa100": {
+    "hook": 16,
+    "retencion": 13,
+    "visual": 11,
+    "narracion": 12,
+    "edicion": 7,
+    "originalidad": 8,
+    "titulo": 9,
+    "total": 76,
+    "note": "1 fix round (hook mosquito, shaving, extra cuts, trench blocking)"
+   },
+   "project": "/home/claude/v2/carnarvon",
+   "engine": "v3",
+   "mechanism": "picadura/infección + leyenda maldición",
+   "set": "Egipto tumba/desierto, hotel Cairo",
+   "buffer_ids": {
+    "yt": "6afe2fc401ba7c5e791c692b",
+    "tt": "6afe2fc54cace847b37dcf26",
+    "ig": "6afe2fc6c462756e9e267f92"
+   },
+   "media": "VID-20261118-024.mp4"
   }
  },
- "next_num": 23,
+ "next_num": 25,
  "metricool_month_count": {
   "2026-11": 19
  },
