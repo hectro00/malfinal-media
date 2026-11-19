@@ -190,3 +190,7 @@ Commit and push the `pipeline` branch with:
 
 ## 2b. Real retention data
 The user may paste YouTube Studio screenshots ("se quedaron para mirar", avg view duration). Those numbers beat any API estimate: put them at the top of `insights.md` and judge scripts against the KPI targets there (stayed ≥ 60 %, avg ≥ 35 s).
+
+## BUFFER ERRORS (18 Nov)
+- YouTube sometimes fails with "An unknown error has occurred" (Buffer side, no reason given). At the START of every run: `list_posts` status error → retry each one with `edit_post(mode:"shareNow")`, wait ~3 min, check `sent`. VID-023 failed once and went out fine on retry.
+- Always set YouTube `notifySubscribers:false` (the post that failed had true; the ones that worked had false).
