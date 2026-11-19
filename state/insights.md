@@ -1,6 +1,7 @@
 # Insights (analytics → rules)
 
-Updated: 2026-11-19 ~09:30 (run Thu 05:47): produced VID-027 Bullock (QA 77, Thu 20:30 TT+IG; YT blocked by Buffer 2/day) and VID-028 Dracón (QA 80, Fri 12:00 TT+IG; YT pending). FB via Zapier: 019, 020. Analytics skipped (credit saving).
+Updated: 2026-11-19 ~16:40 (run Thu 14:47): VID-029 Qin (QA 79, Fri 18:00 YT+TT, IG pendiente) y VID-030 Duncan (en render). FB vía Zapier: 021, 025. VID-025 YT falló por límite diario de YouTube (2 por día UTC) → yt_pending. Analytics skipped (credit saving).
+- Previous: 2026-11-19 ~09:30 (run Thu 05:47): VID-027, VID-028.
 - Previous: 2026-11-17 ~18:20 (America/Mexico_City). Run Tue 14:47: Buffer 0/10 and Metricool empty → produced the 3 prepared videos: VID-020 baile Estrasburgo (Tue 18:00), VID-021 Molière (Tue 20:30), VID-022 Esquilo leyenda (Wed 12:00). Buffer 9/10. Facebook/Make paused (not queued). Analytics skipped (credit saving), rules unchanged.
 - Previous: 2026-11-16 ~16:25.
 - Previous: 2026-11-15 ~14:55 (America/Mexico_City). Run Sun 14:47: next 3 slots (Sun 19:00, Mon 12:00, Mon 18:00) already in Metricool → nothing produced. Buffer 0/10 scheduled. YTVP titles still null + 10 unlabeled rows → insufficient data, rules unchanged.
