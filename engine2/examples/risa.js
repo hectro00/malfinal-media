@@ -138,11 +138,13 @@ export function frame(f, k) {
       K.move(K.frame([JB], { yaw: -0.7, h: 2.6, lookY: 1.6, pitch: -0.03, push: 0.9 }), K.frame([JB], { yaw: -0.55, h: 2.6, lookY: 1.6, pitch: -0.04, push: 0.8 }), v, 0.3, f); K.focusOn(add(JB, [0, 1.7, 0])); break; }
     case 8: { // the vineyard: a deer hanging from a fig tree by its tail
       K.preset('golden', { exposure: 1.15, photo: GOLDSKY }); SG.vi.visible = true; swing(t); const v = u(8);
-      K.move({ p: add(VINE, [-6, 1.6, 9]), l: add(VINE, [-0.6, 2.4, 0]), fov: 48 }, { p: add(VINE, [-3.6, 1.8, 5.4]), l: add(VINE, [-0.9, 2.6, 0.4]), fov: 44 }, v, 0.3, f); K.focusOn(add(VINE, [-0.9, 2.4, 0.4])); break; }
+      if (v < 0.5) K.move({ p: add(VINE, [-6, 1.6, 9]), l: add(VINE, [-0.6, 2.4, 0]), fov: 48 }, { p: add(VINE, [-4.8, 1.7, 7.2]), l: add(VINE, [-0.8, 2.5, 0.2]), fov: 46 }, v * 2, 0.3, f);
+      else K.move({ p: add(VINE, [2.6, 0.9, 3.4]), l: add(VINE, [-0.9, 2.6, 0.4]), fov: 46 }, { p: add(VINE, [2.2, 0.9, 3.0]), l: add(VINE, [-0.9, 2.7, 0.4]), fov: 44 }, (v - 0.5) * 2, 0.3, f); K.focusOn(add(VINE, [-0.9, 2.4, 0.4])); break; }
     case 9: { // "as if punished for stealing figs": close on the deer, figs dropping, LADRÓN DE HIGOS tag
       K.preset('golden', { exposure: 1.15, photo: GOLDSKY }); swing(t, 0.7); const v = u(9);
       figs.forEach((fg, i) => { const k2 = Math.max(0, (t * 0.9 + i / figs.length) % 1.4 - 0.4); fg.position.y -= k2 * k2 * 3.0; });
-      K.move({ p: add(VINE, [-2.6, 1.8, 4.0]), l: add(VINE, [-0.9, 2.1, 0.4]), fov: 44 }, { p: add(VINE, [-2.3, 1.85, 3.6]), l: add(VINE, [-0.9, 2.15, 0.4]), fov: 42 }, v, 0.2, f); K.focusOn(add(VINE, [-0.9, 1.9, 0.6])); break; }
+      if (v < 0.5) K.move({ p: add(VINE, [-2.6, 1.8, 4.0]), l: add(VINE, [-0.9, 2.1, 0.4]), fov: 44 }, { p: add(VINE, [-2.45, 1.82, 3.8]), l: add(VINE, [-0.9, 2.12, 0.4]), fov: 43 }, v * 2, 0.2, f);
+      else K.move({ p: add(VINE, [-0.6, 0.5, 2.2]), l: add(VINE, [-0.9, 2.4, 0.3]), fov: 50 }, { p: add(VINE, [-0.7, 0.5, 2.0]), l: add(VINE, [-0.9, 2.5, 0.3]), fov: 48 }, (v - 0.5) * 2, 0.2, f); K.focusOn(add(VINE, [-0.9, 1.9, 0.6])); break; }
     case 10: { // re-hook: dark push on the king's face — the grin starts
       K.preset('night', { exposure: 2.2 }); K.grade.vig.value = 0.75; const v = u(10); if (v < 0.08) K.grade.flash.value = 0.4;
       P(KG, { pos: KB, yaw: 0.4, sit: 1, expr: v < 0.5 ? 'neutral' : 'happy', arms: 'down', tremble: v > 0.5 ? 1 : 0 }, f);

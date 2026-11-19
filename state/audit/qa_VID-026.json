@@ -1,0 +1,43 @@
+{
+ "auto": {
+  "file": "out/final.mp4",
+  "duration": 64.31,
+  "size_mb": 38.3,
+  "lufs": -14.8,
+  "true_peak": -1.7,
+  "blacks": [],
+  "silences_in_voice": [],
+  "cuts": 27,
+  "cuts_per_min": 25.2,
+  "longest_static_s": 9.6,
+  "motion_first_2s": 10.53,
+  "hook_words": 6,
+  "gates": {
+   "duration_62_75s": true,
+   "res_1080x1920": true,
+   "size_lt_95MB": true,
+   "loudness_-14±1.5": true,
+   "true_peak_le_-1": true,
+   "no_black_gt_0.3s": true,
+   "no_silence_gt_1.2s_in_voice": true,
+   "captions_present": true,
+   "hook_line_le_10_words": true
+  },
+  "all_gates_pass": true,
+  "auto_points": {
+   "edicion_ritmo_of_10": 7
+  }
+ },
+ "scores": {
+  "hook": 16,
+  "retencion": 14,
+  "visual": 11,
+  "narracion": 12,
+  "edicion": 7,
+  "originalidad": 7,
+  "titulo": 9
+ },
+ "total": 76,
+ "fix_round": "cortes a mitad en frases 8-9 (viña), ángulos nuevos",
+ "evidence": "frame 0 rey a carcajadas con la corona saltando; 4 sets; gag ciervo LADRÓN DE HIGOS; corte real (banquete) cercano a VID-019; estático máx 9.6 s"
+}

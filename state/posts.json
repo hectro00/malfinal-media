@@ -512,9 +512,41 @@
    },
    "media": "VID-20261118-025.mp4",
    "note": "moved from 20:30 (slot taken by VID-023 from interactive session)"
+  },
+  "VID-20261118-026": {
+   "num": 26,
+   "series": 26,
+   "title": "Este REY murió de risa… literalmente 😂",
+   "hookA": "Este REY murió de risa… literalmente 😂",
+   "hookB": "Lo mató un CHISTE… y se acabó su dinastía 😂",
+   "burned": "A",
+   "slotAt": "2026-11-19T18:00",
+   "status": "programado",
+   "durationS": 64.3,
+   "qa100": {
+    "hook": 16,
+    "retencion": 14,
+    "visual": 11,
+    "narracion": 12,
+    "edicion": 7,
+    "originalidad": 7,
+    "titulo": 9,
+    "total": 76,
+    "note": "1 fix round (vineyard cuts)"
+   },
+   "project": "/home/claude/v2/risa",
+   "engine": "v3",
+   "mechanism": "risa / chiste (leyenda)",
+   "set": "banquete Aragón, alcoba, viña, salón del trono",
+   "buffer_ids": {
+    "yt": "6afe560259eff0b616d090d5",
+    "tt": "6afe5604b16549e9b81700b0",
+    "ig": "6afe5605b16549e9b81700df"
+   },
+   "media": "VID-20261118-026.mp4"
   }
  },
- "next_num": 26,
+ "next_num": 27,
  "metricool_month_count": {
   "2026-11": 19
  },
