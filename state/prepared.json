@@ -2,8 +2,8 @@
  "note": "Videos already written and staged by the interactive session (engine v2.2: PBR textures, photo skies). Use these FIRST, in this order, before inventing new ones. For each: script = engine2/examples/<n>_script.txt, scene = engine2/examples/<n>.js, audio = engine2/examples/<n>_audio.py. Still do TTS, stills check and render. Remove the item when it is scheduled.",
  "items": [],
  "todo_next_run": [
-  "VID-029 Qin: crear post Instagram (copy_ig en posts.json) para Vie 20 nov 18:00 si aún no existe (Buffer estaba 10/10).",
-  "VID-030 Duncan (bufanda): si no quedó programado en esta corrida, terminar desde engine2/examples/duncan.js (+duncan_audio.py, duncan_script.txt) y programarlo Vie 20:30 (YT permitido: día UTC 21 = 029 + 030).",
+  "PRIMERO (Buffer estaba 10/10 al cierre): VID-029 Qin → crear post Instagram (copy_ig en posts.json, media main/VID-20261119-029.mp4) para Vie 20 nov 18:00 (2026-11-20T18:00:00-06:00).",
+  "VID-030 Duncan YA está en main (VID-20261119-030.mp4, QA 80): crear YT (title=hookA, copy_yt, notifySubscribers:false) + TT (hookB, copy_tt) + IG (copy_ig) para Vie 20 nov 20:30 (2026-11-20T20:30:00-06:00). YT permitido (día UTC 21 = 029 + 030).",
   "YouTube pendientes (yt_pending): VID-025 Rodale y VID-027 Bullock — Buffer/YouTube permite 2 por día UTC; usar en compilación del domingo o hueco.",
   "Facebook (Zapier) pendientes: VID-022✓… siguientes: 026, 027, 028, 029, 030 cuando salgan (máx 2 por corrida, el más viejo primero).",
   "Sábado 21 (corrida 14:47): compilación semanal W47 (PLAYBOOK 7b) para domingo 13:00."
