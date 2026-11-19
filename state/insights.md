@@ -1,6 +1,7 @@
 # Insights (analytics → rules)
 
-Updated: 2026-11-17 ~18:20 (America/Mexico_City). Run Tue 14:47: Buffer 0/10 and Metricool empty → produced the 3 prepared videos: VID-020 baile Estrasburgo (Tue 18:00), VID-021 Molière (Tue 20:30), VID-022 Esquilo leyenda (Wed 12:00). Buffer 9/10. Facebook/Make paused (not queued). Analytics skipped (credit saving), rules unchanged.
+Updated: 2026-11-19 ~09:30 (run Thu 05:47): produced VID-027 Bullock (QA 77, Thu 20:30 TT+IG; YT blocked by Buffer 2/day) and VID-028 Dracón (QA 80, Fri 12:00 TT+IG; YT pending). FB via Zapier: 019, 020. Analytics skipped (credit saving).
+- Previous: 2026-11-17 ~18:20 (America/Mexico_City). Run Tue 14:47: Buffer 0/10 and Metricool empty → produced the 3 prepared videos: VID-020 baile Estrasburgo (Tue 18:00), VID-021 Molière (Tue 20:30), VID-022 Esquilo leyenda (Wed 12:00). Buffer 9/10. Facebook/Make paused (not queued). Analytics skipped (credit saving), rules unchanged.
 - Previous: 2026-11-16 ~16:25.
 - Previous: 2026-11-15 ~14:55 (America/Mexico_City). Run Sun 14:47: next 3 slots (Sun 19:00, Mon 12:00, Mon 18:00) already in Metricool → nothing produced. Buffer 0/10 scheduled. YTVP titles still null + 10 unlabeled rows → insufficient data, rules unchanged.
 - Previous: 2026-11-14 ~17:40 (America/Mexico_City). Run Sat 14:47: Mon 16 18:00 + 20:30 empty → produced VID-017 Sherwood Anderson ("inspiró a Hemingway… lo mató un palillo", formula big-vs-tiny like niágara; 1941 deco party teal/gold, ship, Panamá) and VID-018 Aerovagón (own invention, Russia 1921 birch track). Metricool YTVP: titles listed but metrics null, plus 10 unlabeled numeric rows (can't map to VIDs) → insufficient data, rules unchanged. Metricool 19/20 after this run.

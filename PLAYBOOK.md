@@ -191,6 +191,9 @@ Commit and push the `pipeline` branch with:
 ## 2b. Real retention data
 The user may paste YouTube Studio screenshots ("se quedaron para mirar", avg view duration). Those numbers beat any API estimate: put them at the top of `insights.md` and judge scripts against the KPI targets there (stayed ≥ 60 %, avg ≥ 35 s).
 
+## BUFFER YOUTUBE LIMIT (19 Nov)
+- Buffer rejects a 3rd YouTube post on the same calendar day ("maximum number of posts YouTube allows in a day (2)"). So YouTube carries max 2 shorts/day via Buffer; the 3rd daily short goes TikTok+IG(+FB) only, its YT copy is kept as `yt_pending` (use it on a day with a free YT slot or in the compilation). Don't spend Metricool's last free post on it (reserved for the compilation).
+
 ## BUFFER ERRORS (18 Nov)
 - YouTube sometimes fails with "An unknown error has occurred" (Buffer side, no reason given). At the START of every run: `list_posts` status error → retry each one with `edit_post(mode:"shareNow")`, wait ~3 min, check `sent`. VID-023 failed once and went out fine on retry.
 - Always set YouTube `notifySubscribers:false` (the post that failed had true; the ones that worked had false).

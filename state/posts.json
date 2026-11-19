@@ -342,7 +342,9 @@
     "preprod": 8.25,
     "calidad": 8,
     "pegada": 8
-   }
+   },
+   "fb_id": "3018318091856096",
+   "fb_via": "zapier"
   },
   "VID-20261117-020": {
    "slot": "2026-11-17T18:00",
@@ -365,7 +367,9 @@
     "preprod": 8.25,
     "calidad": 8,
     "pegada": 8
-   }
+   },
+   "fb_id": "1140026231908635",
+   "fb_via": "zapier"
   },
   "VID-20261117-021": {
    "slot": "2026-11-17T20:30",
@@ -546,9 +550,75 @@
     "ig": "6afe5605b16549e9b81700df"
    },
    "media": "VID-20261118-026.mp4"
+  },
+  "VID-20261119-027": {
+   "num": 27,
+   "series": 27,
+   "title": "Inventó una MÁQUINA… y su máquina lo atrapó ⚙️",
+   "hookA": "Inventó una MÁQUINA… y su máquina lo atrapó ⚙️",
+   "hookB": "Lo mató una PATADA a su propio invento 🦶",
+   "burned": "B",
+   "slotAt": "2026-11-19T20:30",
+   "status": "programado (TT+IG); YT pendiente: Buffer limita YouTube a 2 posts/día",
+   "durationS": 71.4,
+   "story": "William Bullock, prensa rotativa, Filadelfia 1867",
+   "project": "/home/claude/v2/bullock",
+   "media": "VID-20261119-027.mp4",
+   "engine": "v2.2 + v3",
+   "route": "buffer",
+   "buffer_ids": {
+    "tt": "6afefd8003dff68ab45c85ab",
+    "ig": "6afefd8003dff68ab45c85ff",
+    "yt": null
+   },
+   "yt_pending": true,
+   "qa100": {
+    "hook": 16,
+    "retencion": 15,
+    "visual": 11,
+    "narracion": 12,
+    "edicion": 6,
+    "originalidad": 8,
+    "titulo": 9,
+    "total": 77
+   },
+   "copy_yt": "Inventó una MÁQUINA… y su máquina lo atrapó ⚙️\nFiladelfia, 1867: William Bullock, inventor de la imprenta rotativa que imprimía 12.000 hojas por hora, quiso meter una correa en su sitio de una patada mientras la máquina giraba. Su pierna quedó atrapada… y días después murió en plena operación.\nMuertes absurdas #27\nFuente: Wikipedia — William Bullock (inventor); historyofinformation.com.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #shorts"
+  },
+  "VID-20261119-028": {
+   "num": 28,
+   "series": 28,
+   "title": "Sus FANS lo querían tanto… que lo asfixiaron 🎭",
+   "hookA": "Sus FANS lo querían tanto… que lo asfixiaron 🎭",
+   "hookB": "Lo mató una lluvia de ROPA… por cariño 🧥",
+   "burned": "A",
+   "slotAt": "2026-11-20T12:00",
+   "status": "programado (TT+IG); YT PENDIENTE: crear en la corrida 14:47 (Buffer estaba 10/10)",
+   "durationS": 68.4,
+   "story": "Dracón, teatro de Egina (leyenda, Suda)",
+   "project": "/home/claude/v2/dracon",
+   "media": "VID-20261119-028.mp4",
+   "engine": "v2.2 + v3",
+   "route": "buffer",
+   "buffer_ids": {
+    "tt": "6aff090b03dff68ab463488f",
+    "ig": "6aff090bcac0791c5d92e735",
+    "yt": null
+   },
+   "yt_pending": true,
+   "qa100": {
+    "hook": 18,
+    "retencion": 15,
+    "visual": 12,
+    "narracion": 12,
+    "edicion": 6,
+    "originalidad": 8,
+    "titulo": 9,
+    "total": 80
+   },
+   "copy_yt": "Sus FANS lo querían tanto… que lo asfixiaron 🎭\nGrecia, hace 2.600 años: Dracón, el autor de las leyes más duras de Atenas (de ahí \"draconiano\"), fue recibido en el teatro de Egina con la costumbre de la época: lanzarle capas y sombreros. Fueron tantos que lo sepultaron. Así lo cuenta la leyenda.\nMuertes absurdas #28\nFuente: Suda (enciclopedia bizantina, entrada Δράκων); Wikipedia — Draco (legislator).\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #shorts"
   }
  },
- "next_num": 27,
+ "next_num": 29,
  "metricool_month_count": {
   "2026-11": 19
  },
