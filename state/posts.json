@@ -454,7 +454,7 @@
    "hookB": "Lo mató un MOSQUITO… tras abrir la tumba de Tutankamón 🦟",
    "burned": "A",
    "slotAt": "2026-11-18T18:00",
-   "status": "programado",
+   "status": "publicado",
    "durationS": 72.2,
    "qa100": {
     "hook": 16,
@@ -476,7 +476,9 @@
     "tt": "6afe2fc54cace847b37dcf26",
     "ig": "6afe2fc6c462756e9e267f92"
    },
-   "media": "VID-20261118-024.mp4"
+   "media": "VID-20261118-024.mp4",
+   "fb_id": "1496991189289758",
+   "ig_url": "https://www.instagram.com/reel/Df5vluZgKoX/"
   }
  },
  "next_num": 25,
