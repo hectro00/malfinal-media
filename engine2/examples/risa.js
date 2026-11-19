@@ -36,7 +36,7 @@ export async function build(k) {
   K.box(1.4, 2.6, 0.5, 0x7a1a2a, add(HALL, [0, 1.3, -5.6])); K.box(1.0, 0.5, 0.9, 0x7a1a2a, add(HALL, [0, 0.5, -5.2]));
   K.pointLight(0xffb060, 7, add(HALL, [0, 3.2, -2]), 12); K.pointLight(0xffa040, 4, add(HALL, [-3, 2.6, 1]), 9); K.pointLight(0xffc080, 3, add(HALL, [3, 2.6, -4]), 9);
   SG.ar = K.sign('ARAGÓN · 1410', add(HALL, [0, 6.4, -5.85]), { w: 4.0, h: 0.95, bg: '#c8202a', border: '#f2c230' });
-  SG.oca = K.sign('¡UNA OCA ENTERA!', add(HALL, [0, 6.4, -5.83]), { w: 4.4, h: 0.95, bg: '#2a1a10', border: '#f2c230' });
+  SG.oca = K.sign('¡UN GANSO ENTERO!', add(HALL, [0, 6.4, -5.83]), { w: 4.4, h: 0.95, bg: '#2a1a10', border: '#f2c230' });
   SG.q = K.sign('¿TE HABRÍA HECHO GRACIA?', add(HALL, [0, 6.4, -5.81]), { w: 5.6, h: 1.0, bg: '#c8202a', border: '#ffe9a8' });
 
   // ---------------- BED: royal bedchamber at night — one candle, window to the vineyard ----------------
@@ -75,9 +75,10 @@ export async function build(k) {
   await K.placeH('rpg_items_pack/Book1_Open', add(THRONE, [4.6, 1.05, 1.6]), 0.3, 0.3).catch(() => {}); K.box(1.4, 1.0, 0.9, 0x4a2a14, add(THRONE, [4.6, 0.5, 1.6]));
   K.cyl(0.04, 0.04, 0.28, 0xf4ecd8, add(THRONE, [5.1, 1.14, 1.4])); K.sph(0.04, 0xffd060, add(THRONE, [5.1, 1.32, 1.4]), { emissive: 0xffb030, emissiveIntensity: 6 }).scale.set(0.8, 1.6, 0.8);
   book = K.box(0.02, 0.32, 0.02, 0xf2ead8, [0, -99, 0]);
-  K.pointLight(0xffb060, 6, add(THRONE, [0, 3.4, -1.6]), 12); K.pointLight(0xffc080, 4, add(THRONE, [4.6, 2.2, 2.4]), 6);
+  K.pointLight(0xffb060, 6, add(THRONE, [0, 3.4, -1.6]), 12); K.pointLight(0xffc080, 1.4, add(THRONE, [3.6, 2.6, 1.0]), 6);
   SG.din = K.sign('500 AÑOS', add(THRONE, [0, 6.2, -4.85]), { w: 3.0, h: 0.95, bg: '#c8202a', border: '#f2c230' });
   SG.her = K.sign('SIN HEREDERO', add(THRONE, [0, 6.2, -4.83]), { w: 3.4, h: 0.95, bg: '#2a1a10', border: '#f2c230' });
+  SG.cas = K.sign('CASPE · 1412', add(THRONE, [0, 6.2, -4.81]), { w: 3.4, h: 0.95, bg: '#1e2a6a', border: '#f2c230' });
   SG.ley = K.sign('¿LEYENDA?', add(THRONE, [4.6, 2.6, 0.6]), { w: 2.4, h: 0.8, bg: '#2a1a10', border: '#f2c230', posts: true, rotY: -0.4 });
 }
 
@@ -141,7 +142,7 @@ export function frame(f, k) {
     case 9: { // "as if punished for stealing figs": close on the deer, figs dropping, LADRÓN DE HIGOS tag
       K.preset('golden', { exposure: 1.15, photo: GOLDSKY }); swing(t, 0.7); const v = u(9);
       figs.forEach((fg, i) => { const k2 = Math.max(0, (t * 0.9 + i / figs.length) % 1.4 - 0.4); fg.position.y -= k2 * k2 * 3.0; });
-      K.move({ p: add(VINE, [-1.6, 1.6, 2.4]), l: add(VINE, [-0.9, 1.8, 0.4]), fov: 42 }, { p: add(VINE, [-1.3, 1.7, 2.0]), l: add(VINE, [-0.9, 1.9, 0.4]), fov: 40 }, v, 0.2, f); K.focusOn(add(VINE, [-0.9, 1.9, 0.6])); break; }
+      K.move({ p: add(VINE, [-2.6, 1.8, 4.0]), l: add(VINE, [-0.9, 2.1, 0.4]), fov: 44 }, { p: add(VINE, [-2.3, 1.85, 3.6]), l: add(VINE, [-0.9, 2.15, 0.4]), fov: 42 }, v, 0.2, f); K.focusOn(add(VINE, [-0.9, 1.9, 0.6])); break; }
     case 10: { // re-hook: dark push on the king's face — the grin starts
       K.preset('night', { exposure: 2.2 }); K.grade.vig.value = 0.75; const v = u(10); if (v < 0.08) K.grade.flash.value = 0.4;
       P(KG, { pos: KB, yaw: 0.4, sit: 1, expr: v < 0.5 ? 'neutral' : 'happy', arms: 'down', tremble: v > 0.5 ? 1 : 0 }, f);
@@ -165,13 +166,22 @@ export function frame(f, k) {
       K.preset('candle', { exposure: 1.4 }); SG.din.visible = u(14) < 0.5; SG.her.visible = u(14) >= 0.5; const v = u(14); const fl = Math.min(1, Math.max(0, (v - 0.55) / 0.3));
       const L = crowns[7]; L.g.position.set(L.base[0] + fl * 0.5, L.base[1] - fl * fl * 1.2, L.base[2] + fl * 0.3); L.g.rotation.z = -fl * 1.8;
       K.move({ p: add(THRONE, [-6.5, 1.8, 3.0]), l: add(THRONE, [-1.0, 1.3, -1.0]), fov: 46 }, { p: add(THRONE, [-2.0, 1.7, 3.2]), l: add(THRONE, [4.2, 1.2, -1.0]), fov: 46 }, v, 0.2, f); K.focusOn(add(THRONE, [3.6, 1.2, -1.0])); break; }
-    case 15: { // all for a deer in a fig tree: slow pull-back from the swinging deer
-      K.preset('golden', { exposure: 1.1, photo: GOLDSKY }); swing(t); const v = u(15);
+    case 16: { // all for a deer in a fig tree: slow pull-back from the swinging deer
+      K.preset('golden', { exposure: 1.1, photo: GOLDSKY }); swing(t); const v = u(16);
       K.move({ p: add(VINE, [-1.8, 2.4, 3.0]), l: add(VINE, [-0.9, 2.3, 0.4]), fov: 44 }, { p: add(VINE, [-4.0, 2.8, 8.0]), l: add(VINE, [-0.6, 2.4, 0.2]), fov: 46 }, v, 0.2, f); K.focusOn(add(VINE, [-0.9, 2.3, 0.4])); break; }
-    case 16: { // the chronicles: a monk writing it down by candlelight — "¿LEYENDA?"
-      K.preset('candle', { exposure: 1.4 }); SG.ley.visible = true; const v = u(16); const p = add(THRONE, [4.6, 0, 2.5]);
+    case 17: { // the chronicles: a monk writing it down by candlelight — "¿LEYENDA?"
+      K.preset('candle', { exposure: 1.4 }); SG.ley.visible = true; const v = u(17); const p = add(THRONE, [4.6, 0, 2.5]);
       P(MO, { pos: p, yaw: Math.PI, expr: 'tired', arms: 'hammer', lean: 0.2 }, f);
       K.move(K.frame([p, add(THRONE, [4.6, 0, 1.6])], { yaw: 0.7, h: 2.4, lookY: 1.3, pitch: 0.1, push: 0.95 }), K.frame([p, add(THRONE, [4.6, 0, 1.6])], { yaw: 0.55, h: 2.4, lookY: 1.2, pitch: 0.12, push: 0.85 }), v, 0.2, f); K.focusOn(add(THRONE, [4.6, 1.1, 1.6])); break; }
-    default: { const v = u(17); hookShot(f, t, v, true); SG.q.visible = true; }
+    case 15: { // two years later another family takes the crown: a new crown descends onto the empty throne, CASPE 1412
+      K.preset('candle', { exposure: 1.4 }); SG.cas.visible = true; const v = u(15); const d = Math.min(1, v * 1.4);
+      crownK.position.set(...add(THRONE, [0, 1.02 + (1 - d) * 2.4, -3.8])); crownK.rotation.y = t * 1.5;
+      K.move({ p: add(THRONE, [2.4, 2.0, 2.8]), l: add(THRONE, [0, 1.9, -3.8]), fov: 48 }, { p: add(THRONE, [2.0, 1.9, 2.2]), l: add(THRONE, [0, 1.7, -3.8]), fov: 46 }, v, 0.2, f); K.focusOn(add(THRONE, [0, 1.3, -3.8])); break; }
+    case 18: { // "careful who tells you jokes after dinner": Borra winks at the lens over the banquet table, holding up a goose leg
+      K.preset('candle', { exposure: 1.4 }); const v = u(18); const p = add(HALL, [0.9, 0, -2.0]);
+      P(JE, { pos: p, yaw: 0.2, expr: v < 0.5 ? 'smug' : 'laugh', arms: 'point', talk: 0.8, bounce: 0.3 }, f);
+      goose.position.set(...add(HALL, [0, 1.12, -2.2])); goose.scale.setScalar(0.6);
+      K.move(K.frame([p], { yaw: 0.3, h: 2.4, lookY: 1.7, pitch: -0.02, push: 0.85 }), K.frame([p], { yaw: 0.15, h: 2.4, lookY: 1.7, pitch: -0.03, push: 0.72 }), v, 0.3, f); K.focusOn(add(p, [0, 1.8, 0])); break; }
+    default: { const v = u(19); hookShot(f, t, v, true); SG.q.visible = true; }
   }
 }

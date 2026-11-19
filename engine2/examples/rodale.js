@@ -47,16 +47,16 @@ export async function build(k) {
     for (let i = 0; i < 26; i++) { const bw = 30 + (i * 37) % 50, bh = 120 + (i * 71) % 260, x = i * 40; c.fillStyle = '#0e1430'; c.fillRect(x, h - bh, bw, bh); c.fillStyle = '#ffd870'; for (let y = h - bh + 10; y < h - 8; y += 18) for (let xx = x + 5; xx < x + bw - 6; xx += 12) if ((xx + y + i) % 3) c.fillRect(xx, y, 5, 8); } });
   K.plane(16, 6, K.std(0xffffff, { map: sky, emissive: 0x222244 }), add(STUDIO, [0.5, 3, -5.2]), [0, 0, 0]);
   const curt = K.pbr('painted_plaster_wall', [4, 2], { tint: 0x3a4aa8 }); K.plane(16, 7, curt, add(STUDIO, [-7, 3.5, 0]), [0, Math.PI / 2, 0]); K.plane(16, 7, curt, add(STUDIO, [8, 3.5, 0]), [0, -Math.PI / 2, 0]);
-  K.box(2.2, 1.0, 0.9, 0x6a3a1a, add(STUDIO, [2.6, 0.7, -2.2]), { map: K.pbr('wood_table_001', [1, 1]).map });
-  await K.placeH('house_interior_pack/Chair_2', add(STUDIO, [2.6, 0.2, -3.0]), 0, 1.0).catch(() => {});
-  await K.placeH('house_interior_pack/Couch_Medium1', add(STUDIO, [-0.9, 0.2, -2.6]), 0, 0.9, { tint: 0xb8301e }).catch(() => {});
+  K.box(1.6, 0.75, 0.8, 0xc89a6a, add(STUDIO, [3.6, 0.575, -2.3]));
+  await K.placeH('house_interior_pack/Chair_2', add(STUDIO, [2.2, 0.2, -2.6]), -0.5, 1.0).catch(() => {});
+  const cv = null; K.box(2.2, 0.42, 0.95, 0xc83a2a, add(STUDIO, [-0.9, 0.41, -2.45]), { roughness: 0.8 }); K.box(2.2, 0.85, 0.28, 0xb8301e, add(STUDIO, [-0.9, 0.85, -2.95]), { roughness: 0.8 }); for (const x of [-2.05, 0.25]) K.box(0.25, 0.65, 0.95, 0xa82a1e, add(STUDIO, [x, 0.52, -2.5]), { roughness: 0.8 });
   await K.placeH('house_interior_pack/Houseplant_5', add(STUDIO, [-3.6, 0.2, -3.6]), 0, 1.6).catch(() => {});
   await K.placeH('house_interior_pack/Houseplant_2', add(STUDIO, [4.4, 0.2, -3.4]), 0, 1.4).catch(() => {});
   await K.placeH('house_interior_pack/Table_RoundSmall', add(STUDIO, [0.9, 0.2, -2.1]), 0, 0.5).catch(() => {});
   for (let i = 0; i < 6; i++) { const x = -4 + i * 1.8; K.cyl(0.18, 0.25, 0.5, 0x1a1a1a, add(STUDIO, [x, 5.6, 1.5])); lamps.push(K.sph(0.16, 0xfff4d8, add(STUDIO, [x, 5.35, 1.55]), { emissive: 0xfff0c0, emissiveIntensity: 3 })); }
   for (let r = 0; r < 3; r++) { K.box(14, 0.4, 1.3, 0x4a2a1a, add(STUDIO, [0.5, 0.2 + r * 0.5, 4.6 + r * 1.3])); for (let i = 0; i < 12; i++) fan(add(STUDIO, [-5 + i * 0.95 + (r % 2) * 0.4, 0.4 + r * 0.5, 4.6 + r * 1.3]), [0xb8301e, 0x2a6aa8, 0xe0a030, 0x3a8a3a, 0x8a2a6a, 0xf2ead8][(i + r) % 6]); }
   fans.forEach(fa => fa.g.rotation.y = Math.PI);
-  K.pointLight(0xfff0d8, 7, add(STUDIO, [0.5, 4.5, 1.0]), 12); K.pointLight(0x8aa0ff, 3, add(STUDIO, [-4, 3, -3]), 9); K.pointLight(0xffc890, 3, add(STUDIO, [0.5, 3, 5]), 10);
+  K.pointLight(0xfff0d8, 7, add(STUDIO, [0.5, 4.5, 1.0]), 12); K.pointLight(0xffe8d0, 6, add(STUDIO, [0.0, 2.6, 0.2]), 7); K.pointLight(0x8aa0ff, 3, add(STUDIO, [-4, 3, -3]), 9); K.pointLight(0xffc890, 3, add(STUDIO, [0.5, 3, 5]), 10);
   SG.air = K.sign('AL AIRE', add(STUDIO, [-3.2, 4.4, -5.0]), { w: 2.2, h: 0.8, bg: '#d7262a', border: '#ffffff' });
   SG.mejor = K.sign('¡NUNCA ME SENTÍ MEJOR!', add(STUDIO, [0.5, 4.6, -5.0]), { w: 5.4, h: 0.9, bg: '#2a6a2a', border: '#ffe9a8' });
   SG.med = K.sign('¡UN MÉDICO!', add(STUDIO, [0.5, 4.6, -5.0]), { w: 3.4, h: 0.9, bg: '#d7262a', border: '#ffffff' });
@@ -71,7 +71,7 @@ export async function build(k) {
   const tw = K.pbr('red_brick', [3, 8], { tint: 0xb89a8a }), tw2 = K.pbr('beige_wall_001', [3, 8], { tint: 0x9aa0b0 });
   for (let i = 0; i < 18; i++) { const h = 14 + (i * 13) % 22, x = -36 + i * 4.6; const m = i % 2 ? tw : tw2; K.box(4.2, h, 5, 0xffffff, add(NYC, [x, h / 2, -9 - (i % 3)]), { map: m.map, normalMap: m.normalMap });
     for (let y = 2; y < h - 1; y += 2.2) for (const dx of [-1.2, 0, 1.2]) if ((i + y + dx * 3) % 3 > 0.5) K.box(0.6, 0.9, 0.05, 0xffd870, add(NYC, [x + dx, y, -6.45 - (i % 3)]), { emissive: 0xffb040, emissiveIntensity: 1.4 }); }
-  for (let i = 0; i < 8; i++) await K.placeH('street_pack/Streetlight_Single', add(NYC, [-20 + i * 6, 0, 5.5]), Math.PI, 4.2).catch(() => {});
+  for (let i = 0; i < 8; i++) await K.placeH('street_pack/Streetlight_Single', add(NYC, [-20 + i * 6, 0, -5.4]), 0, 4.2).catch(() => {});
   for (let i = 0; i < 3; i++) { const t2 = makeTaxi(); t2.position.set(...add(NYC, [-14 + i * 9, 0, -2.6])); t2.rotation.y = Math.PI / 2; }
   SG.ny = K.sign('NUEVA YORK · 1971', add(NYC, [-1.5, 3.4, 4.4]), { w: 4.4, h: 0.95, bg: '#1e2a4a', border: '#e0b040', posts: true, rotY: 0.2 });
   SG.show = K.sign('EL SHOW MÁS FAMOSO', add(NYC, [3, 5.2, -6.3]), { w: 6.0, h: 1.2, bg: '#d7262a', border: '#ffe9a8' });
@@ -82,7 +82,7 @@ export async function build(k) {
   for (let r = 0; r < 5; r++) for (let i = 0; i < 9; i++) await K.placeH('crops_pack/' + ['Carrot_3', 'Lettuce_3', 'Beet_3', 'Carrot_4', 'Corn_3'][r % 5], add(FARM, [-4 + i * 1.0, 0, -1.5 - r * 1.2]), i, 0.6).catch(() => {});
   K.box(6, 4, 5, 0xb8301e, add(FARM, [6, 2, -9]), { map: K.pbr('brown_planks_03', [3, 2], { tint: 0xd85040 }).map }); K.box(6.4, 0.3, 5.4, 0x3a2a1a, add(FARM, [6, 4.1, -9]));
   for (let i = 0; i < 10; i++) await K.placeH('nature_pack/CommonTree_' + ((i % 5) + 1), add(FARM, [-24 + i * 5.5, 0, -14 - (i % 2) * 4]), i, 6).catch(() => {});
-  for (let i = 0; i < 8; i++) await K.placeH('medieval_village_pack/Fence', add(FARM, [-6 + i * 2.0, 0, 2.6]), 0, 1.0).catch(() => {});
+  for (let i = 0; i < 8; i++) await K.placeH('medieval_village_pack/Fence', add(FARM, [-6 + i * 2.0, 0, -7.5]), 0, 1.0).catch(() => {});
   await K.placeH('house_interior_pack/Trashcan_Cylindric', add(FARM, [1.6, 0, 0.6]), 0, 0.9).catch(() => {});
   SG.org = K.sign('100% ORGÁNICO', add(FARM, [-3.2, 2.6, -0.6]), { w: 3.6, h: 0.9, bg: '#2a6a2a', border: '#ffe9a8', posts: true, rotY: 0.25 });
   SG.noaz = K.sign('CERO AZÚCAR', add(FARM, [3.6, 2.6, -0.8]), { w: 3.2, h: 0.9, bg: '#d7262a', border: '#ffffff', posts: true, rotY: -0.25 });
@@ -94,7 +94,7 @@ export async function build(k) {
   await K.placeH('house_interior_pack/Light_Floor2', add(HOME, [-2.4, 0, -2.8]), 0, 1.8).catch(() => {});
   await K.placeH('house_interior_pack/Houseplant_1', add(HOME, [2.6, 0, -3.2]), 0, 1.2).catch(() => {});
   K.box(1.6, 1.2, 1.0, 0x5a3a1a, add(HOME, [0, 1.0, -3.2]), { map: K.pbr('dark_wood', [1, 1]).map }); for (const s of [-0.5, 0.5]) K.box(0.08, 0.5, 0.08, 0x2a1a10, add(HOME, [s, 0.25, -3.2]));
-  tvScreen = K.plane(1.1, 0.85, K.std(0x9aa0a8, { emissive: 0x9aa8c0, emissiveIntensity: 0.9 }), add(HOME, [-0.15, 1.02, -2.69]), [0, 0, 0]);
+  tvScreen = K.plane(1.1, 0.85, K.std(0x3a4048, { emissive: 0x4a5870, emissiveIntensity: 0.35 }), add(HOME, [-0.15, 1.02, -2.69]), [0, 0, 0]);
   tvGlow = K.pointLight(0x9ab8ff, 3, add(HOME, [0, 1.2, -2.0]), 6);
   SG.noemi = K.sign('NUNCA SE EMITIÓ', add(HOME, [0, 2.4, -3.9]), { w: 3.8, h: 0.9, bg: '#1a1a2a', border: '#e0b040' });
 }
@@ -107,7 +107,7 @@ function hideAll() {
   for (const z of zz) z.position.set(0, -99, 0);
   sign100.position.set(...add(STUDIO, [0.5, 3.6, -4.9])); sign100.rotation.set(0, 0, 0); sign100.visible = false; camLed.visible = true; lamps.forEach(l => (l.visible = true));
 }
-const COUCH = add(STUDIO, [-0.9, 0.25, -2.35]), HOST = add(STUDIO, [2.6, 0.25, -2.95]), GUEST = add(STUDIO, [0.1, 0.25, -2.4]);
+const COUCH = add(STUDIO, [-0.9, 0.25, -2.35]), HOST = add(STUDIO, [2.2, 0.25, -2.4]), GUEST = add(STUDIO, [0.1, 0.25, -2.4]);
 function seated(f, t, o = {}) { // the three on set: host behind desk, guest chair, Rodale on the couch
   P(HO, { pos: HOST, yaw: o.hy ?? -0.5, sit: 1, expr: o.he || 'happy', talk: o.ht || 0, arms: o.ha || 'down', lean: o.hl || 0 }, f);
   if (o.guest) P(GU, { pos: GUEST, yaw: 0.5, sit: 1, expr: 'happy', talk: o.gt || 0, arms: 'shrug' }, f);
@@ -115,44 +115,48 @@ function seated(f, t, o = {}) { // the three on set: host behind desk, guest cha
   if (o.tilt) { RO.neck.rotation.z = -o.tilt * 0.7; RO.neck.rotation.x = o.tilt * 0.35; }
 }
 function hookShot(f, t, v, rev) { // frame 0: Rodale's head drops on the couch while the host keeps smiling — ON AIR blinking, crowd laughing
-  K.preset('interior', { exposure: 1.3 }); cheer(t, 0.8); SG.air.visible = Math.floor(t * 3) % 2 === 0;
+  K.preset('interior', { exposure: 1.55 }); cheer(t, 0.8); SG.air.visible = Math.floor(t * 3) % 2 === 0;
   const k = rev ? 1 - v * 0.5 : Math.min(1, 0.4 + v * 1.2);
   seated(f, t, { guest: true, gt: 0.7, re: 'out', tilt: k, rl: 0.15 * k, he: 'laugh', ht: 0.6 });
-  K.move({ p: add(COUCH, [1.6, 1.7, 3.6]), l: add(COUCH, [0.3, 1.3, 0]), fov: 46 }, { p: add(COUCH, [1.2, 1.6, 2.6]), l: add(COUCH, [0.1, 1.3, 0]), fov: 44 }, v, 0.5, f); K.focusOn(add(COUCH, [0, 1.3, 0]));
+  K.move({ p: add(COUCH, [1.9, 1.8, 4.2]), l: add(COUCH, [0.9, 1.2, 0]), fov: 50 }, { p: add(COUCH, [1.6, 1.7, 3.4]), l: add(COUCH, [0.7, 1.25, 0]), fov: 48 }, v, 0.5, f); K.focusOn(add(COUCH, [0, 1.3, 0]));
 }
 
 export function frame(f, k) {
   hideAll(); const ph = K.at(f), t = f / 30, u = (i) => K.u(f, i);
-  K.preset('interior', { exposure: 1.3 });
+  K.preset('interior', { exposure: 1.55 });
   switch (ph) {
     case 0: { if (u(0) < 0.06) K.grade.flash.value = 0.5 * (1 - u(0) / 0.06); hookShot(f, t, u(0)); break; }
     case 1: { // the cameras kept rolling: push into the camera lens, red light blinking
       const v = u(1); cam.position.set(...add(STUDIO, [1.0, 0.2, 2.2])); cam.rotation.y = Math.PI - 0.15; camLed.visible = Math.floor(t * 4) % 2 === 0; SG.air.visible = true;
       seated(f, t, { re: 'out', tilt: 1, guest: true, gt: 0.6 });
-      K.move({ p: add(STUDIO, [2.6, 2.0, 5.0]), l: add(STUDIO, [1.0, 1.7, 2.2]), fov: 44 }, { p: add(STUDIO, [1.8, 1.9, 4.0]), l: add(STUDIO, [1.0, 1.7, 2.2]), fov: 40 }, v, 0.3, f); K.focusOn(add(STUDIO, [1.0, 1.7, 2.2])); break; }
+      K.move({ p: add(STUDIO, [4.0, 2.0, 4.0]), l: add(STUDIO, [0.0, 1.4, -1.6]), fov: 50 }, { p: add(STUDIO, [3.6, 1.9, 3.4]), l: add(STUDIO, [0.2, 1.4, -1.6]), fov: 48 }, v, 0.3, f); K.focusOn(add(STUDIO, [1.0, 1.7, 2.2])); break; }
     case 2: { // New York 1971: Rodale power-walking down the avenue munching a carrot, cabs behind
       K.preset('day', { exposure: 1.05, photo: DAYSKY }); SG.ny.visible = true; const v = u(2); const p = add(NYC, [-6 + 4 * v, 0, 3.4]);
       P(RO, { pos: p, yaw: Math.PI / 2, walk: t * 2.2, expr: 'proud', arms: 'hold' }, f); holdW(RO, carrot, [0, 0.05, 0.05]); carrot.rotation.z = 0.5;
-      K.move(K.frame([p], { yaw: 0.55, h: 2.6, lookY: 1.6, pitch: -0.05, push: 1.0 }), K.frame([p], { yaw: 0.35, h: 2.6, lookY: 1.6, pitch: -0.06, push: 0.9 }), v, 0.4, f); K.focusOn(add(p, [0, 1.6, 0])); break; }
+      if (v < 0.5) K.move(K.frame([p], { yaw: 0.55, h: 2.6, lookY: 1.6, pitch: -0.05, push: 1.0 }), K.frame([p], { yaw: 0.45, h: 2.6, lookY: 1.6, pitch: -0.06, push: 0.94 }), v * 2, 0.4, f);
+      else K.move(K.frame([p], { yaw: 1.2, h: 2.2, lookY: 1.7, pitch: -0.02, push: 0.8 }), K.frame([p], { yaw: 1.1, h: 2.2, lookY: 1.7, pitch: -0.03, push: 0.72 }), (v - 0.5) * 2, 0.4, f); K.focusOn(add(p, [0, 1.6, 0])); break; }
     case 3: { // organic food, no sugar: on his farm he bins a sugar bag, crops all around
       K.preset('day', { exposure: 1.05, photo: DAYSKY }); SG.org.visible = SG.noaz.visible = true; const v = u(3); const p = add(FARM, [0.2, 0, 0.8]);
       P(RO, { pos: p, yaw: 0.6, expr: v < 0.5 ? 'angry' : 'smug', arms: v < 0.5 ? 'hold' : 'point' }, f);
       if (v < 0.45) holdW(RO, sugar, [0, -0.1, 0.1]); else { const k2 = Math.min(1, (v - 0.45) / 0.25); sugar.position.set(...K.lerp(add(p, [0.6, 1.4, 0.3]), add(FARM, [1.6, 0.9, 0.6]), k2)); sugar.position.y += Math.sin(k2 * Math.PI) * 0.8; sugar.rotation.z = k2 * 3; }
-      K.move(K.frame([p, add(FARM, [1.6, 0, 0.6])], { yaw: 0.25, h: 2.6, lookY: 1.5, pitch: -0.05, push: 1.0 }), K.frame([p, add(FARM, [1.6, 0, 0.6])], { yaw: 0.05, h: 2.6, lookY: 1.5, pitch: -0.06, push: 0.9 }), v, 0.3, f); K.focusOn(add(p, [0.5, 1.4, 0])); break; }
+      if (v < 0.5) K.move(K.frame([p, add(FARM, [1.6, 0, 0.6])], { yaw: 0.25, h: 2.6, lookY: 1.5, pitch: -0.05, push: 1.0 }), K.frame([p, add(FARM, [1.6, 0, 0.6])], { yaw: 0.15, h: 2.6, lookY: 1.5, pitch: -0.06, push: 0.94 }), v * 2, 0.3, f);
+      else K.move(K.frame([p], { yaw: 0.7, h: 2.2, lookY: 1.7, pitch: -0.02, push: 0.8 }), K.frame([p], { yaw: 0.6, h: 2.2, lookY: 1.7, pitch: -0.03, push: 0.72 }), (v - 0.5) * 2, 0.3, f); K.focusOn(add(p, [0.5, 1.4, 0])); break; }
     case 4: { // invited to the most famous show: dusk avenue, marquee, he walks to the stage door
-      K.preset('dusk', { exposure: 1.2, photo: DUSKSKY }); SG.show.visible = true; const v = u(4); const p = add(NYC, [1.0 + 1.6 * v, 0, 1.8 - 3.0 * v]);
+      K.preset('dusk', { exposure: 1.6, photo: DUSKSKY }); SG.show.visible = true; const v = u(4); const p = add(NYC, [1.0 + 1.6 * v, 0, 1.8 - 3.0 * v]);
       P(RO, { pos: p, yaw: Math.PI - 0.4, walk: t * 2, expr: 'happy', arms: 'wave' }, f);
       K.move({ p: add(NYC, [-1.5, 1.4, 8.5]), l: add(NYC, [2.5, 3.2, -4]), fov: 48 }, { p: add(NYC, [-0.8, 1.2, 7.2]), l: add(NYC, [3, 4.0, -5]), fov: 46 }, v, 0.3, f); K.focusOn(add(p, [0, 1.6, 0])); break; }
     case 5: { // walks on stage, waves at the crowd, brags "never felt better"
       cheer(t, 1); SG.mejor.visible = u(5) > 0.5; const v = u(5); const p = add(STUDIO, [-3.0 + 2.4 * Math.min(1, v * 1.6), 0.2, -1.2]);
       P(RO, { pos: p, yaw: v < 0.6 ? Math.PI / 2 : 0.2, walk: v < 0.6 ? t * 2 : 0, expr: 'proud', arms: v < 0.6 ? 'wave' : 'fists', talk: v > 0.6 ? 0.8 : 0 }, f);
       P(HO, { pos: add(STUDIO, [1.4, 0.2, -1.4]), yaw: -0.8, expr: 'happy', arms: 'wave' }, f);
-      K.move(K.frame([p, add(STUDIO, [1.4, 0, -1.4])], { yaw: 0.1, h: 2.8, lookY: 1.7, pitch: -0.04, push: 1.0, pad: 1.25 }), K.frame([p, add(STUDIO, [1.4, 0, -1.4])], { yaw: -0.05, h: 2.8, lookY: 1.7, pitch: -0.05, push: 0.92, pad: 1.25 }), v, 0.3, f); K.focusOn(add(p, [0, 1.7, 0])); break; }
+      if (v < 0.55) K.move({ p: add(STUDIO, [-1.6, 1.9, 3.4]), l: add(STUDIO, [-1.3, 1.4, -1.3]), fov: 52 }, { p: add(STUDIO, [-1.0, 1.85, 3.1]), l: add(STUDIO, [-0.7, 1.4, -1.3]), fov: 50 }, v / 0.55, 0.3, f);
+      else K.move(K.frame([p], { yaw: 0.3, h: 2.2, lookY: 1.7, pitch: -0.02, push: 0.8 }), K.frame([p], { yaw: 0.2, h: 2.2, lookY: 1.7, pitch: -0.03, push: 0.72 }), (v - 0.55) / 0.45, 0.3, f); K.focusOn(add(p, [0, 1.7, 0])); break; }
     case 6: { // gag: "unless a sugar-crazed taxi driver runs me over" — cab charging at the lens, driver gobbling candy
       K.preset('day', { exposure: 1.05, photo: DAYSKY }); SG.cien.visible = true; const v = u(6); const z = -14 + 13 * v;
       taxi.position.set(...add(NYC, [0.5, 0.05 + Math.abs(Math.sin(t * 14)) * 0.08, z])); taxi.rotation.set(0, Math.sin(t * 7) * 0.12, Math.sin(t * 9) * 0.04);
       P(TX, { pos: add(NYC, [0.1, 0.55, z + 0.1]), yaw: 0, sit: 1, expr: 'laugh', arms: 'up', bounce: 1.5 }, f);
-      K.move({ p: add(NYC, [1.6, 1.0, 4.5]), l: add(NYC, [0.3, 1.3, -6]), fov: 48 }, { p: add(NYC, [1.6, 0.9, 4.8]), l: add(NYC, [0.3, 1.2, -2]), fov: 50 }, v, 0.9, f); K.focusOn(add(NYC, [0.5, 1.2, z + 1.5])); break; }
+      if (v < 0.5) K.move({ p: add(NYC, [1.6, 1.0, 4.5]), l: add(NYC, [0.3, 1.3, -6]), fov: 48 }, { p: add(NYC, [1.6, 0.95, 4.6]), l: add(NYC, [0.3, 1.25, -4]), fov: 49 }, v * 2, 0.9, f);
+      else K.move({ p: add(NYC, [2.4, 1.7, z + 3.2]), l: add(NYC, [0.3, 1.4, z]), fov: 46 }, { p: add(NYC, [2.2, 1.6, z + 3.0]), l: add(NYC, [0.3, 1.4, z]), fov: 46 }, (v - 0.5) * 2, 0.9, f); K.focusOn(add(NYC, [0.5, 1.2, z + 1.5])); break; }
     case 7: { // the crowd laughs its head off — reverse shot on the bleachers
       cheer(t, 1.6); const v = u(7);
       K.move({ p: add(STUDIO, [0.5, 2.0, 1.0]), l: add(STUDIO, [0.5, 1.4, 6]), fov: 50 }, { p: add(STUDIO, [-0.5, 2.2, 1.6]), l: add(STUDIO, [0.0, 1.5, 6]), fov: 46 }, v, 0.4, f); K.focusOn(add(STUDIO, [0.5, 1.2, 5.2])); break; }
@@ -162,14 +166,15 @@ export function frame(f, k) {
       K.move({ p: add(COUCH, [0.8, 1.75, 1.5]), l: add(COUCH, [0.05, 1.55, 0]), fov: 40 }, { p: add(COUCH, [0.6, 1.7, 1.1]), l: add(COUCH, [0.05, 1.55, 0]), fov: 38 }, K.ease(v), 0.2, f); K.focusOn(add(COUCH, [0, 1.55, 0])); break; }
     case 9: { // host interviews the next guest... Rodale closes his eyes on the couch
       cheer(t, 0.2); const v = u(9); seated(f, t, { guest: true, gt: 0.8, hy: -0.9, ht: 0.5, re: v < 0.5 ? 'tired' : 'out', tilt: v > 0.6 ? 0.3 : 0 });
-      K.move(K.frame([COUCH, GUEST, HOST], { yaw: 0.05, h: 2.4, lookY: 1.3, pitch: -0.04, push: 1.0, pad: 1.1 }), K.frame([COUCH, GUEST, HOST], { yaw: -0.08, h: 2.4, lookY: 1.3, pitch: -0.05, push: 0.92, pad: 1.1 }), v, 0.3, f); K.focusOn(add(GUEST, [0, 1.3, 0])); break; }
+      if (v < 0.5) K.move({ p: add(STUDIO, [0.4, 2.0, 3.2]), l: add(STUDIO, [0.6, 1.1, -2.5]), fov: 60 }, { p: add(STUDIO, [0.35, 1.97, 3.0]), l: add(STUDIO, [0.55, 1.1, -2.5]), fov: 59 }, v * 2, 0.3, f);
+      else K.move({ p: add(STUDIO, [-0.2, 1.75, 1.0]), l: add(STUDIO, [-0.6, 1.25, -2.4]), fov: 50 }, { p: add(STUDIO, [-0.25, 1.72, 0.8]), l: add(STUDIO, [-0.6, 1.25, -2.4]), fov: 48 }, (v - 0.5) * 2, 0.3, f); K.focusOn(add(GUEST, [0, 1.3, 0])); break; }
     case 10: { // head drops to one side — floating Z's like he's snoring
       const v = u(10); seated(f, t, { re: 'out', tilt: Math.min(1, v * 2), rl: 0.12 });
       zz.forEach((z, i) => { const k2 = (t * 0.6 + i / 3) % 1; z.position.set(...add(COUCH, [0.35 + k2 * 0.6, 1.9 + k2 * 1.0, 0.2])); z.scale.setScalar(0.6 + k2 * 0.6); });
       K.move({ p: add(COUCH, [1.2, 1.8, 2.4]), l: add(COUCH, [0.2, 1.6, 0]), fov: 42 }, { p: add(COUCH, [1.0, 1.8, 2.0]), l: add(COUCH, [0.2, 1.7, 0]), fov: 42 }, v, 0.2, f); K.focusOn(add(COUCH, [0.1, 1.5, 0])); break; }
     case 11: { // the host jokes: "are we boring you?" — leaning over the desk, smug grin
-      cheer(t, 0.7); const v = u(11); seated(f, t, { hy: -1.1, he: 'smug', ht: 0.9, ha: 'point', hl: 0.2, re: 'out', tilt: 1, guest: true });
-      K.move(K.frame([HOST, COUCH], { yaw: -0.5, h: 2.4, lookY: 1.3, pitch: -0.03, push: 0.95, pad: 1.1 }), K.frame([HOST, COUCH], { yaw: -0.6, h: 2.4, lookY: 1.3, pitch: -0.04, push: 0.86, pad: 1.1 }), v, 0.3, f); K.focusOn(add(HOST, [0, 1.3, 0])); break; }
+      cheer(t, 0.7); const v = u(11); seated(f, t, { hy: -1.1, he: 'smug', ht: 0.9, ha: 'point', hl: 0.2, re: 'out', tilt: 1 });
+      K.move({ p: add(STUDIO, [0.7, 1.9, 2.6]), l: add(STUDIO, [0.6, 1.2, -2.4]), fov: 58 }, { p: add(STUDIO, [0.7, 1.85, 2.2]), l: add(STUDIO, [0.6, 1.25, -2.4]), fov: 56 }, v, 0.3, f); K.focusOn(add(HOST, [0, 1.3, 0])); break; }
     case 12: { // re-hook: crash zoom onto the motionless face, lights flicker
       const v = u(12); if (v < 0.1) K.grade.flash.value = 0.45; K.grade.vig.value = 0.8; lamps.forEach((l, i) => (l.visible = Math.floor(t * 10 + i) % 3 !== 0));
       K.preset('interior', { exposure: 0.95 + 0.2 * Math.sin(t * 25) }); seated(f, t, { re: 'out', tilt: 1, he: 'shock', hy: -1.0 });
@@ -185,7 +190,7 @@ export function frame(f, k) {
       carrot.position.set(...add(COUCH, [0.1, 0.62, 0.1])); carrot.rotation.set(0, 0, Math.PI / 2);
       K.move({ p: add(COUCH, [0.2, 1.8, 3.6]), l: add(COUCH, [0, 1.4, -0.5]), fov: 44 }, { p: add(COUCH, [0.1, 1.6, 2.8]), l: add(COUCH, [0, 1.2, -0.5]), fov: 42 }, u(14), 0.2, f); K.focusOn(add(COUCH, [0.1, 0.7, 0.1])); break; }
     case 15: { // the episode never aired: living-room TV hissing static
-      K.preset('night', { exposure: 2.2 }); SG.noemi.visible = true; const v = u(15); tvScreen.material.emissiveIntensity = 0.6 + 0.6 * Math.abs(Math.sin(t * 37)); tvScreen.material.color.setHSL(0.6, 0.05, 0.4 + 0.3 * Math.abs(Math.sin(t * 53)));
+      K.preset('night', { exposure: 2.2 }); SG.noemi.visible = true; const v = u(15); tvScreen.material.emissiveIntensity = 0.25 + 0.3 * Math.abs(Math.sin(t * 37)); tvScreen.material.color.setHSL(0.6, 0.05, 0.4 + 0.3 * Math.abs(Math.sin(t * 53)));
       K.move({ p: add(HOME, [0.8, 1.6, 3.6]), l: add(HOME, [0, 1.2, -3]), fov: 46 }, { p: add(HOME, [0.4, 1.4, 1.6]), l: add(HOME, [0, 1.1, -3]), fov: 42 }, v, 0.2, f); K.focusOn(add(HOME, [0, 1.1, -2.7])); break; }
     case 16: { // gag: the "I'll live to 100!" banner drops off its hooks onto the empty stage
       K.preset('interior', { exposure: 1.0 }); K.grade.sat.value = 0.85; const v = u(16); sign100.visible = true; lamps.forEach((l, i) => (l.visible = i % 2 === 0));

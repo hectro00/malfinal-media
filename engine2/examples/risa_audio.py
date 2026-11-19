@@ -51,8 +51,8 @@ bpm = 104; beat = 60 / bpm
 section(0.0, st(10) - 0.05, MED, tense=False)
 place(music, drone(55.0, st(13) - st(10), 0.3), st(10))
 section(st(13), st(16) - 0.05, MINOR)
-place(music, drone(49.0, st(17) - st(16), 0.28), st(16))
-section(st(17), en(17) + 0.6, MED)
+place(music, drone(49.0, st(18) - st(16), 0.28), st(16))
+section(st(18), en(19) + 0.6, MED)
 
 # ---------- sfx ----------
 sfx = np.zeros(N)
@@ -142,9 +142,11 @@ place(sfx, laughk(3.0, 0.5), st(11))
 place(sfx, laughk(2.0, 0.45), st(12)); place(sfx, boom(0.4), W(12, 0.8))
 place(sfx, sting(0.6), st(13))
 place(sfx, wind(2.5, 0.18), st(14)); place(sfx, crash(0.6, 0.25), W(14, 0.6))
-place(sfx, creak(0.8, 0.3), st(15))
-place(sfx, wind(2.5, 0.15), st(16))
-place(sfx, boom(0.45), st(17)); place(sfx, laughk(2.0, 0.4), st(17) + 0.05)
+place(sfx, fall(1.0, 0.25), st(15)); place(sfx, clank(0.4), W(15, 0.7))
+place(sfx, creak(0.8, 0.3), st(16))
+place(sfx, wind(2.5, 0.15), st(17))
+place(sfx, laughk(1.6, 0.35), W(18, 0.5))
+place(sfx, boom(0.45), st(19)); place(sfx, laughk(2.0, 0.4), st(19) + 0.05)
 
 # ---------- level lock: music and SFX at 50 % of voice gated RMS ----------
 def grms(x):

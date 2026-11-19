@@ -479,9 +479,42 @@
    "media": "VID-20261118-024.mp4",
    "fb_id": "1496991189289758",
    "ig_url": "https://www.instagram.com/reel/Df5vluZgKoX/"
+  },
+  "VID-20261118-025": {
+   "num": 25,
+   "series": 25,
+   "title": "Dijo en la TELE que viviría 100 años… y murió ahí 📺",
+   "hookA": "Dijo en la TELE que viviría 100 años… y murió ahí 📺",
+   "hookB": "Prometió vivir 100 AÑOS… y murió en pleno programa 📺",
+   "burned": "B",
+   "slotAt": "2026-11-19T12:00",
+   "status": "programado",
+   "durationS": 69.7,
+   "qa100": {
+    "hook": 17,
+    "retencion": 14,
+    "visual": 11,
+    "narracion": 13,
+    "edicion": 8,
+    "originalidad": 9,
+    "titulo": 9,
+    "total": 81,
+    "note": "1 fix round (hook line ≤10 words, mid-phrase cuts)"
+   },
+   "project": "/home/claude/v2/rodale",
+   "engine": "v3",
+   "mechanism": "muerte en directo / ironía",
+   "set": "plató TV 1971, Nueva York, granja",
+   "buffer_ids": {
+    "yt": "6afe4b41a588bd6687ad21c9",
+    "tt": "6afe4b42c462756e9e305a08",
+    "ig": "6afe4b43a588bd6687ad2292"
+   },
+   "media": "VID-20261118-025.mp4",
+   "note": "moved from 20:30 (slot taken by VID-023 from interactive session)"
   }
  },
- "next_num": 25,
+ "next_num": 26,
  "metricool_month_count": {
   "2026-11": 19
  },
