@@ -21,7 +21,7 @@ def trim(w, sr, th=0.006):  # v3 voice (17 Nov): keep word tails (user: 'las pal
     return w[:, max(0, int(idx[0]) - int(0.03 * sr)):min(a.shape[0], int(idx[-1]) + int(0.22 * sr))]
 # v3B (user choice 18 Nov: "B nueva fluida"): narrate 2-3 lines in ONE breath for natural prosody, then split per line
 # with Whisper word timestamps. Falls back to per-line (same B settings) when a group can't be aligned.
-EX, CFG, TEMP = 0.8, 0.45, 0.8
+EX, CFG, TEMP = float(os.environ.get("EX", 0.8)), float(os.environ.get("CFG", 0.45)), 0.8
 def gen(text, ex):
     m.conds = CONDS
     return trim(m.generate(text.replace('...', '…'), language_id="es", exaggeration=ex, cfg_weight=CFG, temperature=TEMP), m.sr)

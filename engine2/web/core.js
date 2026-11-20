@@ -53,13 +53,18 @@ const depthMat = new THREE.ShaderMaterial({ vertexShader: 'varying vec3 vn; vary
   fragmentShader: 'varying vec3 vn; varying float vz; void main(){ float d=clamp(vz/160.,0.,0.99999); float hi=floor(d*255.)/255.; float lo=fract(d*255.); vec3 n=normalize(vn); if(!gl_FrontFacing) n=-n; gl_FragColor=vec4(n.xy*0.5+0.5,hi,lo); }', side: THREE.DoubleSide });
 const composer = new EffectComposer(renderer, rt); composer.setPixelRatio(1); composer.setSize(W, H);
 composer.addPass(new RenderPass(scene, cam));
+// v4 "real" look (user ref Mildly Elsewhere, 20 Nov): ambient occlusion only in style=real
+const REAL = (qs.get('style') || 'rick') !== 'rick';
+let gtao = null;
+if (false) { const { GTAOPass } = await import('three/addons/postprocessing/GTAOPass.js'); gtao = new GTAOPass(scene, cam, W, H); gtao.output = GTAOPass.OUTPUT.Default; gtao.blendIntensity = 1.0;
+  gtao.updateGtaoMaterial({ radius: 0.6, distanceExponent: 1.5, thickness: 1.0, scale: 1.0, samples: 12 }); gtao.updatePdMaterial({ lumaPhi: 10, depthPhi: 2, normalPhi: 3, radius: 6, rings: 2, samples: 12 }); composer.addPass(gtao); }
 const bloom = new UnrealBloomPass(new THREE.Vector2(W / 2, H / 2), 0.22, 0.5, 2.2); composer.addPass(bloom);
 const lensPass = new ShaderPass({
   uniforms: { tDiffuse: { value: null }, tDepth: { value: depthRT.texture }, res: { value: new THREE.Vector2(W, H) }, near: { value: 0.1 }, far: { value: 900 },
-    focus: { value: 6 }, aperture: { value: 0.0 }, maxBlur: { value: 14 }, ink: { value: 0.9 }, inkW: { value: 1.3 }, inkN: { value: 1.0 }, inkCol: { value: new THREE.Color(0x1a1218) } },
+    focus: { value: 6 }, aperture: { value: 0.0 }, maxBlur: { value: 14 }, ink: { value: 0.9 }, aoI: { value: 0 }, inkW: { value: 1.3 }, inkN: { value: 1.0 }, inkCol: { value: new THREE.Color(0x1a1218) } },
   vertexShader: 'varying vec2 vUv; void main(){ vUv=uv; gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.); }',
   fragmentShader: `#include <packing>
-  uniform sampler2D tDiffuse, tDepth; uniform vec2 res; uniform float near,far,focus,aperture,maxBlur,ink,inkW,inkN; uniform vec3 inkCol; varying vec2 vUv;
+  uniform sampler2D tDiffuse, tDepth; uniform vec2 res; uniform float near,far,focus,aperture,maxBlur,ink,inkW,inkN,aoI; uniform vec3 inkCol; varying vec2 vUv;
   float lin(vec2 uv){ vec4 t=texture2D(tDepth,uv); if(t.b>0.999&&t.a>0.99) return 900.; return (t.b+t.a/255.)*160.; }
   vec2 nrm(vec2 uv){ return texture2D(tDepth,uv).rg*2.-1.; }
   float coc(float z){ float c=abs(1.-focus/max(z,0.001))*aperture*res.y*0.01; return clamp(c-0.8, 0., maxBlur); }
@@ -68,6 +73,9 @@ const lensPass = new ShaderPass({
     if(c>0.3){ for(int i=0;i<24;i++){ float a=float(i)*2.39996; float r=sqrt((float(i)+0.5)/24.)*c; vec2 o=vec2(cos(a),sin(a))*r/res;
         float zs=lin(vUv+o); float cs=coc(zs); float w = zs<z ? smoothstep(0.,1.,cs/max(r,0.5)) : 1.; acc+=texture2D(tDiffuse,vUv+o).rgb*w; wsum+=w; } }
     vec3 col=acc/wsum;
+    if(aoI>0.&&z<150.){ float occ=0.; float rp=clamp(26./z,2.,40.)*res.y/1080.;
+      for(int i=0;i<10;i++){ float a=float(i)*2.39996+0.7; float r=sqrt((float(i)+0.5)/10.)*rp; vec2 o=vec2(cos(a),sin(a))*r/res; float zs=lin(vUv+o); float dz=z-zs; occ+=smoothstep(0.03,0.25,dz)*(1.-smoothstep(0.8,2.5,dz)); }
+      col*=1.-aoI*clamp(occ/10.,0.,1.); }
     // depth-edge ink (silhouettes), fades with blur and distance
     vec2 px=inkW/res; float zl=lin(vUv-vec2(px.x,0.)), zr=lin(vUv+vec2(px.x,0.)), zu=lin(vUv+vec2(0.,px.y)), zd=lin(vUv-vec2(0.,px.y));
     float e=max(max(abs(zl-z),abs(zr-z)),max(abs(zu-z),abs(zd-z)))/z;
@@ -78,6 +86,20 @@ const lensPass = new ShaderPass({
     gl_FragColor=vec4(col,1.); }` });
 lensPass.uniforms.tDepth.value = depthRT.texture;
 composer.addPass(lensPass);
+// v4 camera motion blur (real style): per-pixel reprojection with last frame's camera, 12 taps along the velocity
+const mblur = new ShaderPass({
+  uniforms: { tDiffuse: { value: null }, tDepth: { value: depthRT.texture }, invProj: { value: new THREE.Matrix4() }, camWorld: { value: new THREE.Matrix4() }, prevVP: { value: new THREE.Matrix4() }, amount: { value: 0 }, maxV: { value: 0.06 } },
+  vertexShader: 'varying vec2 vUv; void main(){ vUv=uv; gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.); }',
+  fragmentShader: `uniform sampler2D tDiffuse,tDepth; uniform mat4 invProj,camWorld,prevVP; uniform float amount,maxV; varying vec2 vUv;
+  void main(){ vec3 c=texture2D(tDiffuse,vUv).rgb; if(amount<=0.){ gl_FragColor=vec4(c,1.); return; }
+    vec4 t=texture2D(tDepth,vUv); float z=(t.b>0.999&&t.a>0.99)?600.:(t.b+t.a/255.)*160.;
+    vec4 v=invProj*vec4(vUv*2.-1.,1.,1.); v.xyz/=v.w; vec3 vp=v.xyz*(z/max(-v.z,1e-4));
+    vec4 wp=camWorld*vec4(vp,1.); vec4 pc=prevVP*wp; vec2 puv=pc.xy/pc.w*0.5+0.5;
+    vec2 vel=(vUv-puv)*amount; if(pc.w<=0.||any(isnan(vel))) vel=vec2(0.); float l=length(vel); if(l>maxV) vel*=maxV/l; if(l<0.0008){ gl_FragColor=vec4(c,1.); return; }
+    vec3 acc=vec3(0.); for(int i=0;i<12;i++){ float k=float(i)/11.-0.5; acc+=texture2D(tDiffuse,clamp(vUv+vel*k,0.001,0.999)).rgb; }
+    gl_FragColor=vec4(acc/12.,1.); }` });
+mblur.uniforms.tDepth.value = depthRT.texture; composer.addPass(mblur);
+const _prevVP = new THREE.Matrix4(); let _prevF = -9;
 composer.addPass(new OutputPass());
 const gradePass = new ShaderPass({
   uniforms: { tDiffuse: { value: null }, whip: { value: 0 }, punch: { value: 0 }, sat: { value: 1.18 }, con: { value: 1.06 }, warm: { value: new THREE.Vector3(1.03, 1.0, 0.96) }, shadowTint: { value: new THREE.Vector3(0.96, 0.98, 1.06) }, vig: { value: 0.28 }, grain: { value: 0.025 }, seed: { value: 0 }, flash: { value: 0 }, black: { value: 0 }, res: { value: new THREE.Vector2(W, H) } },
@@ -102,7 +124,7 @@ const loader = new GLTFLoader(); const cache = {};
 function stylize(root, o = {}) {
   root.traverse((m) => { if (!m.isMesh) return; m.castShadow = o.shadow !== false; m.receiveShadow = true;
     const fix = (mat) => { const n = mat.clone(); n.roughness = Math.max(n.roughness ?? 0.7, o.rough ?? 0.72); n.metalness = Math.min(n.metalness ?? 0, 0.15); n.envMapIntensity = o.env ?? 0.8;
-      if (o.tint) n.color.multiply(new THREE.Color(o.tint)); if (n.color) { const hsl = {}; n.color.getHSL(hsl); n.color.setHSL(hsl.h, Math.min(1, hsl.s * (o.satBoost ?? 1.3)), Math.min(0.92, hsl.l * 1.05)); } return K.TOON_ON ? toonOf(n) : n; };
+      if (o.tint) n.color.multiply(new THREE.Color(o.tint)); if (o.recolor && o.recolor[mat.name] !== undefined) n.color.set(o.recolor[mat.name]); if (n.color) { const hsl = {}; n.color.getHSL(hsl); n.color.setHSL(hsl.h, Math.min(1, hsl.s * (o.satBoost ?? (REAL ? 1.0 : 1.3))), Math.min(0.92, hsl.l * 1.05)); } return K.TOON_ON ? toonOf(n) : n; };
     m.material = Array.isArray(m.material) ? m.material.map(fix) : fix(m.material); });
   return root;
 }
@@ -209,6 +231,55 @@ K.frame = (targets, o = {}) => {
   return { p, l: [c[0] + (o.lx ?? 0) * right[0], ly, c[2] + (o.lx ?? 0) * right[2]], fov, d };
 };
 
+
+// ---------- v4 rigged people (Quaternius modular_men/women, own procedural poses) ----------
+K.person = async (path, pos, rotY = 0, h = 1.75, o = {}) => {
+  const src = await load(path); const { size } = sizeOf(src); const k = h / size.y;
+  const m = stylize(SkeletonUtils.clone(src), o); m.scale.setScalar(k); m.position.set(...pos); m.rotation.y = rotY; (o.parent || scene).add(m);
+  const B = {}; m.traverse((x) => { if (x.isBone) { B[x.name] = x; B[x.name.replace(/[^A-Za-z0-9]/g, '')] = x; x.userData.q0 = x.quaternion.clone(); } if (x.isMesh) x.frustumCulled = false; });
+  return { root: m, B, base: [...pos], rotY, k }; };
+const _e = new THREE.Euler(), _q = new THREE.Quaternion();
+K.bone = (P, name, x = 0, y = 0, z = 0) => { const b = P.B[name] || P.B[name.replace(/[^A-Za-z0-9]/g, '')]; if (!b) return; _e.set(x, y, z); _q.setFromEuler(_e); b.quaternion.copy(b.userData.q0).multiply(_q); };
+K.resetPerson = (P) => { for (const n in P.B) P.B[n].quaternion.copy(P.B[n].userData.q0); };
+
+// aim a bone (towards its child) along dir given in the character's own frame (+x = its left, +y up, +z = where it faces)
+const _v1 = new THREE.Vector3(), _v2 = new THREE.Vector3(), _qa = new THREE.Quaternion(), _qb = new THREE.Quaternion(), _qp = new THREE.Quaternion();
+K.aim = (P, name, dir) => { const b = P.B[name] || P.B[name.replace(/[^A-Za-z0-9]/g, '')]; if (!b) return; const c = b.children.find((x) => x.isBone); if (!c) return;
+  P.root.updateMatrixWorld(true); b.getWorldPosition(_v1); c.getWorldPosition(_v2); const d = _v2.sub(_v1).normalize();
+  const want = new THREE.Vector3(...dir).normalize().applyQuaternion(P.root.getWorldQuaternion(_qp));
+  _qa.setFromUnitVectors(d, want); b.getWorldQuaternion(_qb); const nw = _qa.multiply(_qb); b.parent.getWorldQuaternion(_qp).invert(); b.quaternion.copy(_qp.multiply(nw)); b.updateMatrixWorld(true); };
+// pose: {walk: phase speed (0 = still), arms:'down|up|flail|forward|cling|cross|point', sit, lean, look:[yaw,pitch], fall:0..1 (tumble), t}
+K.posePerson = (P, p = {}, f = 0) => { K.resetPerson(P); const t = (p.t ?? f) / 30; const R = P.root; R.position.set(...(p.pos || P.base)); R.rotation.set(0, p.yaw ?? P.rotY, 0);
+  const S = Math.sin, C = Math.cos; const ph = p.walk ? t * 2 * Math.PI * 0.9 * p.walk : 0, sw = p.walk ? 0.45 : 0;
+  if (p.lean) K.bone(P, 'Abdomen', p.lean, 0, 0);
+  if (p.look) K.bone(P, 'Neck', p.look[1] || 0, p.look[0] || 0, 0);
+  // legs
+  for (const [side, sg] of [['L', 1], ['R', -1]]) {
+    const a = S(ph + (sg > 0 ? 0 : Math.PI)) * sw;
+    if (p.sit) { K.aim(P, `UpperLeg.${side}`, [sg * 0.12, -0.15, 1]); K.aim(P, `LowerLeg.${side}`, [sg * 0.05, -1, 0.1]); }
+    else if (p.fall) { const w = S(t * 9 + sg) * 0.5; K.aim(P, `UpperLeg.${side}`, [sg * 0.35, -1, 0.4 + w]); K.aim(P, `LowerLeg.${side}`, [sg * 0.2, -1, -0.3 + w]); }
+    else { K.aim(P, `UpperLeg.${side}`, [sg * 0.06, -1, a]); K.aim(P, `LowerLeg.${side}`, [sg * 0.04, -1, Math.min(a, 0) * 0.9 - (p.walk ? 0.12 : 0)]); }
+    K.aim(P, `Foot.${side}`, [0, -0.35, 1]);
+  }
+  // arms
+  for (const [side, sg] of [['L', 1], ['R', -1]]) {
+    const a = S(ph + (sg > 0 ? Math.PI : 0)) * sw * 0.8; const arms = p.arms || 'down';
+    let U = [sg * 0.18, -1, a], L = [sg * 0.12, -1, a + 0.25];
+    if (arms === 'up') { U = [sg * 0.35, 1, 0.1]; L = [sg * 0.2, 1, 0.1]; }
+    if (arms === 'flail') { const w = S(t * 11 + sg * 2); U = [sg * 0.9, 0.7 + w * 0.5, 0.3]; L = [sg * 0.6, 1, w * 0.6]; }
+    if (arms === 'cling') { U = [sg * 0.45, 1, -0.25]; L = [sg * 0.15, 1, -0.4]; }
+    if (arms === 'forward') { U = [sg * 0.25, -0.6, 0.8]; L = [sg * 0.05, -0.2, 1]; }
+    if (arms === 'cross') { U = [sg * 0.25, -1, 0.35]; L = [-sg * 0.9, 0.1, 0.4]; }
+    if (arms === 'point' && sg < 0) { U = [-0.3, 0.25, 1]; L = [-0.3, 0.3, 1]; }
+    if (arms === 'talk') { U = [sg * 0.2, -1, 0.25]; L = [sg * 0.25, -0.1 + S(t * 5 + sg) * 0.25, 1]; }
+    if (arms === 'sitlap') { U = [sg * 0.15, -1, 0.35]; L = [sg * 0.05, -0.25, 1]; }
+    K.aim(P, `UpperArm.${side}`, U); K.aim(P, `LowerArm.${side}`, L);
+  }
+  if (p.walk) R.position.y += Math.abs(S(ph)) * 0.035 - 0.02;
+  if (p.sit) R.position.y += (p.sitDrop ?? -0.42) * P.k * 0 + (p.sitDrop ?? -0.45);
+  if (p.fall) { R.rotation.x = p.fall * 1.1 * S(t * 2.3); R.rotation.z = p.fall * 0.6 * C(t * 1.7); }
+};
+
 await S.build(K);
 window.FRAMES = S.FRAMES;
 window.renderFrame = (f) => {
@@ -216,7 +287,11 @@ window.renderFrame = (f) => {
   if (K.TOON_ON && K.ph && K.AUTO_CUTS !== false) { let dmin = 99, sgn = 1; for (const p of K.ph) { const c = p.a - 4; const d = f - c; if (Math.abs(d + 0.5) < Math.abs(dmin + 0.5)) { dmin = d; sgn = (p.a % 2) ? 1 : -1; } }
     const w = Math.max(0, 1 - Math.abs(dmin + 0.5) / 3.5); K.grade.whip.value = sgn * 0.09 * w * w; K.grade.punch.value = dmin >= 0 ? 0.05 * Math.max(0, 1 - dmin / 8) : 0; }
   for (const o of scene.children) if (o.userData.culled) { o.visible = true; o.userData.culled = false; }
+  if (REAL) { K.lens.ink.value = 0; K.lens.aoI.value = 0.75; K.grade.sat.value = 1.04; K.grade.con.value = 1.03; K.grade.vig.value = 0.16; K.grade.grain.value = 0.012; K.lens.aperture.value = 0.25; K.MBLUR = 0.5;
+    if (f > 0) { S.frame(f - 1, K); cam.updateMatrixWorld(); _prevVP.multiplyMatrices(cam.projectionMatrix, cam.matrixWorldInverse); } }
   S.frame(f, K);
+  if (REAL) { cam.updateMatrixWorld(); mblur.uniforms.invProj.value.copy(cam.projectionMatrixInverse); mblur.uniforms.camWorld.value.copy(cam.matrixWorld);
+    mblur.uniforms.prevVP.value.copy(f > 0 ? _prevVP : new THREE.Matrix4().multiplyMatrices(cam.projectionMatrix, cam.matrixWorldInverse)); mblur.uniforms.amount.value = K.MBLUR; }
   // set culling: everything farther than CULL m from the camera is hidden for this frame (sets live 200 m apart)
   const cp = cam.position;
   for (const o of scene.children) {

@@ -6,7 +6,7 @@ const srv = http.createServer((q, r) => { const p = path.join(root, decodeURICom
 const b = await puppeteer.launch({ executablePath: '/usr/bin/google-chrome', args: ['--no-sandbox', '--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'] });
 const pg = await b.newPage(); const W = +width, H = Math.round(W * 16 / 9); await pg.setViewport({ width: W, height: H });
 pg.on('pageerror', e => console.log('ERR', e.message)); pg.on('console', m => { const t = m.text(); if (!/GPU stall|GL Driver|WebGL/.test(t)) console.log('PAGE', t); });
-await pg.goto(`http://localhost:${port}/index.html?w=${W}`); await pg.waitForFunction('window.ready===true', { timeout: 300000 });
+await pg.goto(`http://localhost:${port}/index.html?w=${W}&style=${process.env.STYLE || "rick"}&ao=${process.env.AO || "1"}`); await pg.waitForFunction('window.ready===true', { timeout: 300000 });
 const N = await pg.evaluate('window.FRAMES');
 let frames = []; for (const part of spec.split(',')) { if (part.includes('-')) { const [a, bb] = part.split('-').map(Number); for (let i = a; i <= Math.min(bb, N - 1); i++) frames.push(i); } else frames.push(+part); }
 fs.mkdirSync(outDir, { recursive: true });
