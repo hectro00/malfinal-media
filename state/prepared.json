@@ -2,11 +2,13 @@
  "note": "Videos already written and staged by the interactive session (engine v2.2: PBR textures, photo skies). Use these FIRST, in this order, before inventing new ones. For each: script = engine2/examples/<n>_script.txt, scene = engine2/examples/<n>.js, audio = engine2/examples/<n>_audio.py. Still do TTS, stills check and render. Remove the item when it is scheduled.",
  "items": [],
  "todo_next_run": [
-  "PRIMERO (Buffer 10/10 al cierre de la corrida 05:47 del vie 20; 028 sale a las 12:00 y libera 3): VID-031 Carlos VIII → crear IG (copy_ig en posts.json, media main/VID-20261120-031.mp4) para Sáb 21 11:00 (2026-11-21T11:00:00-06:00).",
-  "VID-032 Valentiniano YA está en main (VID-20261120-032.mp4, QA 80): crear YT (hookA, copy_yt, notifySubscribers:false) + TT (hookB, copy_tt) + IG (copy_ig) para Sáb 21 17:00 (2026-11-21T17:00:00-06:00). YouTube permitido (Sáb: 031 + 032 = 2).",
-  "Falta producir 1 video para Sáb 21 20:00 (sin YouTube: ya hay 2 YT ese día CDMX → TT+IG).",
-  "Límite YouTube de Buffer es por DÍA CDMX (no UTC): 030 fue rechazado en YT el vie 20:30 (ya había 028 12:00 y 029 18:00). yt_pending: 025, 027, 030.",
-  "Facebook (Zapier) pendientes, el más viejo primero (máx 2 por corrida): 028, 029, 030, luego 031, 032 cuando salgan.",
-  "Sábado 21 (corrida 14:47): compilación semanal W47 (PLAYBOOK 7b) para domingo 13:00. Metricool 19/20: queda 1 (para la compilación)."
+  "BLOQUEO 20 Nov 14:47: los links raw.githubusercontent.com/nuncaverso-sketch/malfinal-media/... dan 404 (también hectorfdg/...). La cuenta de GitHub se renombró a 'hectorfdg' (~14:43) y el repo parece privado. Buffer responde 'Video could not be read from its URL'. PRIMERO: curl -sI de un raw; si da 200 (repo público otra vez, con el nombre que sea), usar ESA base de URL en todo lo de abajo. Si sigue 404: no producir (early exit) y avisar.",
+  "Revisar en Buffer si 029 (vie 18:00) y 030 (vie 20:30) salieron o quedaron en error (¿Buffer re-descarga al publicar?). Si error y el link ya funciona: edit_post shareNow.",
+  "VID-031 IG para Sáb 21 11:00 (copy_ig en posts.json).",
+  "VID-032 Valentiniano (QA 80): YT+TT+IG Sáb 21 17:00.",
+  "VID-033 Alejandro/mono (QA 77, en main): TT+IG Sáb 21 20:00 (sin YT: Sáb ya tiene 031+032). yt_pending.",
+  "Facebook (Zapier) pendientes, más viejo primero (máx 2/corrida): 028, 029, 030, 031...",
+  "Sábado 21 (corrida 14:47): compilación semanal W47 (PLAYBOOK 7b) para domingo 13:00. Metricool 19/20: queda 1.",
+  "Falta producir para Dom 22 09:00 / 13:00 / 19:00."
  ]
 }

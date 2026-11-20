@@ -729,7 +729,7 @@
     "ig": null
    },
    "fb_id": null,
-   "status": "programado (YT+TT) Sáb 21 11:00; IG PENDIENTE por cupo Buffer 10/10",
+   "status": "programado (YT+TT) Sáb 21 11:00; IG PENDIENTE: Buffer no lee el video (raw 404 desde 20 Nov 14:43)",
    "ig_pending": true,
    "qa100": {
     "hook": 16,
@@ -769,7 +769,7 @@
     "ig": null
    },
    "fb_id": null,
-   "status": "render OK y subido a main; Buffer PENDIENTE (YT+TT+IG) para Sáb 21 17:00 por cupo 10/10",
+   "status": "render OK y en main; Buffer PENDIENTE (YT+TT+IG Sáb 21 17:00): Buffer no lee el video (raw 404)",
    "qa100": {
     "hook": 15,
     "retencion": 14,
@@ -781,9 +781,48 @@
     "total": 80,
     "note": "1 ronda de arreglo (cámara frases 9 y 16); gates OK, -14.9 LUFS"
    }
+  },
+  "VID-20261120-033": {
+   "num": "033",
+   "series": 33,
+   "title": "Lo mordió un MONO… y cambió la historia de Grecia 🐒",
+   "hookA": "Lo mordió un MONO… y cambió la historia de Grecia 🐒",
+   "hookB": "Un MONO mordió al REY… y Grecia lo pagó 🐒",
+   "burned": "B",
+   "hook_text": "UN MONO|MORDIÓ AL REY",
+   "slotAt": "2026-11-21T20:00",
+   "durationS": 69.7,
+   "story": "Alejandro I de Grecia (1920): su perro Fritz atacó al mono del encargado de los viñedos de Tatoi; al separarlos, otro mono lo mordió; la herida se infectó y murió a los 27. Churchill: 'un cuarto de millón de personas murieron por la mordida de este mono'.",
+   "project": "/home/claude/v2/alejandro",
+   "media": "VID-20261120-033.mp4",
+   "engine": "v2",
+   "mechanism": "mordida de animal / infección",
+   "set": "viñedo Tatoi, palacio blanco Atenas, salón del trono con mapa, alcoba con capilla, despacho Londres",
+   "route": "Buffer TT+IG (Sáb ya tiene 2 YT: 031, 032) + FB Zapier; YT pendiente",
+   "copy_yt": "Lo mordió un MONO… y cambió la historia de Grecia 🐒\nGrecia, 1920: el joven rey Alejandro paseaba con su perro Fritz por los viñedos de Tatoi. Fritz atacó al mono mascota del encargado y, cuando el rey intentó separarlos, otro mono lo mordió. La herida se infectó y murió a los 27 años; su muerte desató una crisis política en plena guerra.\nMuertes absurdas #33\nFuente: Encyclopaedia Britannica — Alexander (king of Greece); W. Churchill, The World Crisis: The Aftermath.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #shorts",
+   "copy_tt": "Un MONO mordió al REY… y Grecia lo pagó 🐒 ¿Tú habrías separado al perro y al mono? Historia real (Grecia, 1920). Animación hecha con apoyo de IA. #muertesabsurdas #historiasreales #datososcuros #curiosidades #malfinal",
+   "copy_ig": "Un MONO mordió al REY… y Grecia lo pagó 🐒\nEl rey Alejandro quiso separar a su perro de un mono… y un segundo mono lo mordió. ¿Tú los habrías separado?\nGuárdalo para contárselo a alguien 👀\nMuertes absurdas #33\nFuente: Encyclopaedia Britannica; Churchill, The World Crisis.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #curiosidadeshistoricas #datoscuriosos #malfinal",
+   "buffer_ids": {
+    "yt": null,
+    "tt": null,
+    "ig": null
+   },
+   "fb_id": null,
+   "status": "render OK, QA 77, subido a main (VID-20261120-033.mp4); Buffer PENDIENTE (links raw 404) → TT+IG Sáb 21 20:00",
+   "qa100": {
+    "hook": 15,
+    "retencion": 14,
+    "visual": 11,
+    "narracion": 13,
+    "edicion": 6,
+    "originalidad": 9,
+    "titulo": 9,
+    "total": 77,
+    "note": "gates OK, -14.9 LUFS, 69.7 s; hook box tapa la cara del rey 2.6 s; estático máx 7.2 s. Sin ronda de arreglo (Buffer bloqueado). Publicable por regla ≥70 si el slot está a <8 h."
+   }
   }
  },
- "next_num": 33,
+ "next_num": 34,
  "metricool_month_count": {
   "2026-11": 19
  },
