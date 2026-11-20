@@ -553,7 +553,8 @@
     "tt": "6afe5604b16549e9b81700b0",
     "ig": "6afe5605b16549e9b81700df"
    },
-   "media": "VID-20261118-026.mp4"
+   "media": "VID-20261118-026.mp4",
+   "fb_id": "914984211604968"
   },
   "VID-20261119-027": {
    "num": 27,
@@ -586,7 +587,8 @@
     "titulo": 9,
     "total": 77
    },
-   "copy_yt": "Inventó una MÁQUINA… y su máquina lo atrapó ⚙️\nFiladelfia, 1867: William Bullock, inventor de la imprenta rotativa que imprimía 12.000 hojas por hora, quiso meter una correa en su sitio de una patada mientras la máquina giraba. Su pierna quedó atrapada… y días después murió en plena operación.\nMuertes absurdas #27\nFuente: Wikipedia — William Bullock (inventor); historyofinformation.com.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #shorts"
+   "copy_yt": "Inventó una MÁQUINA… y su máquina lo atrapó ⚙️\nFiladelfia, 1867: William Bullock, inventor de la imprenta rotativa que imprimía 12.000 hojas por hora, quiso meter una correa en su sitio de una patada mientras la máquina giraba. Su pierna quedó atrapada… y días después murió en plena operación.\nMuertes absurdas #27\nFuente: Wikipedia — William Bullock (inventor); historyofinformation.com.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #shorts",
+   "fb_id": "4458999741079992"
   },
   "VID-20261119-028": {
    "num": 28,
@@ -630,7 +632,7 @@
    "burned": "B",
    "hook_text": "PÍLDORAS PARA|NO MORIR",
    "slotAt": "2026-11-20T18:00",
-   "status": "programado (YT+TT); IG pendiente: crear cuando Buffer < 10 (tras salir VID-026 a las 18:00 del jueves)",
+   "status": "programado (YT+TT+IG)",
    "durationS": 68.7,
    "story": "Qin Shi Huang, píldoras de la inmortalidad (mercurio), carretas de pescado (Shiji)",
    "project": "/home/claude/v2/qin",
@@ -642,9 +644,9 @@
    "buffer_ids": {
     "yt": "6aff788def915da8dbc4ac56",
     "tt": "6aff788eef915da8dbc4acb0",
-    "ig": null
+    "ig": "6b0033ca0c6d6b905283272b"
    },
-   "ig_pending": true,
+   "ig_pending": false,
    "copy_ig": "Tomaba píldoras para NO MORIR… y lo mataron 💊\nEl primer emperador de China quería vivir para siempre… y para esconder su muerte lo rodearon de carretas de pescado. ¿Tú te habrías tomado esas píldoras?\nGuárdalo para contárselo a alguien 👀\nMuertes absurdas #29\nFuente: Sima Qian, Shiji; Encyclopaedia Britannica.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #curiosidadeshistoricas #datoscuriosos #malfinal",
    "copy_yt": "Quería ser INMORTAL… y su remedio lo mató 💊\nChina, 210 a.C.: Qin Shi Huang, el primer emperador, mandó flotas a buscar la isla de los inmortales y tomaba las píldoras de sus alquimistas. Murió de viaje a los 49 y sus ministros escondieron su muerte entre carretas de pescado. Se cree que las píldoras tenían mercurio.\nMuertes absurdas #29\nFuente: Sima Qian, Shiji (Memorias históricas); Encyclopaedia Britannica — Qin Shi Huang.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #shorts",
    "copy_tt": "Tomaba píldoras para NO MORIR… y lo mataron 💊 ¿Tú te habrías tomado esas píldoras? Historia real (China, 210 a.C.). Animación hecha con apoyo de IA. #muertesabsurdas #historiasreales #datososcuros #curiosidades #malfinal",
@@ -670,7 +672,7 @@
    "burned": "A",
    "hook_text": "OJO CON|LA BUFANDA",
    "slotAt": "2026-11-20T20:30",
-   "status": "render OK y subido a main; Buffer PENDIENTE (YT+TT+IG) por cupo 10/10",
+   "status": "programado (TT+IG); YT pendiente: Buffer rechazó 3er YouTube del día CDMX",
    "durationS": 64.6,
    "story": "Isadora Duncan, Niza 1927: bufanda de seda en la rueda de radios",
    "project": "/home/claude/v2/duncan",
@@ -681,8 +683,8 @@
    "route": "buffer",
    "buffer_ids": {
     "yt": null,
-    "tt": null,
-    "ig": null
+    "tt": "6b0033cb3d025b9e58aaa66c",
+    "ig": "6b0033cc3d025b9e58aaa6a8"
    },
    "copy_yt": "Su BUFANDA la hizo famosa… y la mató 🧣\nNiza, 1927: Isadora Duncan, la madre de la danza moderna, subió a un auto deportivo descapotable con su larguísima bufanda de seda. Gritó «¡Adiós, amigos, me voy a la gloria!»… y la bufanda se enredó en los radios de la rueda.\nMuertes absurdas #30\nFuente: Encyclopaedia Britannica — Isadora Duncan; The New York Times (15 sep 1927).\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #shorts",
    "copy_tt": "Gritó «me voy a la GLORIA»… y se fue 🧣 ¿Tú te habrías puesto esa bufanda? Historia real (Niza, 1927). Animación hecha con apoyo de IA. #muertesabsurdas #historiasreales #datososcuros #curiosidades #malfinal",
@@ -698,10 +700,90 @@
     "titulo": 9,
     "total": 80,
     "note": "publicar; plano 15 algo lavado"
+   },
+   "yt_pending": true
+  },
+  "VID-20261120-031": {
+   "num": 31,
+   "series": 31,
+   "title": "Conquistó ITALIA… y lo mató una PUERTA 🚪",
+   "hookA": "Conquistó ITALIA… y lo mató una PUERTA 🚪",
+   "hookB": "Este REY no se agachó… y una puerta lo mató 🚪",
+   "burned": "B",
+   "hook_text": "REY VS|PUERTA",
+   "slotAt": "2026-11-21T11:00",
+   "durationS": 69.7,
+   "story": "Carlos VIII de Francia, Amboise 1498: dintel de una puerta baja camino al jeu de paume (Commynes)",
+   "project": "/home/claude/v2/carlos",
+   "media": "VID-20261120-031.mp4",
+   "engine": "v2.2 + v3",
+   "mechanism": "golpe con el dintel de una puerta",
+   "set": "galería de piedra, cancha jeu de paume, castillo Amboise/Loira, Alpes nevados + Nápoles",
+   "route": "buffer",
+   "copy_yt": "Conquistó ITALIA… y lo mató una PUERTA 🚪\nFrancia, 1498: Carlos VIII, el rey que cruzó los Alpes y entró en Nápoles, iba con la reina Ana a ver un partido de pelota (el abuelo del tenis) en su castillo de Amboise. En una galería vieja no se agachó… y se dio en la frente con el dintel de una puerta. Horas después se desplomó y murió esa misma noche.\nMuertes absurdas #31\nFuente: Philippe de Commynes, Memorias; Encyclopaedia Britannica — Charles VIII.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #shorts",
+   "copy_tt": "Este REY no se agachó… y una puerta lo mató 🚪 ¿Tú te habrías agachado? Historia real (Francia, 1498). Animación hecha con apoyo de IA. #muertesabsurdas #historiasreales #datososcuros #curiosidades #malfinal",
+   "copy_ig": "Este REY no se agachó… y una puerta lo mató 🚪\nConquistó medio Italia y, de camino a ver un partido de pelota, se dio con el marco de una puerta. ¿Tú te habrías agachado?\nGuárdalo para contárselo a alguien 👀\nMuertes absurdas #31\nFuente: Commynes, Memorias; Encyclopaedia Britannica.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #curiosidadeshistoricas #datoscuriosos #malfinal",
+   "buffer_ids": {
+    "yt": "6b00693516b7fc947dff1428",
+    "tt": "6b006936d94183983ed6d720",
+    "ig": null
+   },
+   "fb_id": null,
+   "status": "programado (YT+TT) Sáb 21 11:00; IG PENDIENTE por cupo Buffer 10/10",
+   "ig_pending": true,
+   "qa100": {
+    "hook": 16,
+    "retencion": 14,
+    "visual": 11,
+    "narracion": 13,
+    "edicion": 7,
+    "originalidad": 9,
+    "titulo": 9,
+    "total": 79,
+    "note": "1 ronda de arreglo (rey de 3/4 en el golpe, re-render frases 0/13/19); gates OK, -14.9 LUFS"
+   }
+  },
+  "VID-20261120-032": {
+   "num": 32,
+   "series": 32,
+   "title": "Era EMPERADOR de Roma… y lo mató su enojo 😡",
+   "hookA": "Era EMPERADOR de Roma… y lo mató su enojo 😡",
+   "hookB": "Se ENOJÓ tanto… que se murió 😡",
+   "burned": "A",
+   "hook_text": "LO MATÓ|SU ENOJO",
+   "slotAt": "2026-11-21T17:00",
+   "durationS": 66.1,
+   "story": "Valentiniano I, Brigetio (Danubio) 375: ataque de ira ante embajadores cuados (Amiano Marcelino 30.6); osas Mica Aurea e Innocentia (29.3.9)",
+   "project": "/home/claude/v2/valen",
+   "media": "VID-20261120-032.mp4",
+   "engine": "v2.2 + v3",
+   "mechanism": "ataque de ira / grito",
+   "set": "tienda roja de audiencias, campamento del Danubio, salón de mármol con jaulas de osas",
+   "route": "buffer",
+   "copy_yt": "Era EMPERADOR de Roma… y lo mató su enojo 😡\nAño 375, a orillas del Danubio: Valentiniano I, emperador famoso por su mal genio (tenía dos osas junto a su cuarto, «Migaja de Oro» e «Inocencia»), recibió a unos embajadores que le dijeron que la guerra era culpa de Roma. Se enfureció tanto, gritando, que se desplomó ahí mismo y murió.\nMuertes absurdas #32\nFuente: Amiano Marcelino, Historia (libros 29–30); Encyclopaedia Britannica — Valentinian I.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #shorts",
+   "copy_tt": "Se ENOJÓ tanto… que se murió 😡 ¿Tú te habrías aguantado el coraje? Historia real (Roma, año 375). Animación hecha con apoyo de IA. #muertesabsurdas #historiasreales #datososcuros #curiosidades #malfinal",
+   "copy_ig": "Se ENOJÓ tanto… que se murió 😡\nUn emperador romano escuchó «la culpa es de Roma»… y gritó hasta caer fulminado. ¿Tú te habrías aguantado el coraje?\nGuárdalo para contárselo a alguien 👀\nMuertes absurdas #32\nFuente: Amiano Marcelino, Historia; Encyclopaedia Britannica.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #curiosidadeshistoricas #datoscuriosos #malfinal",
+   "buffer_ids": {
+    "yt": null,
+    "tt": null,
+    "ig": null
+   },
+   "fb_id": null,
+   "status": "render OK y subido a main; Buffer PENDIENTE (YT+TT+IG) para Sáb 21 17:00 por cupo 10/10",
+   "qa100": {
+    "hook": 15,
+    "retencion": 14,
+    "visual": 12,
+    "narracion": 13,
+    "edicion": 8,
+    "originalidad": 9,
+    "titulo": 9,
+    "total": 80,
+    "note": "1 ronda de arreglo (cámara frases 9 y 16); gates OK, -14.9 LUFS"
    }
   }
  },
- "next_num": 31,
+ "next_num": 33,
  "metricool_month_count": {
   "2026-11": 19
  },

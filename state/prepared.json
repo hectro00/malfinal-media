@@ -2,10 +2,11 @@
  "note": "Videos already written and staged by the interactive session (engine v2.2: PBR textures, photo skies). Use these FIRST, in this order, before inventing new ones. For each: script = engine2/examples/<n>_script.txt, scene = engine2/examples/<n>.js, audio = engine2/examples/<n>_audio.py. Still do TTS, stills check and render. Remove the item when it is scheduled.",
  "items": [],
  "todo_next_run": [
-  "PRIMERO (Buffer estaba 10/10 al cierre): VID-029 Qin → crear post Instagram (copy_ig en posts.json, media main/VID-20261119-029.mp4) para Vie 20 nov 18:00 (2026-11-20T18:00:00-06:00).",
-  "VID-030 Duncan YA está en main (VID-20261119-030.mp4, QA 80): crear YT (title=hookA, copy_yt, notifySubscribers:false) + TT (hookB, copy_tt) + IG (copy_ig) para Vie 20 nov 20:30 (2026-11-20T20:30:00-06:00). YT permitido (día UTC 21 = 029 + 030).",
-  "YouTube pendientes (yt_pending): VID-025 Rodale y VID-027 Bullock — Buffer/YouTube permite 2 por día UTC; usar en compilación del domingo o hueco.",
-  "Facebook (Zapier) pendientes: VID-022✓… siguientes: 026, 027, 028, 029, 030 cuando salgan (máx 2 por corrida, el más viejo primero).",
-  "Sábado 21 (corrida 14:47): compilación semanal W47 (PLAYBOOK 7b) para domingo 13:00."
+  "PRIMERO (Buffer 10/10 al cierre de la corrida 05:47 del vie 20; 028 sale a las 12:00 y libera 3): VID-031 Carlos VIII → crear IG (copy_ig en posts.json, media main/VID-20261120-031.mp4) para Sáb 21 11:00 (2026-11-21T11:00:00-06:00).",
+  "VID-032 Valentiniano YA está en main (VID-20261120-032.mp4, QA 80): crear YT (hookA, copy_yt, notifySubscribers:false) + TT (hookB, copy_tt) + IG (copy_ig) para Sáb 21 17:00 (2026-11-21T17:00:00-06:00). YouTube permitido (Sáb: 031 + 032 = 2).",
+  "Falta producir 1 video para Sáb 21 20:00 (sin YouTube: ya hay 2 YT ese día CDMX → TT+IG).",
+  "Límite YouTube de Buffer es por DÍA CDMX (no UTC): 030 fue rechazado en YT el vie 20:30 (ya había 028 12:00 y 029 18:00). yt_pending: 025, 027, 030.",
+  "Facebook (Zapier) pendientes, el más viejo primero (máx 2 por corrida): 028, 029, 030, luego 031, 032 cuando salgan.",
+  "Sábado 21 (corrida 14:47): compilación semanal W47 (PLAYBOOK 7b) para domingo 13:00. Metricool 19/20: queda 1 (para la compilación)."
  ]
 }

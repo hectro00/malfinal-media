@@ -1,6 +1,7 @@
 # Insights (analytics → rules)
 
-Updated: 2026-11-19 ~16:40 (run Thu 14:47): VID-029 Qin (QA 79, Fri 18:00 YT+TT, IG pendiente) y VID-030 Duncan (en render). FB vía Zapier: 021, 025. VID-025 YT falló por límite diario de YouTube (2 por día UTC) → yt_pending. Analytics skipped (credit saving).
+Updated: 2026-11-20 ~09:50 (run Fri 05:47): IG 029 + 030 TT/IG programados (030 YT rechazado: límite 2/día CDMX). Producidos VID-031 Carlos VIII (QA 79, Sáb 11:00 YT+TT, IG pendiente) y VID-032 Valentiniano (QA 80, en main, Buffer pendiente Sáb 17:00). FB vía Zapier: 026, 027. Analytics skipped (credit saving).
+- Previous: 2026-11-19 ~16:40 (run Thu 14:47): VID-029 Qin (QA 79, Fri 18:00 YT+TT, IG pendiente) y VID-030 Duncan (en render). FB vía Zapier: 021, 025. VID-025 YT falló por límite diario de YouTube (2 por día UTC) → yt_pending. Analytics skipped (credit saving).
 - Previous: 2026-11-19 ~09:30 (run Thu 05:47): VID-027, VID-028.
 - Previous: 2026-11-17 ~18:20 (America/Mexico_City). Run Tue 14:47: Buffer 0/10 and Metricool empty → produced the 3 prepared videos: VID-020 baile Estrasburgo (Tue 18:00), VID-021 Molière (Tue 20:30), VID-022 Esquilo leyenda (Wed 12:00). Buffer 9/10. Facebook/Make paused (not queued). Analytics skipped (credit saving), rules unchanged.
 - Previous: 2026-11-16 ~16:25.
