@@ -197,3 +197,4 @@ The user may paste YouTube Studio screenshots ("se quedaron para mirar", avg vie
 ## BUFFER ERRORS (18 Nov)
 - YouTube sometimes fails with "An unknown error has occurred" (Buffer side, no reason given). At the START of every run: `list_posts` status error → retry each one with `edit_post(mode:"shareNow")`, wait ~3 min, check `sent`. VID-023 failed once and went out fine on retry.
 - Always set YouTube `notifySubscribers:false` (the post that failed had true; the ones that worked had false).
+- YouTube channel can't be phone-verified (the user's number is already used on 2 accounts) → **YouTube max 2 shorts per UTC day** (00:00–23:59 UTC = 18:00–17:59 CDMX). Per CDMX day: 12:00 slot and 18:00 slot go to YouTube as usual; the 20:30 short goes to TikTok + Instagram + Facebook only and gets a YouTube post the next day only if a YT slot is free (never a 3rd in the same UTC day). Count sent + scheduled YT posts per UTC day before creating one.
