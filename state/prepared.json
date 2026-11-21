@@ -2,7 +2,7 @@
  "note": "Videos already written and staged by the interactive session (engine v2.2: PBR textures, photo skies). Use these FIRST, in this order, before inventing new ones. For each: script = engine2/examples/<n>_script.txt, scene = engine2/examples/<n>.js, audio = engine2/examples/<n>_audio.py. Still do TTS, stills check and render. Remove the item when it is scheduled.",
  "items": [],
  "todo_next_run": [
-  "BLOQUEO 20 Nov 14:47: los links raw.githubusercontent.com/nuncaverso-sketch/malfinal-media/... dan 404 (también hectorfdg/...). La cuenta de GitHub se renombró a 'hectorfdg' (~14:43) y el repo parece privado. Buffer responde 'Video could not be read from its URL'. PRIMERO: curl -sI de un raw; si da 200 (repo público otra vez, con el nombre que sea), usar ESA base de URL en todo lo de abajo. Si sigue 404: no producir (early exit) y avisar.",
+  "BLOQUEO sigue (21 Nov 05:47): raw.githubusercontent + github.com/nuncaverso-sketch/malfinal-media dan 404 público (repo privado; git autenticado sí funciona). Buffer: 029 TT/IG y 030 TT/IG en error 'media URL ... publicly accessible'; 029 YT error límite diario. 031 YT+TT Sáb 11:00 programados pero fallarán. PRIMERO curl -sI de un raw; si 200 → reintentar errores con edit_post shareNow y seguir la lista. Si 404 → early exit y avisar.",
   "Revisar en Buffer si 029 (vie 18:00) y 030 (vie 20:30) salieron o quedaron en error (¿Buffer re-descarga al publicar?). Si error y el link ya funciona: edit_post shareNow.",
   "VID-031 IG para Sáb 21 11:00 (copy_ig en posts.json).",
   "VID-032 Valentiniano (QA 80): YT+TT+IG Sáb 21 17:00.",
