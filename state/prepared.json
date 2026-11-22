@@ -2,14 +2,10 @@
  "note": "Videos already written and staged by the interactive session (engine v2.2: PBR textures, photo skies). Use these FIRST, in this order, before inventing new ones. For each: script = engine2/examples/<n>_script.txt, scene = engine2/examples/<n>.js, audio = engine2/examples/<n>_audio.py. Still do TTS, stills check and render. Remove the item when it is scheduled.",
  "items": [],
  "todo_next_run": [
-  "BLOQUEO sigue (22 Nov 14:47): raw.githubusercontent 404 (nuncaverso-sketch y hectorfdg). Buffer 0 programados. PRIMERO curl -sI de un raw mp4; si 200 → edit_post shareNow de errores y seguir la lista; si 404 → early exit y avisar.",
-  "Compilación W47 perdida (Dom 22 13:00 pasó sin URL pública). Meter sus items en la W48.",
-  "Revisar en Buffer si 029 (vie 18:00) y 030 (vie 20:30) salieron o quedaron en error (¿Buffer re-descarga al publicar?). Si error y el link ya funciona: edit_post shareNow.",
-  "VID-031 IG para Sáb 21 11:00 (copy_ig en posts.json).",
-  "VID-032 Valentiniano (QA 80): YT+TT+IG Sáb 21 17:00.",
-  "VID-033 Alejandro/mono (QA 77, en main): TT+IG Sáb 21 20:00 (sin YT: Sáb ya tiene 031+032). yt_pending.",
-  "Facebook (Zapier) pendientes, más viejo primero (máx 2/corrida): 028, 029, 030, 031...",
-  "Sábado 21 (corrida 14:47): compilación semanal W47 (PLAYBOOK 7b) para domingo 13:00. Metricool 19/20: queda 1.",
-  "Dom 22 09:00/13:00/19:00 vacíos (sin URL pública). Compilación W47 no hecha."
+  "Repo público de nuevo (22 Nov ~14:55). Usar URLs raw de hectorfdg/malfinal-media.",
+  "Buffer: 029 Dom 19:00, 030 Lun 12:00, 031 Lun 18:00 (9/10). Lun 20:30 libre: programar 032 (QA 80) TT+IG(+YT si cabe, Lun ya tiene 2 YT) → luego 033 (QA 77) Mar 12:00. Producir nuevos solo después.",
+  "Facebook (Zapier) pendientes, más viejo primero (máx 2/corrida): 029 (sale Dom 19:00), 030, 031...",
+  "Compilación W47 perdida; meter sus items en W48 (Sáb 28 14:47).",
+  "yt_pending: 025, 027, 033."
  ]
 }

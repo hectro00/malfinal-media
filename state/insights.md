@@ -1,6 +1,6 @@
 # Insights (analytics → rules)
 
-Updated: 2026-11-22 ~14:50 (run Sun 14:47): BLOQUEO sigue (raw 404, repo privado). Buffer 0 programados. Early exit, nada producido. Slots Dom 19:00, Lun 12:00, Lun 18:00 vacíos.
+Updated: 2026-11-22 ~14:55: usuario hizo público el repo → 029/030/031 reprogramados (Dom 19:00, Lun 12:00, Lun 18:00), FB 028 vía Zapier. Analytics skipped.
 - Previous: 2026-11-22 ~05:50 (run Sun 05:47): BLOQUEO sigue. Early exit.
 - Previous: 2026-11-21 ~14:55 (run Sat 14:47): BLOQUEO sigue (raw 404). Buffer 0 programados, 7 posts en error. Nada producido, sin compilación W47 (early exit).
 - Previous: 2026-11-21 ~05:55 (run Sat 05:47): BLOQUEO sigue — repo privado (raw 404). Buffer 029/030 TT+IG en error por URL no pública. Nada producido ni publicado (early exit).

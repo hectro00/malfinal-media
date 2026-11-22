@@ -621,7 +621,8 @@
     "titulo": 9,
     "total": 80
    },
-   "copy_yt": "Sus FANS lo querían tanto… que lo asfixiaron 🎭\nGrecia, hace 2.600 años: Dracón, el autor de las leyes más duras de Atenas (de ahí \"draconiano\"), fue recibido en el teatro de Egina con la costumbre de la época: lanzarle capas y sombreros. Fueron tantos que lo sepultaron. Así lo cuenta la leyenda.\nMuertes absurdas #28\nFuente: Suda (enciclopedia bizantina, entrada Δράκων); Wikipedia — Draco (legislator).\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #shorts"
+   "copy_yt": "Sus FANS lo querían tanto… que lo asfixiaron 🎭\nGrecia, hace 2.600 años: Dracón, el autor de las leyes más duras de Atenas (de ahí \"draconiano\"), fue recibido en el teatro de Egina con la costumbre de la época: lanzarle capas y sombreros. Fueron tantos que lo sepultaron. Así lo cuenta la leyenda.\nMuertes absurdas #28\nFuente: Suda (enciclopedia bizantina, entrada Δράκων); Wikipedia — Draco (legislator).\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #shorts",
+   "fb_id": "1460999085425726"
   },
   "VID-20261119-029": {
    "num": 29,
@@ -631,8 +632,8 @@
    "hookB": "Tomaba píldoras para NO MORIR… y lo mataron 💊",
    "burned": "B",
    "hook_text": "PÍLDORAS PARA|NO MORIR",
-   "slotAt": "2026-11-20T18:00",
-   "status": "programado (YT+TT+IG)",
+   "slotAt": "2026-11-22T19:00",
+   "status": "programado YT+TT+IG Dom 22 19:00 (reprogramado tras bloqueo)",
    "durationS": 68.7,
    "story": "Qin Shi Huang, píldoras de la inmortalidad (mercurio), carretas de pescado (Shiji)",
    "project": "/home/claude/v2/qin",
@@ -646,7 +647,6 @@
     "tt": "6aff788eef915da8dbc4acb0",
     "ig": "6b0033ca0c6d6b905283272b"
    },
-   "ig_pending": false,
    "copy_ig": "Tomaba píldoras para NO MORIR… y lo mataron 💊\nEl primer emperador de China quería vivir para siempre… y para esconder su muerte lo rodearon de carretas de pescado. ¿Tú te habrías tomado esas píldoras?\nGuárdalo para contárselo a alguien 👀\nMuertes absurdas #29\nFuente: Sima Qian, Shiji; Encyclopaedia Britannica.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #curiosidadeshistoricas #datoscuriosos #malfinal",
    "copy_yt": "Quería ser INMORTAL… y su remedio lo mató 💊\nChina, 210 a.C.: Qin Shi Huang, el primer emperador, mandó flotas a buscar la isla de los inmortales y tomaba las píldoras de sus alquimistas. Murió de viaje a los 49 y sus ministros escondieron su muerte entre carretas de pescado. Se cree que las píldoras tenían mercurio.\nMuertes absurdas #29\nFuente: Sima Qian, Shiji (Memorias históricas); Encyclopaedia Britannica — Qin Shi Huang.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #shorts",
    "copy_tt": "Tomaba píldoras para NO MORIR… y lo mataron 💊 ¿Tú te habrías tomado esas píldoras? Historia real (China, 210 a.C.). Animación hecha con apoyo de IA. #muertesabsurdas #historiasreales #datososcuros #curiosidades #malfinal",
@@ -671,8 +671,8 @@
    "hookB": "Gritó «me voy a la GLORIA»… y se fue 🧣",
    "burned": "A",
    "hook_text": "OJO CON|LA BUFANDA",
-   "slotAt": "2026-11-20T20:30",
-   "status": "programado (TT+IG); YT pendiente: Buffer rechazó 3er YouTube del día CDMX",
+   "slotAt": "2026-11-23T12:00",
+   "status": "programado YT+TT+IG Lun 23 12:00",
    "durationS": 64.6,
    "story": "Isadora Duncan, Niza 1927: bufanda de seda en la rueda de radios",
    "project": "/home/claude/v2/duncan",
@@ -682,7 +682,7 @@
    "set": "escenario teatro, calle nocturna con carteles, paseo de Niza",
    "route": "buffer",
    "buffer_ids": {
-    "yt": null,
+    "yt": "6b035663c72676f5e95ca5fb",
     "tt": "6b0033cb3d025b9e58aaa66c",
     "ig": "6b0033cc3d025b9e58aaa6a8"
    },
@@ -701,7 +701,7 @@
     "total": 80,
     "note": "publicar; plano 15 algo lavado"
    },
-   "yt_pending": true
+   "yt_pending": false
   },
   "VID-20261120-031": {
    "num": 31,
@@ -711,7 +711,7 @@
    "hookB": "Este REY no se agachó… y una puerta lo mató 🚪",
    "burned": "B",
    "hook_text": "REY VS|PUERTA",
-   "slotAt": "2026-11-21T11:00",
+   "slotAt": "2026-11-23T18:00",
    "durationS": 69.7,
    "story": "Carlos VIII de Francia, Amboise 1498: dintel de una puerta baja camino al jeu de paume (Commynes)",
    "project": "/home/claude/v2/carlos",
@@ -726,11 +726,10 @@
    "buffer_ids": {
     "yt": "6b00693516b7fc947dff1428",
     "tt": "6b006936d94183983ed6d720",
-    "ig": null
+    "ig": "6b035665cc364169c1848451"
    },
    "fb_id": null,
-   "status": "programado (YT+TT) Sáb 21 11:00; IG PENDIENTE: Buffer no lee el video (raw 404 desde 20 Nov 14:43)",
-   "ig_pending": true,
+   "status": "programado YT+TT+IG Lun 23 18:00",
    "qa100": {
     "hook": 16,
     "retencion": 14,
@@ -769,7 +768,7 @@
     "ig": null
    },
    "fb_id": null,
-   "status": "render OK y en main; Buffer PENDIENTE (YT+TT+IG Sáb 21 17:00): Buffer no lee el video (raw 404)",
+   "status": "terminado, en main; PENDIENTE de programar (siguiente corrida)",
    "qa100": {
     "hook": 15,
     "retencion": 14,
@@ -808,7 +807,7 @@
     "ig": null
    },
    "fb_id": null,
-   "status": "render OK, QA 77, subido a main (VID-20261120-033.mp4); Buffer PENDIENTE (links raw 404) → TT+IG Sáb 21 20:00",
+   "status": "terminado, en main; PENDIENTE de programar (siguiente corrida)",
    "qa100": {
     "hook": 15,
     "retencion": 14,
