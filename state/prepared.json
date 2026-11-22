@@ -2,8 +2,8 @@
  "note": "Videos already written and staged by the interactive session (engine v2.2: PBR textures, photo skies). Use these FIRST, in this order, before inventing new ones. For each: script = engine2/examples/<n>_script.txt, scene = engine2/examples/<n>.js, audio = engine2/examples/<n>_audio.py. Still do TTS, stills check and render. Remove the item when it is scheduled.",
  "items": [],
  "todo_next_run": [
-  "BLOQUEO sigue (22 Nov 05:47): raw.githubusercontent 404 (nuncaverso-sketch y hectorfdg), API repo 301→privado. Buffer 0 programados. PRIMERO curl -sI de un raw; si 200 → edit_post shareNow de errores y seguir la lista; si 404 → early exit y avisar.",
-  "Compilación W47 NO hecha el Sáb 21 (sin URL pública no se puede publicar). Si se desbloquea antes del Dom 13:00, hacerla.",
+  "BLOQUEO sigue (22 Nov 14:47): raw.githubusercontent 404 (nuncaverso-sketch y hectorfdg). Buffer 0 programados. PRIMERO curl -sI de un raw mp4; si 200 → edit_post shareNow de errores y seguir la lista; si 404 → early exit y avisar.",
+  "Compilación W47 perdida (Dom 22 13:00 pasó sin URL pública). Meter sus items en la W48.",
   "Revisar en Buffer si 029 (vie 18:00) y 030 (vie 20:30) salieron o quedaron en error (¿Buffer re-descarga al publicar?). Si error y el link ya funciona: edit_post shareNow.",
   "VID-031 IG para Sáb 21 11:00 (copy_ig en posts.json).",
   "VID-032 Valentiniano (QA 80): YT+TT+IG Sáb 21 17:00.",
