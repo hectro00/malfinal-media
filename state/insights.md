@@ -1,6 +1,7 @@
 # Insights (analytics → rules)
 
-Updated: 2026-11-21 ~14:55 (run Sat 14:47): BLOQUEO sigue (raw 404). Buffer 0 programados, 7 posts en error. Nada producido, sin compilación W47 (early exit).
+Updated: 2026-11-22 ~05:50 (run Sun 05:47): BLOQUEO sigue (raw 404, repo privado). Buffer 0 programados. Early exit, nada producido.
+- Previous: 2026-11-21 ~14:55 (run Sat 14:47): BLOQUEO sigue (raw 404). Buffer 0 programados, 7 posts en error. Nada producido, sin compilación W47 (early exit).
 - Previous: 2026-11-21 ~05:55 (run Sat 05:47): BLOQUEO sigue — repo privado (raw 404). Buffer 029/030 TT+IG en error por URL no pública. Nada producido ni publicado (early exit).
 - Previous: 2026-11-20 ~16:30 (run Fri 14:47): BLOQUEO — links raw de GitHub 404 (cuenta renombrada a hectorfdg, repo privado?) → Buffer no pudo leer 031 IG / 032. Producido VID-033 Alejandro de Grecia/mono (QA 77, en main, pendiente Sáb 20:00 TT+IG). FB no subido (mismo problema). Analytics skipped.
 - Previous: 2026-11-20 ~09:50 (run Fri 05:47): IG 029 + 030 TT/IG programados (030 YT rechazado: límite 2/día CDMX). Producidos VID-031 Carlos VIII (QA 79, Sáb 11:00 YT+TT, IG pendiente) y VID-032 Valentiniano (QA 80, en main, Buffer pendiente Sáb 17:00). FB vía Zapier: 026, 027. Analytics skipped (credit saving).
