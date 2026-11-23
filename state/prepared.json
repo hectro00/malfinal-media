@@ -2,10 +2,11 @@
  "note": "Videos already written and staged by the interactive session (engine v2.2: PBR textures, photo skies). Use these FIRST, in this order, before inventing new ones. For each: script = engine2/examples/<n>_script.txt, scene = engine2/examples/<n>.js, audio = engine2/examples/<n>_audio.py. Still do TTS, stills check and render. Remove the item when it is scheduled.",
  "items": [],
  "todo_next_run": [
-  "Repo público de nuevo (22 Nov ~14:55). Usar URLs raw de hectorfdg/malfinal-media.",
-  "Buffer: 029 Dom 19:00, 030 Lun 12:00, 031 Lun 18:00 (9/10). Lun 20:30 libre: programar 032 (QA 80) TT+IG(+YT si cabe, Lun ya tiene 2 YT) → luego 033 (QA 77) Mar 12:00. Producir nuevos solo después.",
-  "Facebook (Zapier) pendientes, más viejo primero (máx 2/corrida): 029 (sale Dom 19:00), 030, 031...",
+  "23 nov 14:47: cubierto hasta Mar 24 20:30 (031 Lun18, 035 Lun20:30, 036 Mar12, 032 Mar18, 033 Mar20:30). Buffer tiene 14 programados (el tope de 10 no se aplicó).",
+  "PRODUCIR con v4 para Mié 25 12:00, 18:00, 20:30 (ninguno hecho; no hay videos terminados sin programar).",
+  "YT UTC 25 nov: 032 (00:00Z) + 030 reintento (15:00Z) = 2 → el short de Mié 12:00 sale sin YT (yt_pending) salvo que se mueva 030.",
+  "Facebook pendientes (más viejo primero): 030, 031, 035, 036... (029 y 034 ya subidos 23 nov).",
   "Compilación W47 perdida; meter sus items en W48 (Sáb 28 14:47).",
-  "yt_pending: 025, 027, 033."
+  "yt_pending: 025, 027, 033, 035."
  ]
 }
