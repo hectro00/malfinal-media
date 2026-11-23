@@ -858,9 +858,27 @@
    "yt": "pendiente (límite 2/día lun)",
    "fb": "pendiente",
    "copy_yt": "Sobrevivió al NIÁGARA… y lo mató un estadio 🛢️\nCanadá, 1984: Karel Soucek bajó las Cataratas del Niágara en un barril y salió vivo. En 1985 lo soltaron desde lo alto del Astrodome de Houston hacia un tanque de agua… y el barril golpeó el borde. ¿Tú te habrías subido otra vez?\nMuertes absurdas #35\nFuente: Wikipedia — Karel Soucek.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #shorts"
+  },
+  "VID-20261123-036": {
+   "num": "036",
+   "series": 36,
+   "title": "Le daban miedo los CARRUAJES… y volaba con FUEGOS 🎈🔥",
+   "slotAt": "2026-11-24T12:00",
+   "durationS": 73.8,
+   "story": "Sophie Blanchard, Tivoli, París, 6 jul 1819: fuegos artificiales bajo globo de hidrógeno; el globo ardió y la canasta chocó con un techo de la rue de Provence.",
+   "media": "VID-20261123-036.mp4",
+   "engine": "v4",
+   "voice": "qwen-narrador",
+   "status": "programado",
+   "buffer_ids": {
+    "yt": "6b03e13bc72676f5e991a842",
+    "tt": "6b03e13cc72676f5e991a872",
+    "ig": "6b03e13ca6de38de9ec5f7a8"
+   },
+   "fb": "pendiente"
   }
  },
- "next_num": 36,
+ "next_num": 37,
  "metricool_month_count": {
   "2026-11": 19
  },
