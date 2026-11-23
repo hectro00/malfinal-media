@@ -819,9 +819,29 @@
     "total": 77,
     "note": "gates OK, -14.9 LUFS, 69.7 s; hook box tapa la cara del rey 2.6 s; estático máx 7.2 s. Sin ronda de arreglo (Buffer bloqueado). Publicable por regla ≥70 si el slot está a <8 h."
    }
+  },
+  "VID-20261122-034": {
+   "num": "034",
+   "series": 34,
+   "title": "Prometió usar un MUÑECO… y saltó él 🪂",
+   "hookA": "Prometió usar un MUÑECO… y saltó él 🪂",
+   "slotAt": "2026-11-22T21:02",
+   "durationS": 68.8,
+   "story": "Franz Reichelt, sastre, 4 feb 1912: pidió permiso para lanzar un muñeco desde el 1er piso de la Torre Eiffel (57 m) y saltó él con su traje-paracaídas.",
+   "media": "VID-20261122-034.mp4",
+   "engine": "v4",
+   "voice": "qwen-narrador",
+   "status": "publicado",
+   "buffer_ids": {
+    "yt": "6b03acb7c72676f5e97ecfc9",
+    "tt": "6b03acbad864a011051722f4",
+    "ig": "6b03acc5846b0ee907da90d8"
+   },
+   "fb": "pendiente",
+   "copy_fb": "Prometió usar un MUÑECO… y saltó él de la Torre Eiffel 🪂\nParís, 1912: el sastre Franz Reichelt inventó un abrigo-paracaídas, pidió permiso para lanzar un muñeco desde la torre… y el 4 de febrero saltó él mismo. ¿Tú habrías saltado?\nMuertes absurdas #34\nFuente: Wikipedia — Franz Reichelt.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal"
   }
  },
- "next_num": 34,
+ "next_num": 35,
  "metricool_month_count": {
   "2026-11": 19
  },

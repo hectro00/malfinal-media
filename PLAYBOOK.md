@@ -4,6 +4,28 @@ Goal: the next 3 slots (~24 h) must ALWAYS have a short scheduled (Buffer for YT
 **Rhythm: 3 videos per day** (user decision, 11 Nov evening): **Mon–Fri 12:00, 18:00, 20:30 · Sat 11:00, 17:00, 20:00 · Sun 09:00, 13:00, 19:00**. Target: get each video as close to 10 as possible.
 Each video passes through a **pre-production filter** (self-review against the real metrics).
 
+## ★ v4 SYSTEM (user decision 22 Nov) — overrides EVERYTHING below about style, engine and voice
+User approved (Reichelt, VID-034): "el video quedó perfecto" + voice "Qwen 1 Cálido Narrador". Every new video uses ONLY this:
+- **Style = engine4** (`engine4/`): everything (sets, props, people, fx) drawn in ONE flat-cartoon vector language in canvas 2D — no AI photos, no Blender, no three.js, no engine2/engine3. Animated backgrounds (clouds, birds, smoke, wind, crowd breathing), parallax layers, eased/follow camera, impact shake, sub-frame motion blur, jointed rig with blended poses. The death is NEVER shown: cut to crowd reaction / dust / hat.
+- **Voice = `tts/qwen_voice.py`** (Qwen3-TTS-1.7B-Base cloning the synthetic `tts/ref_narrador.wav`; not a real person). Do NOT use chatterbox/gen_blend any more.
+- Reference implementation (copy its structure, NOT its sets): `engine4/examples/reichelt/{scene.js,script.txt,audio.py}`.
+
+### v4 setup (fresh container, ~10 min, needs ~7 GB disk)
+```
+python3 -m venv qenv && qenv/bin/pip install -q qwen-tts soundfile
+qenv/bin/pip install -q --force-reinstall --no-deps torch==2.11.0+cpu torchaudio==2.11.0+cpu --index-url https://download.pytorch.org/whl/cpu   # qwen-tts pulls a CUDA torch; this fixes it
+qenv/bin/python -c "from huggingface_hub import snapshot_download as s; s('Qwen/Qwen3-TTS-12Hz-1.7B-Base')"   # 4.3 GB; on HTTP 429 wait 5 min and retry
+pip install --break-system-packages -q faster-whisper soundfile scipy; npm i --prefix engine4 puppeteer-core@25.16.0   # Chrome at /usr/bin/google-chrome
+```
+### v4 production (per video; ~25 min wall, mostly waiting)
+1. `mkdir -p work/NNN/{web,audio}`; write `script.txt`: 20 lines, 180–200 words, Mal Final structure (hook line = contrast, re-hooks, payoff, last line = question). Numbers and years IN WORDS ("mil novecientos doce"); respell foreign names how they sound in Spanish (Eiffel→"Éifel").
+2. Voice: `HF_HUB_OFFLINE=1 qenv/bin/python tts/qwen_voice.py script.txt full.wav` (whole script in ONE call, ~6–9 min) → `python3 tts/split_phrases.py script.txt full.wav frases` (match ≥ 0.9) → `python3 engine4/assemble_voice.py '{"<i>":<pause s>}'` (from inside work/NNN; extra pause after the climax line) → `python3 qa/words_gen.py .` → `python3 qa/captions_bolos.py .`. Duration must be 62–75 s: if > 75 add `atempo=1.04` to the filter in assemble_voice; if < 62 lengthen the script.
+3. `web/scene.js`: new sets for the story, built ONLY from `engine4/web/engine.js` primitives (person+pose/mixPose, L parallax, camPath/camTo, shakeAt, handheld, building, tree, lamp, tower-style helpers, puff, speedLines, wind, txt…). One shot per line (split long lines in 2), ≥ 6 sets, every shot has a visible action that matches the line, camera follows moving subjects, characters never cropped. Copy web/index.html + fonts from engine4/web, timing.json from step 2.
+4. Stills check (cheap): `node engine4/render.mjs st "$(python3 -c "print(','.join(str(i) for i in range(10,2300,24)))")" 360 && python3 engine4/sheet.py st 16`, look at st_sheet.jpg ONCE, fix framing/crops, then render `node engine4/render.mjs frames 0-<FRAMES-1> 1080` (~0.08 s/frame).
+5. Audio: copy `engine4/examples/reichelt/audio.py`, keep the synth/mix functions, rewrite only the music sections + SFX cues for the new shots → `python3 audio.py web/timing.json voice/voice.wav audio`.
+6. `bash engine4/finish.sh` → out/final.mp4 (+ out/qa_sheet.jpg). Delete frames/ after (disk).
+7. Publish as below (raw URL host is now **hectro00/malfinal-media**; old URLs redirect). AI labels as always.
+
 ## v3 SYSTEM (user audit, 17 Nov) — overrides anything below that contradicts it
 Real data (Buffer, 17 Nov, 16 videos): views are flat (YT ~1.1–1.8k, TikTok 0.6–2.3k, IG 1.3–3k), nothing breaks out. **TikTok average watch 8.5–19.5 s of 62–75 s; IG 19–32 s**; shares ≈ 0, comments 0–2. → The problems are (1) the first 2 s (most people leave at once), (2) the middle (story *told* by a narrator over people standing, not *shown*), (3) no reason to comment/share/follow, (4) same copy on every platform, (5) robotic voice (user).
 1. **Voice v3** (implemented in `tts/gen_blend.py` + `engine/assemble_voice.py`): expressive (exaggeration 0.8/0.9, cfg 0.5, temp 0.75), no tempo lift, word tails kept with a soft fade, subtle room. Don't change these back.
