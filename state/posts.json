@@ -673,7 +673,7 @@
    "burned": "A",
    "hook_text": "OJO CON|LA BUFANDA",
    "slotAt": "2026-11-23T12:00",
-   "status": "publicado TT+IG Lun 23 12:00; YT falló (límite diario) → reprogramado Mié 25 09:00",
+   "status": "publicado TT+IG Lun 23 12:00; YT reprogramado Mié 25 18:15 (ventana 24 h móvil)",
    "durationS": 64.6,
    "story": "Isadora Duncan, Niza 1927: bufanda de seda en la rueda de radios",
    "project": "/home/claude/v2/duncan",
@@ -730,7 +730,7 @@
     "ig": "6b035665cc364169c1848451"
    },
    "fb_id": "1863135308194324",
-   "status": "programado YT+TT+IG Lun 23 18:00",
+   "status": "publicado TT+IG Lun 23 18:00; YT falló (límite diario) → reprogramado Mié 25 12:15",
    "qa100": {
     "hook": 16,
     "retencion": 14,
