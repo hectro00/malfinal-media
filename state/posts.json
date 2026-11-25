@@ -892,9 +892,37 @@
    },
    "fb": "publicado 24 nov 11:45",
    "fb_id": "1128249980188808"
+  },
+  "VID-20261125-037": {
+   "slot": "2026-11-25T18:00:00-06:00",
+   "title": "Mató al ELEFANTE… y el elefante lo mató a él 🐘",
+   "project": "eleazar",
+   "media": "VID-20261125-037.mp4",
+   "engine": "v4",
+   "durationS": 67.4,
+   "source": "1 Macabeos 6:43-46; Josefo, Antigüedades XII.9.4",
+   "fb_id": null,
+   "buffer_ids": {
+    "tt": "6b07262d5e4da1697fd880a4",
+    "ig": "6b07262eacb19363a0d3b348",
+    "yt": null
+   },
+   "yt": "yt_pendiente (límite 2/día; hoy ya 031 y 030)",
+   "qa100": {
+    "hook": 16,
+    "retencion": 14,
+    "visual": 12,
+    "narracion": 13,
+    "edicion": 7,
+    "originalidad": 10,
+    "titulo": 9,
+    "total": 81,
+    "note": "gates OK, -15.0 LUFS, 67.4 s; subtítulo se cruza con texto en P1; elefante caído P15 algo confuso"
+   },
+   "status": "programado TT+IG Mié 25 18:00"
   }
  },
- "next_num": 37,
+ "next_num": 38,
  "metricool_month_count": {
   "2026-11": 19
  },
