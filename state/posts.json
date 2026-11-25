@@ -187,7 +187,15 @@
    "qa": "v3 rebuild (1 attempt + forced publish rule)",
    "slotAt": "2026-11-14T17:00",
    "status": "programado",
-   "engine": "v2"
+   "engine": "v2",
+   "reposts": [
+    {
+     "at": "2026-11-25T12:00-06:00",
+     "tt": "6b071e1d4f460a8675e6e92c",
+     "ig": "6b071e1d4c1d32a74c13ab37",
+     "why": "slot 12:00 sin cubrir a <20 min"
+    }
+   ]
   },
   "VID-20261110-012": {
    "metricool_id": 426653074,
@@ -768,7 +776,7 @@
     "ig": "6b042d947e433fe9cac76551",
     "tt": "6b042d8666ef504f454dd2bc"
    },
-   "fb_id": null,
+   "fb_id": "1393965770474989",
    "status": "programado YT+TT+IG Mar 24 18:00",
    "qa100": {
     "hook": 15,
@@ -780,7 +788,8 @@
     "titulo": 9,
     "total": 80,
     "note": "1 ronda de arreglo (cámara frases 9 y 16); gates OK, -14.9 LUFS"
-   }
+   },
+   "fb": "publicado 24 nov 20:45 (atrasado)"
   },
   "VID-20261120-033": {
    "num": "033",
@@ -807,7 +816,7 @@
     "tt": "6b042d966b6de5028259b41e",
     "yt": null
    },
-   "fb_id": null,
+   "fb_id": "2362738414567436",
    "status": "programado TT+IG Mar 24 20:30; YT pendiente (límite 2/día UTC)",
    "qa100": {
     "hook": 15,
@@ -820,7 +829,8 @@
     "total": 77,
     "note": "gates OK, -14.9 LUFS, 69.7 s; hook box tapa la cara del rey 2.6 s; estático máx 7.2 s. Sin ronda de arreglo (Buffer bloqueado). Publicable por regla ≥70 si el slot está a <8 h."
    },
-   "yt_pending": true
+   "yt_pending": true,
+   "fb": "publicado 24 nov 20:45"
   },
   "VID-20261122-034": {
    "num": "034",
