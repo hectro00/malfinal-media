@@ -975,9 +975,43 @@
     "note": "v4, 63.2 s, -14.8 LUFS; 4 sets (comedor repetido en 6 planos), sin ronda de arreglo"
    },
    "fb": "publicado 26 nov 11:45"
+  },
+  "VID-20261126-040": {
+   "num": 40,
+   "series": 40,
+   "title": "Eligió la ESPADA para vivir… y lo mató su TRONO 👑",
+   "hookA": "Eligió la ESPADA para vivir… y lo mató su TRONO 👑",
+   "hookB": "Le dieron a elegir: CORONA o ESPADA… 👑⚔️",
+   "slot": "2026-11-26T18:00:00-06:00",
+   "media": "VID-20261126-040.mp4",
+   "engine": "v4",
+   "voice": "qwen-narrador",
+   "durationS": 63.3,
+   "story": "Béla I de Hungría: prueba de la corona y la espada en Tiszavárkony (c.1060, Crónica iluminada); rey 1060; en Dömös (1063) su trono de madera se rompió, herido murió camino a la frontera junto al arroyo Kanyapatak, 11 sep 1063.",
+   "source": "Wikipedia / Encyclopaedia Britannica — Béla I de Hungría; Crónica iluminada",
+   "buffer_ids": {
+    "tt": "6b0874d6f0a96d0f217b8566",
+    "ig": "6b0874d63accdac92ceac9f0",
+    "yt": null
+   },
+   "yt_pending": true,
+   "fb_id": null,
+   "copy_yt": "Eligió la ESPADA para vivir… y lo mató su TRONO 👑\nHungría, 1060: el rey Andrés puso ante su hermano Bela una corona y una espada; le advirtieron que si tomaba la corona lo matarían. Eligió la espada, luego conquistó el reino… y en 1063 su trono de madera se rompió bajo él en Dömös. ¿Tú qué habrías elegido?\nMuertes absurdas #40\nFuente: Wikipedia / Encyclopaedia Britannica — Béla I de Hungría; Crónica iluminada.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #shorts",
+   "status": "programado TT+IG Jue 26 18:00; YT pendiente (ventana 24 h móvil llena: 038 12:30, 037 18:30)",
+   "qa100": {
+    "hook": 15,
+    "retencion": 14,
+    "visual": 12,
+    "narracion": 13,
+    "edicion": 7,
+    "originalidad": 10,
+    "titulo": 9,
+    "total": 80,
+    "note": "v4, 63.3 s, -15.1 LUFS; 12 sets; subtítulos se cruzan con texto en pantalla en 3 planos; caballo simple; sin ronda de arreglo"
+   }
   }
  },
- "next_num": 40,
+ "next_num": 41,
  "metricool_month_count": {
   "2026-11": 19
  },
