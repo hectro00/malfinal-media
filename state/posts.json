@@ -946,9 +946,37 @@
    "status": "programado TT+IG Mié 25 21:00; YT Jue 26 12:30",
    "engine": "v4",
    "story": "Alejandro III de Escocia, 18-19 mar 1286: salió de Edimburgo en tormenta para ir con la reina Yolanda, cruzó el Forth (barquero: \"moriré con gusto con el hijo de tu padre\"), perdió a sus guías y apareció muerto en la playa de Kinghorn; caballo tropezó. (Crónica de Lanercost; Britannica)"
+  },
+  "VID-20261125-039": {
+   "num": 39,
+   "title": "Le dijeron que no tomara el AGUA… y se la tomó 💧",
+   "hookA": "Quiso demostrar que el AGUA era segura… y se la tomó 💧",
+   "hookB": "Le dijeron que no tomara el AGUA… y se la tomó 💧",
+   "story": "Arnold Bennett, agua de la llave en París (ene 1931), tifoidea, muere en Londres 27 mar 1931; paja en la calle",
+   "source": "Wikipedia/Britannica — Arnold Bennett",
+   "slot": "2026-11-26T12:00:00-06:00",
+   "fb_id": null,
+   "buffer_ids": {
+    "tt": "6b07a34cd4eda4b659d2608e",
+    "ig": "6b07a34db96dd8d351845c06",
+    "yt": null
+   },
+   "yt_pending": true,
+   "status": "programado TT+IG Jue 26 12:00; YT pendiente (ventana 24 h móvil llena)",
+   "qa100": {
+    "hook": 15,
+    "retencion": 14,
+    "visual": 11,
+    "narracion": 13,
+    "edicion": 7,
+    "originalidad": 10,
+    "titulo": 9,
+    "total": 79,
+    "note": "v4, 63.2 s, -14.8 LUFS; 4 sets (comedor repetido en 6 planos), sin ronda de arreglo"
+   }
   }
  },
- "next_num": 39,
+ "next_num": 40,
  "metricool_month_count": {
   "2026-11": 19
  },
