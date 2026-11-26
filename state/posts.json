@@ -955,7 +955,7 @@
    "story": "Arnold Bennett, agua de la llave en París (ene 1931), tifoidea, muere en Londres 27 mar 1931; paja en la calle",
    "source": "Wikipedia/Britannica — Arnold Bennett",
    "slot": "2026-11-26T12:00:00-06:00",
-   "fb_id": null,
+   "fb_id": "1660829855822258",
    "buffer_ids": {
     "tt": "6b07a34cd4eda4b659d2608e",
     "ig": "6b07a34db96dd8d351845c06",
@@ -973,7 +973,8 @@
     "titulo": 9,
     "total": 79,
     "note": "v4, 63.2 s, -14.8 LUFS; 4 sets (comedor repetido en 6 planos), sin ronda de arreglo"
-   }
+   },
+   "fb": "publicado 26 nov 11:45"
   }
  },
  "next_num": 40,
