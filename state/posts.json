@@ -905,7 +905,7 @@
    "buffer_ids": {
     "tt": "6b07262d5e4da1697fd880a4",
     "ig": "6b07262eacb19363a0d3b348",
-    "yt": null
+    "yt": "6b07776cb96dd8d351727905"
    },
    "yt": "yt_pendiente (límite 2/día; hoy ya 031 y 030)",
    "qa100": {
@@ -919,10 +919,36 @@
     "total": 81,
     "note": "gates OK, -15.0 LUFS, 67.4 s; subtítulo se cruza con texto en P1; elefante caído P15 algo confuso"
    },
-   "status": "programado TT+IG Mié 25 18:00"
+   "status": "programado TT+IG Mié 25 18:00; YT Jue 26 18:30",
+   "story": "Eleazar Avarán, Bet Zacarías 162 a.C.: se metió bajo el elefante real y murió aplastado (1 Mac 6:43-46)"
+  },
+  "VID-20261125-038": {
+   "slot": "2026-11-25T21:00:00-06:00",
+   "title": "No quiso esperar la TORMENTA… y Escocia perdió a su rey ⛈️",
+   "media": "VID-20261125-038.mp4",
+   "fb_id": null,
+   "buffer_ids": {
+    "tt": "6b07775ed4eda4b659c03f93",
+    "ig": "6b07775fb8e2338b85743637",
+    "yt": "6b07776b9f6dda31cca9f5f7"
+   },
+   "qa100": {
+    "hook": 15,
+    "retencion": 14,
+    "visual": 11,
+    "narracion": 13,
+    "edicion": 7,
+    "originalidad": 10,
+    "titulo": 9,
+    "total": 79,
+    "note": "v4, 68.2 s, -14.6 LUFS; subtítulos se cruzan con texto en pantalla en 4 planos (GRANIZO/YOLANDA/SOLO/TROPEZÓ); sin ronda de arreglo"
+   },
+   "status": "programado TT+IG Mié 25 21:00; YT Jue 26 12:30",
+   "engine": "v4",
+   "story": "Alejandro III de Escocia, 18-19 mar 1286: salió de Edimburgo en tormenta para ir con la reina Yolanda, cruzó el Forth (barquero: \"moriré con gusto con el hijo de tu padre\"), perdió a sus guías y apareció muerto en la playa de Kinghorn; caballo tropezó. (Crónica de Lanercost; Britannica)"
   }
  },
- "next_num": 38,
+ "next_num": 39,
  "metricool_month_count": {
   "2026-11": 19
  },
