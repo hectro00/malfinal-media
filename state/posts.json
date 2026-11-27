@@ -1049,9 +1049,41 @@
     "total": 80,
     "note": "v4, 70.1 s, -15.1 LUFS, gates OK (hook 8 palabras tras 1 ronda de arreglo); 8 sets; estático máx 12.8 s según score.py (fondos de nieve parecidos); subtítulo roza texto en P1b/P14"
    }
+  },
+  "VID-20261127-042": {
+   "num": "042",
+   "series": 42,
+   "slot": "2026-11-27T18:00:00-06:00",
+   "title": "Una adivina lo mandó a PARÍS… y París lo mató 🔮",
+   "hookA": "Una adivina lo mandó a PARÍS… y París lo mató 🔮",
+   "story": "Ödön von Horváth: una adivina en Ámsterdam le dijo que en París viviría su mayor aventura; 1 jun 1938, tormenta en los Campos Elíseos, una rama de castaño cayó sobre él frente al Théâtre Marigny (36 años).",
+   "sources": "Encyclopaedia Britannica / Wikipedia — Ödön von Horváth",
+   "media": "VID-20261127-042.mp4",
+   "engine": "v4",
+   "voice": "qwen-narrador",
+   "durationS": 68.7,
+   "buffer_ids": {
+    "tt": "6b09c6c9c4601a3566a412f9",
+    "ig": "6b09c6ca446d2e47aaab3cfb",
+    "yt": "6b09c6cbd5bf252ef5413480"
+   },
+   "fb_id": null,
+   "yt_pending": null,
+   "status": "programado TT+IG Vie 27 18:00; YT Vie 27 18:45 (ventana 24 h móvil)",
+   "qa100": {
+    "hook": 15,
+    "retencion": 14,
+    "visual": 12,
+    "narracion": 13,
+    "edicion": 6,
+    "originalidad": 10,
+    "titulo": 9,
+    "total": 79,
+    "note": "v4, 68.7 s, -15.0 LUFS, gates OK tras 1 ronda (hook a 10 palabras); 8 sets; estático máx 20 s según score.py; '1901–1938' roza el letrero del teatro en P17"
+   }
   }
  },
- "next_num": 42,
+ "next_num": 43,
  "metricool_month_count": {
   "2026-11": 19
  },
