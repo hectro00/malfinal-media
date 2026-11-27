@@ -1017,9 +1017,41 @@
     "total": 80,
     "note": "v4, 63.3 s, -15.1 LUFS; 12 sets; subtítulos se cruzan con texto en pantalla en 3 planos; caballo simple; sin ronda de arreglo"
    }
+  },
+  "VID-20261126-041": {
+   "num": "041",
+   "series": 41,
+   "slot": "2026-11-27T12:00:00-06:00",
+   "title": "Quiso inventar el CONGELADOR… y se congeló él ❄️",
+   "hookA": "Quiso inventar el CONGELADOR… y se congeló él ❄️",
+   "story": "Francis Bacon, abril 1626, Highgate: rellenó una gallina con nieve para probar si conservaba la carne; se enfrió, cama húmeda en casa del conde de Arundel, murió de neumonía el 9 abr 1626.",
+   "sources": "Encyclopaedia Britannica / Wikipedia — Francis Bacon; John Aubrey, Brief Lives",
+   "media": "VID-20261126-041.mp4",
+   "engine": "v4",
+   "voice": "qwen-narrador",
+   "durationS": 70.1,
+   "buffer_ids": {
+    "tt": "6b08f5f1e94385a8fd6beb42",
+    "ig": "6b08f5f21fd46e62e70aa520",
+    "yt": "6b08f5f3658222306cd944d5"
+   },
+   "fb_id": null,
+   "yt_pending": null,
+   "status": "programado TT+IG Vie 27 12:00; YT Vie 27 12:45 (ventana 24 h móvil)",
+   "qa100": {
+    "hook": 15,
+    "retencion": 14,
+    "visual": 12,
+    "narracion": 13,
+    "edicion": 7,
+    "originalidad": 10,
+    "titulo": 9,
+    "total": 80,
+    "note": "v4, 70.1 s, -15.1 LUFS, gates OK (hook 8 palabras tras 1 ronda de arreglo); 8 sets; estático máx 12.8 s según score.py (fondos de nieve parecidos); subtítulo roza texto en P1b/P14"
+   }
   }
  },
- "next_num": 41,
+ "next_num": 42,
  "metricool_month_count": {
   "2026-11": 19
  },
