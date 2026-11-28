@@ -1081,9 +1081,37 @@
     "total": 79,
     "note": "v4, 68.7 s, -15.0 LUFS, gates OK tras 1 ronda (hook a 10 palabras); 8 sets; estático máx 20 s según score.py; '1901–1938' roza el letrero del teatro en P17"
    }
+  },
+  "VID-20261127-043": {
+   "num": "043",
+   "slot": "2026-11-27T21:00:00-06:00",
+   "fb_id": null,
+   "status": "programado TT+IG Vie 27 21:00; YT pendiente (ventana 24 h móvil llena: 041 12:45, 042 18:45)",
+   "qa100": {
+    "hook": 15,
+    "retencion": 14,
+    "visual": 12,
+    "narracion": 13,
+    "edicion": 7,
+    "originalidad": 10,
+    "titulo": 9,
+    "total": 80,
+    "note": "v4, 64.3 s, -15.1 LUFS, gates OK; 9 sets; 1 ronda (textos ¡A LA BOCA!/AQUÍ TODO SALIÓ MAL movidos arriba de subtítulos); muerte no mostrada (corte a frasco cayendo)"
+   },
+   "hookA": "Ganó dos PULITZER… y lo mató una tapita 🎭",
+   "hookB": "Ganó dos PULITZER… y lo mató una tapita 🎭💧",
+   "burned": "B",
+   "story": "Tennessee Williams, Hotel Elysée NY, 25 feb 1983: se ahogó con la tapita de un frasco de gotas",
+   "source": "CBS News; TIME (1983)",
+   "buffer_ids": {
+    "tt": "6b0a1a94eab081a3f509e368",
+    "ig": "6b0a1a94eada83daa6ace80b",
+    "yt": null
+   },
+   "yt_pending": true
   }
  },
- "next_num": 43,
+ "next_num": 44,
  "metricool_month_count": {
   "2026-11": 19
  },
