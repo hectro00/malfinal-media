@@ -1,1139 +1,1139 @@
 {
- "example_info": {
-  "autoPublish": true,
-  "draft": false,
-  "descendants": [],
-  "firstCommentText": "",
-  "hasNotReadNotes": false,
-  "media": [
-   "https://raw.githubusercontent.com/nuncaverso-sketch/malfinal-media/main/VID-20261110-001.mp4"
-  ],
-  "mediaAltText": [],
-  "providers": [
-   {
-    "network": "youtube"
-   },
-   {
-    "network": "tiktok"
-   },
-   {
-    "network": "instagram"
-   },
-   {
-    "network": "facebook"
-   }
-  ],
-  "publicationDate": {
-   "dateTime": "2026-11-11T07:30:00",
-   "timezone": "America/Mexico_City"
-  },
-  "shortener": false,
-  "smartLinkData": {
-   "ids": []
-  },
-  "text": "Una ola de cerveza mató a 8 personas en Londres en 1814… y la cervecería terminó ganando dinero. 🍺⚖️ Historia real.\n#historia #datoscuriosos #curiosidades #malfinal #historiasreales\n\nFuente: History.com — The London Beer Flood.\nAnimación hecha con apoyo de IA.",
-  "youtubeData": {
-   "title": "Una ola de CERVEZA mató a 8 personas 🍺",
-   "type": "short",
-   "privacy": "public",
-   "tags": [
-    "historia",
-    "datos curiosos",
-    "muertes absurdas",
-    "mal final",
-    "shorts"
-   ],
-   "category": "EDUCATION",
-   "madeForKids": false,
-   "isAiGeneratedContent": true
-  },
-  "tiktokData": {
-   "disableComment": false,
-   "disableDuet": false,
-   "disableStitch": false,
-   "privacyOption": "PUBLIC_TO_EVERYONE",
-   "commercialContentThirdParty": false,
-   "commercialContentOwnBrand": false,
-   "title": "Una ola de CERVEZA mató a 8 personas 🍺",
-   "autoAddMusic": false,
-   "isAigc": true
-  },
-  "instagramData": {
-   "type": "REEL",
-   "showReelOnFeed": true,
-   "isAiGenerated": true
-  },
-  "facebookData": {
-   "type": "REEL",
-   "title": "Una ola de CERVEZA mató a 8 personas 🍺"
-  }
- },
- "videos": {
-  "VID-20261110-001": {
-   "metricool_id": 424059293,
-   "uuid": "5135073865227911200",
-   "slot": "2026-11-11T07:30:00",
-   "title": "Una ola de CERVEZA mató a 8 personas 🍺",
-   "project": "cerveza3",
-   "media": "VID-20261110-001v5.mp4",
-   "qa": "v3 rebuild (1 attempt + forced publish rule)"
-  },
-  "VID-20261110-002": {
-   "metricool_id": 424070625,
-   "uuid": "68186798064357344",
-   "slot": "2026-11-11T13:00:00",
-   "title": "Sobrevivió al NIÁGARA en un barril… lo mató una naranja 🍊",
-   "project": "niagara3",
-   "media": "VID-20261110-002v3.mp4",
-   "qa": "v3 rebuild (1 attempt + forced publish rule)"
-  },
-  "VID-20261110-003": {
-   "metricool_id": 424086229,
-   "uuid": "-8440272518124780956",
-   "slot": "2026-11-11T19:30:00",
-   "title": "Saltó de la TORRE EIFFEL con un traje que él inventó 🪂",
-   "project": "eiffel3",
-   "media": "VID-20261110-003v3.mp4",
-   "qa": "v3 rebuild (1 attempt + forced publish rule)"
-  },
-  "VID-20261110-004": {
-   "metricool_id": 425183122,
-   "uuid": "-895177550353314362",
-   "slot": "2026-11-12T07:30:00",
-   "title": "Quiso demostrar que la ventana era IRROMPIBLE 🪟",
-   "project": "ventana3",
-   "media": "VID-20261110-004v3.mp4",
-   "qa": "v3 rebuild (1 attempt + forced publish rule)",
-   "slotAt": "2026-11-12T12:00"
-  },
-  "VID-20261110-005": {
-   "metricool_id": 425183134,
-   "uuid": "8367155208976941329",
-   "slot": "2026-11-12T13:00:00",
-   "title": "Una ola de JARABE de 8 metros arrasó Boston 🍯",
-   "project": "melaza3",
-   "media": "VID-20261110-005v3.mp4",
-   "qa": "v3 rebuild (1 attempt + forced publish rule)",
-   "slotAt": "2026-11-12T18:00"
-  },
-  "VID-20261110-006": {
-   "metricool_id": 426698481,
-   "uuid": "-8399659931806512481",
-   "slot": "2026-11-12T19:30:00",
-   "title": "Este abogado GANÓ el caso… demostrándolo en sí mismo ⚖️",
-   "project": "abogado3",
-   "media": "VID-20261110-006v4.mp4",
-   "qa": "v3 rebuild (1 attempt + forced publish rule)",
-   "slotAt": "2026-11-15T09:00",
-   "status": "programado",
-   "engine": "v2"
-  },
-  "VID-20261110-007": {
-   "metricool_id": 426486830,
-   "uuid": "2840333282246085581",
-   "slot": "2026-11-13T07:30:00",
-   "title": "Este músico murió por llevar el RITMO 🎼",
-   "project": "lully3",
-   "media": "VID-20261110-007v4.mp4",
-   "qa": "v3 rebuild (1 attempt + forced publish rule)",
-   "slotAt": "2026-11-13T12:00",
-   "status": "programado",
-   "engine": "v2",
-   "project_v2": "/home/claude/v2/lully"
-  },
-  "VID-20261110-008": {
-   "metricool_id": 426509420,
-   "uuid": "8884635062313372359",
-   "slot": "2026-11-13T13:00:00",
-   "title": "Inventó 2 de las peores cosas del siglo XX… y lo mató la tercera",
-   "project": "poleas3",
-   "media": "VID-20261110-008v4.mp4",
-   "qa": "v3 rebuild (1 attempt + forced publish rule)",
-   "slotAt": "2026-11-13T18:00",
-   "status": "programado",
-   "engine": "v2"
-  },
-  "VID-20261110-009": {
-   "metricool_id": 426551523,
-   "uuid": "-3832667063987846141",
-   "slot": "2026-11-13T19:30:00",
-   "title": "Le pusieron ALAS a un carro… y lo hicieron volar ✈️🚗",
-   "project": "pinto3",
-   "media": "VID-20261110-009v4.mp4",
-   "qa": "v3 rebuild (1 attempt + forced publish rule)",
-   "slotAt": "2026-11-13T20:30",
-   "status": "programado",
-   "engine": "v2"
-  },
-  "VID-20261110-010": {
-   "metricool_id": 426575408,
-   "uuid": "-2443161876793048730",
-   "slot": "2026-11-14T09:30:00",
-   "title": "Su barba medía 1.4 metros… y fue lo que lo mató 🧔",
-   "project": "barba3",
-   "media": "VID-20261110-010v4.mp4",
-   "qa": "v3 rebuild (1 attempt + forced publish rule)",
-   "slotAt": "2026-11-14T11:00",
-   "status": "programado",
-   "engine": "v2"
-  },
-  "VID-20261110-011": {
-   "metricool_id": 426612828,
-   "uuid": "-4743505066469406067",
-   "slot": "2026-11-14T13:00:00",
-   "title": "Un genio de la ciencia murió por rellenar un pollo con NIEVE 🐔❄️",
-   "project": "pollo3",
-   "media": "VID-20261110-011v4.mp4",
-   "qa": "v3 rebuild (1 attempt + forced publish rule)",
-   "slotAt": "2026-11-14T17:00",
-   "status": "programado",
-   "engine": "v2",
-   "reposts": [
-    {
-     "at": "2026-11-25T12:00-06:00",
-     "tt": "6b071e1d4f460a8675e6e92c",
-     "ig": "6b071e1d4c1d32a74c13ab37",
-     "why": "slot 12:00 sin cubrir a <20 min"
-    }
-   ]
-  },
-  "VID-20261110-012": {
-   "metricool_id": 426653074,
-   "uuid": "717286113889374008",
-   "slot": "2026-11-14T19:30:00",
-   "title": "Una de las primeras personas en morir por un AUTO… en 1869 🚂",
-   "project": "vapor3",
-   "media": "VID-20261110-012v4.mp4",
-   "qa": "v3 rebuild (1 attempt + forced publish rule)",
-   "slotAt": "2026-11-14T20:00",
-   "status": "programado",
-   "engine": "v2"
-  },
-  "VID-20261110-013": {
-   "metricool_id": 423833327,
-   "uuid": "6679017619232410139",
-   "slot": "2026-11-10T19:30:00",
-   "title": "Construyó un faro de MADERA con velas… y pidió vivir la peor tormenta 🌊",
-   "project": "faro3",
-   "media": "VID-20261110-013c.mp4",
-   "qa": "CALIDAD 7.1 / PEGADA 7.0 PUBLICAR"
-  },
-  "VID-20261115-014": {
-   "project": "/home/claude/v2/tycho",
-   "title": "Este astrónomo tenía NARIZ DE METAL… y lo mató la cortesía 👃",
-   "metricool_id": 427588590,
-   "uuid": "-3182287624977233691",
-   "slotAt": "2026-11-15T13:00",
-   "status": "programado",
-   "media": "VID-20261115-014.mp4",
-   "engine": "v2.1-rick",
-   "hookA": "Este astrónomo tenía NARIZ DE METAL… y lo mató la cortesía",
-   "hookB": "Murió por no levantarse de la mesa",
-   "note": "moved 19:00→13:00 on 13 Nov so the Hunley short (own-invention mechanism) is not adjacent to the lawyer video (09:00)"
-  },
-  "VID-20261115-015": {
-   "project": "/home/claude/v2/hunley",
-   "title": "Su SUBMARINO ya había fallado… y se subió él mismo 🌊",
-   "metricool_id": 427588680,
-   "uuid": "-2316692729028067145",
-   "slotAt": "2026-11-15T19:00",
-   "status": "programado",
-   "media": "VID-20261115-015.mp4",
-   "engine": "v2.1-rick",
-   "hookA": "Su SUBMARINO ya había fallado… y se subió él mismo",
-   "hookB": "Probó su submarino MORTAL él mismo… y no volvió",
-   "burned": "B (sign YA SE HUNDIÓ)",
-   "durationS": 66.9,
-   "story": "H. L. Hunley, Charleston 1863-64",
-   "scores": {
-    "preprod": 8,
-    "stills": 6.5,
-    "post_v1": {
-     "CALIDAD": 6.8,
-     "PEGADA": 7.0,
-     "verdict": "REHACER"
+  "example_info": {
+    "autoPublish": true,
+    "draft": false,
+    "descendants": [],
+    "firstCommentText": "",
+    "hasNotReadNotes": false,
+    "media": [
+      "https://raw.githubusercontent.com/nuncaverso-sketch/malfinal-media/main/VID-20261110-001.mp4"
+    ],
+    "mediaAltText": [],
+    "providers": [
+      {
+        "network": "youtube"
+      },
+      {
+        "network": "tiktok"
+      },
+      {
+        "network": "instagram"
+      },
+      {
+        "network": "facebook"
+      }
+    ],
+    "publicationDate": {
+      "dateTime": "2026-11-11T07:30:00",
+      "timezone": "America/Mexico_City"
     },
-    "post_v2": "redo applied (partial re-render of 11 phrases), published per 1 attempt + 1 redo rule"
-   }
-  },
-  "VID-20261116-016": {
-   "title": "Ganó la final OLÍMPICA… y ya estaba muerto 🏛️",
-   "slotAt": "2026-11-16T12:00",
-   "slot": null,
-   "status": "programado",
-   "metricool_id": 428097798,
-   "uuid": "-1459378806221355926",
-   "project": "/home/claude/v2/arra",
-   "media": "VID-20261116-016.mp4",
-   "durationS": 72.5,
-   "engine": "v2",
-   "hookA": "Ganó la final OLÍMPICA… y ya estaba muerto 🏛️",
-   "hookB": "Lo declararon CAMPEÓN… y ya no respiraba 🫒",
-   "burned": "A (sign CAMPEÓN)",
-   "scores": {
-    "preprod": 8,
-    "stills": "6 → fixes applied (3 rounds)",
-    "post_v1": {
-     "CALIDAD": 6.8,
-     "PEGADA": 7.0,
-     "verdict": "REHACER"
+    "shortener": false,
+    "smartLinkData": {
+      "ids": []
     },
-    "post_v2": "redo applied (partial re-render of 8 phrases + bigger/lower subs), published per 1 attempt + 1 redo rule"
-   }
-  },
-  "VID-20261116-017": {
-   "title": "Inspiró a Hemingway… y lo mató un PALILLO 🍸",
-   "slotAt": "2026-11-16T18:00",
-   "status": "programado",
-   "metricool_id": 428422128,
-   "uuid": "-6303144973101216901",
-   "project": "/home/claude/v2/s17",
-   "media": "VID-20261116-017.mp4",
-   "durationS": 74.9,
-   "engine": "v2",
-   "hookA": "Inspiró a Hemingway… y lo mató un PALILLO 🍸",
-   "hookB": "Murió por tragarse un PALILLO de martini 🫒",
-   "burned": "B (sign 1 PALILLO)",
-   "scores": {
-    "preprod": 8,
-    "stills": "2 rounds (hook glass, framing, signs)",
-    "post_v1": {
-     "CALIDAD": 8,
-     "PEGADA": 8,
-     "verdict": "PUBLICAR (subs moved below faces, re-encode only)"
-    }
-   }
-  },
-  "VID-20261116-018": {
-   "title": "Le puso una HÉLICE de avión a un tren 🚆",
-   "slotAt": "2026-11-16T20:30",
-   "status": "programado",
-   "metricool_id": 428450010,
-   "uuid": "9077227582155279251",
-   "project": "/home/claude/v2/s18",
-   "media": "VID-20261116-018.mp4",
-   "durationS": 69.2,
-   "engine": "v2",
-   "hookA": "Le puso una HÉLICE de avión a un tren 🚆",
-   "hookB": "Su tren con HÉLICE era rapidísimo… demasiado 🌀",
-   "burned": "A (sign TREN + HÉLICE)",
-   "scores": {
-    "preprod": 8,
-    "stills": "3 rounds (prop size, station light, tree occlusion)",
-    "post_v1": {
-     "CALIDAD": 7.3,
-     "PEGADA": 7.5,
-     "verdict": "REHACER"
+    "text": "Una ola de cerveza mató a 8 personas en Londres en 1814… y la cervecería terminó ganando dinero. 🍺⚖️ Historia real.\n#historia #datoscuriosos #curiosidades #malfinal #historiasreales\n\nFuente: History.com — The London Beer Flood.\nAnimación hecha con apoyo de IA.",
+    "youtubeData": {
+      "title": "Una ola de CERVEZA mató a 8 personas 🍺",
+      "type": "short",
+      "privacy": "public",
+      "tags": [
+        "historia",
+        "datos curiosos",
+        "muertes absurdas",
+        "mal final",
+        "shorts"
+      ],
+      "category": "EDUCATION",
+      "madeForKids": false,
+      "isAiGeneratedContent": true
     },
-    "post_v2": "redo: hook/loop reframed with sign on wagon, cab light, propeller+wreck shot; partial re-render 400 frames; published per 1+1 rule"
-   }
-  },
-  "VID-20261116-019": {
-   "slot": "2026-11-17T12:00",
-   "status": "programado",
-   "title": "Fue rey de Suecia… y lo mató el POSTRE 🍰",
-   "hookA": "Fue rey de Suecia… y lo mató el POSTRE 🍰",
-   "hookB": "El rey que pidió OTRO postre… y otro… 🍮",
-   "burned": "B",
-   "project": "postre",
-   "media": "VID-20261116-019.mp4",
-   "engine": "v2.2",
-   "durationS": 64.4,
-   "route": "buffer+make",
-   "buffer_ids": {
-    "yt": "6afb81c5e71931620ba24cac",
-    "tt": "6afb81c7c6b697e19187b356",
-    "ig": "6afb81c8e71931620ba24e90"
-   },
-   "make_record": "4f038eadaa92",
-   "qa": {
-    "preprod": 8.25,
-    "calidad": 8,
-    "pegada": 8
-   },
-   "fb_id": "3018318091856096",
-   "fb_via": "zapier"
-  },
-  "VID-20261117-020": {
-   "slot": "2026-11-17T18:00",
-   "status": "programado",
-   "title": "Empezó a BAILAR… y no pudo parar en días 💃",
-   "hookA": "Empezó a BAILAR… y no pudo parar en días 💃",
-   "hookB": "La cura para el baile mortal: bailar MÁS 🎻",
-   "burned": "A",
-   "project": "baile",
-   "media": "VID-20261117-020.mp4",
-   "engine": "v2.2",
-   "durationS": 67.7,
-   "route": "buffer (FB pausado)",
-   "buffer_ids": {
-    "yt": "6afcd979c68ceea50aac2645",
-    "tt": "6afcd97a8e2194ed032c15f2",
-    "ig": "6afcd97b30b9befce2b5a86d"
-   },
-   "qa": {
-    "preprod": 8.25,
-    "calidad": 8,
-    "pegada": 8
-   },
-   "fb_id": "1140026231908635",
-   "fb_via": "zapier"
-  },
-  "VID-20261117-021": {
-   "slot": "2026-11-17T20:30",
-   "status": "programado",
-   "title": "Murió en el escenario… y el público SE RIÓ 🎭",
-   "hookA": "Murió en el escenario… y el público SE RIÓ 🎭",
-   "hookB": "Hacía de ENFERMO… y murió de verdad 🎭",
-   "burned": "B",
-   "project": "moliere",
-   "media": "VID-20261117-021.mp4",
-   "engine": "v2.2",
-   "durationS": 64.9,
-   "route": "buffer (FB pausado)",
-   "buffer_ids": {
-    "yt": "6afce514bb12698d1581c55f",
-    "tt": "6afce51593fa11d37df0eaea",
-    "ig": "6afce516bb12698d1581c5ba"
-   },
-   "qa": {
-    "preprod": 8.25,
-    "calidad": 8,
-    "pegada": 8
-   },
-   "fb_id": "1459975589440569"
-  },
-  "VID-20261117-022": {
-   "slot": "2026-11-18T12:00",
-   "status": "programado",
-   "title": "Lo mató una TORTUGA que cayó del cielo 🐢",
-   "hookA": "Lo mató una TORTUGA que cayó del cielo 🐢",
-   "hookB": "Un oráculo le dijo: cuidado con el CIELO… 🦅",
-   "burned": "A",
-   "project": "esquilo",
-   "media": "VID-20261117-022.mp4",
-   "engine": "v2.2",
-   "durationS": 62.9,
-   "route": "buffer (FB pausado)",
-   "buffer_ids": {
-    "yt": "6afceeb6bb12698d15858b73",
-    "tt": "6afceeb7ab47737bddb6031b",
-    "ig": "6afceeb8bb12698d15858bdd"
-   },
-   "qa": {
-    "preprod": 8.25,
-    "calidad": 7.5,
-    "pegada": 8
-   },
-   "fb_id": "1087263124366383",
-   "fb_via": "zapier"
-  },
-  "VID-20261118-023": {
-   "title": "Inauguró el TREN… y el tren lo atropelló 🚂",
-   "status": "publicado",
-   "media": "VID-20261118-023.mp4",
-   "durationS": 72.9,
-   "engine": "v2.2 + v3 system",
-   "story": "William Huskisson, Liverpool–Manchester 1830",
-   "hookA": "Inauguró el TREN… y el tren lo atropelló 🚂",
-   "hookB": "Lo atropelló su PROPIO tren 🚂",
-   "buffer_drafts": {
-    "yt": "6afd19b5aa3b065dd96cf28a",
-    "tt": "6afd19b69f3765f6ab2ac204"
-   },
-   "qa100": {
-    "hook": 17,
-    "retencion": 14,
-    "visual": 10,
-    "narracion": 12,
-    "edicion": 6,
-    "originalidad": 8,
-    "titulo": 8,
-    "total": 75,
-    "note": "1 fix round applied (punch-ins, mute hook text, bigger captions)"
-   },
-   "slot": "2026-11-18T20:30:00-06:00",
-   "buffer_ids": {
-    "youtube": "6afe3446c69bd1cb888d698e",
-    "tiktok": "6afe3452ebd4409dc902de6d",
-    "instagram": "6afe3452ebd4409dc902de9f"
-   },
-   "fb_id": "1848380159620466",
-   "ig_url": "https://www.instagram.com/reel/Df6AuiiEYDX/"
-  },
-  "VID-20261118-024": {
-   "num": 24,
-   "series": 24,
-   "title": "Abrió la tumba de TUTANKAMÓN… y lo mató un mosquito 🦟",
-   "hookA": "Abrió la tumba de TUTANKAMÓN… y lo mató un mosquito 🦟",
-   "hookB": "Lo mató un MOSQUITO… tras abrir la tumba de Tutankamón 🦟",
-   "burned": "A",
-   "slotAt": "2026-11-18T18:00",
-   "status": "publicado",
-   "durationS": 72.2,
-   "qa100": {
-    "hook": 16,
-    "retencion": 13,
-    "visual": 11,
-    "narracion": 12,
-    "edicion": 7,
-    "originalidad": 8,
-    "titulo": 9,
-    "total": 76,
-    "note": "1 fix round (hook mosquito, shaving, extra cuts, trench blocking)"
-   },
-   "project": "/home/claude/v2/carnarvon",
-   "engine": "v3",
-   "mechanism": "picadura/infección + leyenda maldición",
-   "set": "Egipto tumba/desierto, hotel Cairo",
-   "buffer_ids": {
-    "yt": "6afe2fc401ba7c5e791c692b",
-    "tt": "6afe2fc54cace847b37dcf26",
-    "ig": "6afe2fc6c462756e9e267f92"
-   },
-   "media": "VID-20261118-024.mp4",
-   "fb_id": "1496991189289758",
-   "ig_url": "https://www.instagram.com/reel/Df5vluZgKoX/"
-  },
-  "VID-20261118-025": {
-   "num": 25,
-   "series": 25,
-   "title": "Dijo en la TELE que viviría 100 años… y murió ahí 📺",
-   "hookA": "Dijo en la TELE que viviría 100 años… y murió ahí 📺",
-   "hookB": "Prometió vivir 100 AÑOS… y murió en pleno programa 📺",
-   "burned": "B",
-   "slotAt": "2026-11-19T12:00",
-   "status": "publicado TT+IG; YT falló (límite diario YouTube = 2 por día UTC) → yt_pending",
-   "durationS": 69.7,
-   "qa100": {
-    "hook": 17,
-    "retencion": 14,
-    "visual": 11,
-    "narracion": 13,
-    "edicion": 8,
-    "originalidad": 9,
-    "titulo": 9,
-    "total": 81,
-    "note": "1 fix round (hook line ≤10 words, mid-phrase cuts)"
-   },
-   "project": "/home/claude/v2/rodale",
-   "engine": "v3",
-   "mechanism": "muerte en directo / ironía",
-   "set": "plató TV 1971, Nueva York, granja",
-   "buffer_ids": {
-    "yt": null,
-    "tt": "6afe4b42c462756e9e305a08",
-    "ig": "6afe4b43a588bd6687ad2292"
-   },
-   "media": "VID-20261118-025.mp4",
-   "note": "moved from 20:30 (slot taken by VID-023 from interactive session)",
-   "copy_yt": "Dijo en la TELE que viviría 100 años… y murió ahí 📺\n1971: J. I. Rodale, el gurú de la comida orgánica, presumió en un programa de entrevistas que llegaría a los cien. Minutos después se quedó inmóvil en el sofá, con las cámaras grabando. El episodio nunca se emitió.\nMuertes absurdas #25\nFuente: The New York Times (9 jun 1971) — \"J. I. Rodale Dies at 72\"; Encyclopaedia Britannica.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #shorts",
-   "yt_pending": true,
-   "fb_id": "1513897710788460"
-  },
-  "VID-20261118-026": {
-   "num": 26,
-   "series": 26,
-   "title": "Este REY murió de risa… literalmente 😂",
-   "hookA": "Este REY murió de risa… literalmente 😂",
-   "hookB": "Lo mató un CHISTE… y se acabó su dinastía 😂",
-   "burned": "A",
-   "slotAt": "2026-11-19T18:00",
-   "status": "programado",
-   "durationS": 64.3,
-   "qa100": {
-    "hook": 16,
-    "retencion": 14,
-    "visual": 11,
-    "narracion": 12,
-    "edicion": 7,
-    "originalidad": 7,
-    "titulo": 9,
-    "total": 76,
-    "note": "1 fix round (vineyard cuts)"
-   },
-   "project": "/home/claude/v2/risa",
-   "engine": "v3",
-   "mechanism": "risa / chiste (leyenda)",
-   "set": "banquete Aragón, alcoba, viña, salón del trono",
-   "buffer_ids": {
-    "yt": "6afe560259eff0b616d090d5",
-    "tt": "6afe5604b16549e9b81700b0",
-    "ig": "6afe5605b16549e9b81700df"
-   },
-   "media": "VID-20261118-026.mp4",
-   "fb_id": "914984211604968"
-  },
-  "VID-20261119-027": {
-   "num": 27,
-   "series": 27,
-   "title": "Inventó una MÁQUINA… y su máquina lo atrapó ⚙️",
-   "hookA": "Inventó una MÁQUINA… y su máquina lo atrapó ⚙️",
-   "hookB": "Lo mató una PATADA a su propio invento 🦶",
-   "burned": "B",
-   "slotAt": "2026-11-19T20:30",
-   "status": "programado (TT+IG); YT pendiente: Buffer limita YouTube a 2 posts/día",
-   "durationS": 71.4,
-   "story": "William Bullock, prensa rotativa, Filadelfia 1867",
-   "project": "/home/claude/v2/bullock",
-   "media": "VID-20261119-027.mp4",
-   "engine": "v2.2 + v3",
-   "route": "buffer",
-   "buffer_ids": {
-    "tt": "6afefd8003dff68ab45c85ab",
-    "ig": "6afefd8003dff68ab45c85ff",
-    "yt": null
-   },
-   "yt_pending": true,
-   "qa100": {
-    "hook": 16,
-    "retencion": 15,
-    "visual": 11,
-    "narracion": 12,
-    "edicion": 6,
-    "originalidad": 8,
-    "titulo": 9,
-    "total": 77
-   },
-   "copy_yt": "Inventó una MÁQUINA… y su máquina lo atrapó ⚙️\nFiladelfia, 1867: William Bullock, inventor de la imprenta rotativa que imprimía 12.000 hojas por hora, quiso meter una correa en su sitio de una patada mientras la máquina giraba. Su pierna quedó atrapada… y días después murió en plena operación.\nMuertes absurdas #27\nFuente: Wikipedia — William Bullock (inventor); historyofinformation.com.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #shorts",
-   "fb_id": "4458999741079992"
-  },
-  "VID-20261119-028": {
-   "num": 28,
-   "series": 28,
-   "title": "Sus FANS lo querían tanto… que lo asfixiaron 🎭",
-   "hookA": "Sus FANS lo querían tanto… que lo asfixiaron 🎭",
-   "hookB": "Lo mató una lluvia de ROPA… por cariño 🧥",
-   "burned": "A",
-   "slotAt": "2026-11-20T12:00",
-   "status": "programado",
-   "durationS": 68.4,
-   "story": "Dracón, teatro de Egina (leyenda, Suda)",
-   "project": "/home/claude/v2/dracon",
-   "media": "VID-20261119-028.mp4",
-   "engine": "v2.2 + v3",
-   "route": "buffer",
-   "buffer_ids": {
-    "tt": "6aff090b03dff68ab463488f",
-    "ig": "6aff090bcac0791c5d92e735",
-    "yt": "6aff60c3fceb0935ef162b1d"
-   },
-   "yt_pending": false,
-   "qa100": {
-    "hook": 18,
-    "retencion": 15,
-    "visual": 12,
-    "narracion": 12,
-    "edicion": 6,
-    "originalidad": 8,
-    "titulo": 9,
-    "total": 80
-   },
-   "copy_yt": "Sus FANS lo querían tanto… que lo asfixiaron 🎭\nGrecia, hace 2.600 años: Dracón, el autor de las leyes más duras de Atenas (de ahí \"draconiano\"), fue recibido en el teatro de Egina con la costumbre de la época: lanzarle capas y sombreros. Fueron tantos que lo sepultaron. Así lo cuenta la leyenda.\nMuertes absurdas #28\nFuente: Suda (enciclopedia bizantina, entrada Δράκων); Wikipedia — Draco (legislator).\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #shorts",
-   "fb_id": "1460999085425726"
-  },
-  "VID-20261119-029": {
-   "num": 29,
-   "series": 29,
-   "title": "Quería ser INMORTAL… y su remedio lo mató 💊",
-   "hookA": "Quería ser INMORTAL… y su remedio lo mató 💊",
-   "hookB": "Tomaba píldoras para NO MORIR… y lo mataron 💊",
-   "burned": "B",
-   "hook_text": "PÍLDORAS PARA|NO MORIR",
-   "slotAt": "2026-11-22T19:00",
-   "status": "programado YT+TT+IG Dom 22 19:00 (reprogramado tras bloqueo)",
-   "durationS": 68.7,
-   "story": "Qin Shi Huang, píldoras de la inmortalidad (mercurio), carretas de pescado (Shiji)",
-   "project": "/home/claude/v2/qin",
-   "media": "VID-20261119-029.mp4",
-   "engine": "v2.2 + v3",
-   "mechanism": "buscar la inmortalidad / remedio que mata",
-   "set": "laboratorio alquimista, palacio rojo, Gran Muralla + ejército, muelle, camino de bambú",
-   "route": "buffer",
-   "buffer_ids": {
-    "yt": "6aff788def915da8dbc4ac56",
-    "tt": "6aff788eef915da8dbc4acb0",
-    "ig": "6b0033ca0c6d6b905283272b"
-   },
-   "copy_ig": "Tomaba píldoras para NO MORIR… y lo mataron 💊\nEl primer emperador de China quería vivir para siempre… y para esconder su muerte lo rodearon de carretas de pescado. ¿Tú te habrías tomado esas píldoras?\nGuárdalo para contárselo a alguien 👀\nMuertes absurdas #29\nFuente: Sima Qian, Shiji; Encyclopaedia Britannica.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #curiosidadeshistoricas #datoscuriosos #malfinal",
-   "copy_yt": "Quería ser INMORTAL… y su remedio lo mató 💊\nChina, 210 a.C.: Qin Shi Huang, el primer emperador, mandó flotas a buscar la isla de los inmortales y tomaba las píldoras de sus alquimistas. Murió de viaje a los 49 y sus ministros escondieron su muerte entre carretas de pescado. Se cree que las píldoras tenían mercurio.\nMuertes absurdas #29\nFuente: Sima Qian, Shiji (Memorias históricas); Encyclopaedia Britannica — Qin Shi Huang.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #shorts",
-   "copy_tt": "Tomaba píldoras para NO MORIR… y lo mataron 💊 ¿Tú te habrías tomado esas píldoras? Historia real (China, 210 a.C.). Animación hecha con apoyo de IA. #muertesabsurdas #historiasreales #datososcuros #curiosidades #malfinal",
-   "fb_id": "4876504769249030",
-   "qa100": {
-    "hook": 16,
-    "retencion": 14,
-    "visual": 11,
-    "narracion": 13,
-    "edicion": 6,
-    "originalidad": 10,
-    "titulo": 9,
-    "total": 79,
-    "note": "1 fix round (cartel MERCURIO, trono iluminado, cámaras muelle/carroza); gates OK, -14.8 LUFS"
-   },
-   "fb_duplicado": "1786733999074803"
-  },
-  "VID-20261119-030": {
-   "num": 30,
-   "series": 30,
-   "title": "Su BUFANDA la hizo famosa… y la mató 🧣",
-   "hookA": "Su BUFANDA la hizo famosa… y la mató 🧣",
-   "hookB": "Gritó «me voy a la GLORIA»… y se fue 🧣",
-   "burned": "A",
-   "hook_text": "OJO CON|LA BUFANDA",
-   "slotAt": "2026-11-23T12:00",
-   "status": "publicado TT+IG Lun 23 12:00; YT reprogramado Mié 25 18:15 (ventana 24 h móvil)",
-   "durationS": 64.6,
-   "story": "Isadora Duncan, Niza 1927: bufanda de seda en la rueda de radios",
-   "project": "/home/claude/v2/duncan",
-   "media": "VID-20261119-030.mp4",
-   "engine": "v2.2 + v3",
-   "mechanism": "accesorio/ropa atrapado (bufanda)",
-   "set": "escenario teatro, calle nocturna con carteles, paseo de Niza",
-   "route": "buffer",
-   "buffer_ids": {
-    "yt": "6b035663c72676f5e95ca5fb",
-    "tt": "6b0033cb3d025b9e58aaa66c",
-    "ig": "6b0033cc3d025b9e58aaa6a8"
-   },
-   "copy_yt": "Su BUFANDA la hizo famosa… y la mató 🧣\nNiza, 1927: Isadora Duncan, la madre de la danza moderna, subió a un auto deportivo descapotable con su larguísima bufanda de seda. Gritó «¡Adiós, amigos, me voy a la gloria!»… y la bufanda se enredó en los radios de la rueda.\nMuertes absurdas #30\nFuente: Encyclopaedia Britannica — Isadora Duncan; The New York Times (15 sep 1927).\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #shorts",
-   "copy_tt": "Gritó «me voy a la GLORIA»… y se fue 🧣 ¿Tú te habrías puesto esa bufanda? Historia real (Niza, 1927). Animación hecha con apoyo de IA. #muertesabsurdas #historiasreales #datososcuros #curiosidades #malfinal",
-   "copy_ig": "Gritó «me voy a la GLORIA»… y se fue 🧣\nIsadora Duncan cambió la danza para siempre… y su bufanda de seda acabó atrapada en la rueda de un descapotable. ¿Tú te habrías puesto esa bufanda?\nGuárdalo para contárselo a alguien 👀\nMuertes absurdas #30\nFuente: Encyclopaedia Britannica — Isadora Duncan.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #curiosidadeshistoricas #datoscuriosos #malfinal",
-   "fb_id": "994309653747621",
-   "qa100": {
-    "hook": 16,
-    "retencion": 14,
-    "visual": 11,
-    "narracion": 13,
-    "edicion": 8,
-    "originalidad": 9,
-    "titulo": 9,
-    "total": 80,
-    "note": "publicar; plano 15 algo lavado"
-   },
-   "yt_pending": false
-  },
-  "VID-20261120-031": {
-   "num": 31,
-   "series": 31,
-   "title": "Conquistó ITALIA… y lo mató una PUERTA 🚪",
-   "hookA": "Conquistó ITALIA… y lo mató una PUERTA 🚪",
-   "hookB": "Este REY no se agachó… y una puerta lo mató 🚪",
-   "burned": "B",
-   "hook_text": "REY VS|PUERTA",
-   "slotAt": "2026-11-23T18:00",
-   "durationS": 69.7,
-   "story": "Carlos VIII de Francia, Amboise 1498: dintel de una puerta baja camino al jeu de paume (Commynes)",
-   "project": "/home/claude/v2/carlos",
-   "media": "VID-20261120-031.mp4",
-   "engine": "v2.2 + v3",
-   "mechanism": "golpe con el dintel de una puerta",
-   "set": "galería de piedra, cancha jeu de paume, castillo Amboise/Loira, Alpes nevados + Nápoles",
-   "route": "buffer",
-   "copy_yt": "Conquistó ITALIA… y lo mató una PUERTA 🚪\nFrancia, 1498: Carlos VIII, el rey que cruzó los Alpes y entró en Nápoles, iba con la reina Ana a ver un partido de pelota (el abuelo del tenis) en su castillo de Amboise. En una galería vieja no se agachó… y se dio en la frente con el dintel de una puerta. Horas después se desplomó y murió esa misma noche.\nMuertes absurdas #31\nFuente: Philippe de Commynes, Memorias; Encyclopaedia Britannica — Charles VIII.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #shorts",
-   "copy_tt": "Este REY no se agachó… y una puerta lo mató 🚪 ¿Tú te habrías agachado? Historia real (Francia, 1498). Animación hecha con apoyo de IA. #muertesabsurdas #historiasreales #datososcuros #curiosidades #malfinal",
-   "copy_ig": "Este REY no se agachó… y una puerta lo mató 🚪\nConquistó medio Italia y, de camino a ver un partido de pelota, se dio con el marco de una puerta. ¿Tú te habrías agachado?\nGuárdalo para contárselo a alguien 👀\nMuertes absurdas #31\nFuente: Commynes, Memorias; Encyclopaedia Britannica.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #curiosidadeshistoricas #datoscuriosos #malfinal",
-   "buffer_ids": {
-    "yt": "6b00693516b7fc947dff1428",
-    "tt": "6b006936d94183983ed6d720",
-    "ig": "6b035665cc364169c1848451"
-   },
-   "fb_id": "1863135308194324",
-   "status": "publicado TT+IG Lun 23 18:00; YT falló (límite diario) → reprogramado Mié 25 12:15",
-   "qa100": {
-    "hook": 16,
-    "retencion": 14,
-    "visual": 11,
-    "narracion": 13,
-    "edicion": 7,
-    "originalidad": 9,
-    "titulo": 9,
-    "total": 79,
-    "note": "1 ronda de arreglo (rey de 3/4 en el golpe, re-render frases 0/13/19); gates OK, -14.9 LUFS"
-   }
-  },
-  "VID-20261120-032": {
-   "num": 32,
-   "series": 32,
-   "title": "Era EMPERADOR de Roma… y lo mató su enojo 😡",
-   "hookA": "Era EMPERADOR de Roma… y lo mató su enojo 😡",
-   "hookB": "Se ENOJÓ tanto… que se murió 😡",
-   "burned": "A",
-   "hook_text": "LO MATÓ|SU ENOJO",
-   "slotAt": "2026-11-24T18:00",
-   "durationS": 66.1,
-   "story": "Valentiniano I, Brigetio (Danubio) 375: ataque de ira ante embajadores cuados (Amiano Marcelino 30.6); osas Mica Aurea e Innocentia (29.3.9)",
-   "project": "/home/claude/v2/valen",
-   "media": "VID-20261120-032.mp4",
-   "engine": "v2.2 + v3",
-   "mechanism": "ataque de ira / grito",
-   "set": "tienda roja de audiencias, campamento del Danubio, salón de mármol con jaulas de osas",
-   "route": "buffer",
-   "copy_yt": "Era EMPERADOR de Roma… y lo mató su enojo 😡\nAño 375, a orillas del Danubio: Valentiniano I, emperador famoso por su mal genio (tenía dos osas junto a su cuarto, «Migaja de Oro» e «Inocencia»), recibió a unos embajadores que le dijeron que la guerra era culpa de Roma. Se enfureció tanto, gritando, que se desplomó ahí mismo y murió.\nMuertes absurdas #32\nFuente: Amiano Marcelino, Historia (libros 29–30); Encyclopaedia Britannica — Valentinian I.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #shorts",
-   "copy_tt": "Se ENOJÓ tanto… que se murió 😡 ¿Tú te habrías aguantado el coraje? Historia real (Roma, año 375). Animación hecha con apoyo de IA. #muertesabsurdas #historiasreales #datososcuros #curiosidades #malfinal",
-   "copy_ig": "Se ENOJÓ tanto… que se murió 😡\nUn emperador romano escuchó «la culpa es de Roma»… y gritó hasta caer fulminado. ¿Tú te habrías aguantado el coraje?\nGuárdalo para contárselo a alguien 👀\nMuertes absurdas #32\nFuente: Amiano Marcelino, Historia; Encyclopaedia Britannica.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #curiosidadeshistoricas #datoscuriosos #malfinal",
-   "buffer_ids": {
-    "yt": "6b042d952e056481c05897a2",
-    "ig": "6b042d947e433fe9cac76551",
-    "tt": "6b042d8666ef504f454dd2bc"
-   },
-   "fb_id": "1393965770474989",
-   "status": "programado YT+TT+IG Mar 24 18:00",
-   "qa100": {
-    "hook": 15,
-    "retencion": 14,
-    "visual": 12,
-    "narracion": 13,
-    "edicion": 8,
-    "originalidad": 9,
-    "titulo": 9,
-    "total": 80,
-    "note": "1 ronda de arreglo (cámara frases 9 y 16); gates OK, -14.9 LUFS"
-   },
-   "fb": "publicado 24 nov 20:45 (atrasado)"
-  },
-  "VID-20261120-033": {
-   "num": "033",
-   "series": 33,
-   "title": "Lo mordió un MONO… y cambió la historia de Grecia 🐒",
-   "hookA": "Lo mordió un MONO… y cambió la historia de Grecia 🐒",
-   "hookB": "Un MONO mordió al REY… y Grecia lo pagó 🐒",
-   "burned": "B",
-   "hook_text": "UN MONO|MORDIÓ AL REY",
-   "slotAt": "2026-11-24T20:30",
-   "durationS": 69.7,
-   "story": "Alejandro I de Grecia (1920): su perro Fritz atacó al mono del encargado de los viñedos de Tatoi; al separarlos, otro mono lo mordió; la herida se infectó y murió a los 27. Churchill: 'un cuarto de millón de personas murieron por la mordida de este mono'.",
-   "project": "/home/claude/v2/alejandro",
-   "media": "VID-20261120-033.mp4",
-   "engine": "v2",
-   "mechanism": "mordida de animal / infección",
-   "set": "viñedo Tatoi, palacio blanco Atenas, salón del trono con mapa, alcoba con capilla, despacho Londres",
-   "route": "Buffer TT+IG (Sáb ya tiene 2 YT: 031, 032) + FB Zapier; YT pendiente",
-   "copy_yt": "Lo mordió un MONO… y cambió la historia de Grecia 🐒\nGrecia, 1920: el joven rey Alejandro paseaba con su perro Fritz por los viñedos de Tatoi. Fritz atacó al mono mascota del encargado y, cuando el rey intentó separarlos, otro mono lo mordió. La herida se infectó y murió a los 27 años; su muerte desató una crisis política en plena guerra.\nMuertes absurdas #33\nFuente: Encyclopaedia Britannica — Alexander (king of Greece); W. Churchill, The World Crisis: The Aftermath.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #shorts",
-   "copy_tt": "Un MONO mordió al REY… y Grecia lo pagó 🐒 ¿Tú habrías separado al perro y al mono? Historia real (Grecia, 1920). Animación hecha con apoyo de IA. #muertesabsurdas #historiasreales #datososcuros #curiosidades #malfinal",
-   "copy_ig": "Un MONO mordió al REY… y Grecia lo pagó 🐒\nEl rey Alejandro quiso separar a su perro de un mono… y un segundo mono lo mordió. ¿Tú los habrías separado?\nGuárdalo para contárselo a alguien 👀\nMuertes absurdas #33\nFuente: Encyclopaedia Britannica; Churchill, The World Crisis.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #curiosidadeshistoricas #datoscuriosos #malfinal",
-   "buffer_ids": {
-    "ig": "6b042d9c6b6de5028259b7a1",
-    "tt": "6b042d966b6de5028259b41e",
-    "yt": null
-   },
-   "fb_id": "2362738414567436",
-   "status": "programado TT+IG Mar 24 20:30; YT pendiente (límite 2/día UTC)",
-   "qa100": {
-    "hook": 15,
-    "retencion": 14,
-    "visual": 11,
-    "narracion": 13,
-    "edicion": 6,
-    "originalidad": 9,
-    "titulo": 9,
-    "total": 77,
-    "note": "gates OK, -14.9 LUFS, 69.7 s; hook box tapa la cara del rey 2.6 s; estático máx 7.2 s. Sin ronda de arreglo (Buffer bloqueado). Publicable por regla ≥70 si el slot está a <8 h."
-   },
-   "yt_pending": true,
-   "fb": "publicado 24 nov 20:45"
-  },
-  "VID-20261122-034": {
-   "num": "034",
-   "series": 34,
-   "title": "Prometió usar un MUÑECO… y saltó él 🪂",
-   "hookA": "Prometió usar un MUÑECO… y saltó él 🪂",
-   "slotAt": "2026-11-22T21:02",
-   "durationS": 68.8,
-   "story": "Franz Reichelt, sastre, 4 feb 1912: pidió permiso para lanzar un muñeco desde el 1er piso de la Torre Eiffel (57 m) y saltó él con su traje-paracaídas.",
-   "media": "VID-20261122-034.mp4",
-   "engine": "v4",
-   "voice": "qwen-narrador",
-   "status": "publicado",
-   "buffer_ids": {
-    "yt": "6b03acb7c72676f5e97ecfc9",
-    "tt": "6b03acbad864a011051722f4",
-    "ig": "6b03acc5846b0ee907da90d8"
-   },
-   "fb": "publicado 23 nov",
-   "copy_fb": "Prometió usar un MUÑECO… y saltó él de la Torre Eiffel 🪂\nParís, 1912: el sastre Franz Reichelt inventó un abrigo-paracaídas, pidió permiso para lanzar un muñeco desde la torre… y el 4 de febrero saltó él mismo. ¿Tú habrías saltado?\nMuertes absurdas #34\nFuente: Wikipedia — Franz Reichelt.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal",
-   "fb_id": "1872161340463175",
-   "fb_duplicado": "1157456793491446",
-   "reposts": [
-    {
-     "slot": "2026-11-26T21:00:00-06:00",
-     "tt": "6b08ee09776ce21276dc1083",
-     "ig": "6b08ee0a049983dcfb7ee0f4",
-     "motivo": "slot 21:00 vacío a <20 min; reutilizado (regla <2 h). YT no (24 h móvil llena). FB ya tenía."
+    "tiktokData": {
+      "disableComment": false,
+      "disableDuet": false,
+      "disableStitch": false,
+      "privacyOption": "PUBLIC_TO_EVERYONE",
+      "commercialContentThirdParty": false,
+      "commercialContentOwnBrand": false,
+      "title": "Una ola de CERVEZA mató a 8 personas 🍺",
+      "autoAddMusic": false,
+      "isAigc": true
+    },
+    "instagramData": {
+      "type": "REEL",
+      "showReelOnFeed": true,
+      "isAiGenerated": true
+    },
+    "facebookData": {
+      "type": "REEL",
+      "title": "Una ola de CERVEZA mató a 8 personas 🍺"
     }
-   ]
   },
-  "VID-20261123-035": {
-   "num": "035",
-   "series": 35,
-   "title": "Sobrevivió al NIÁGARA… y lo mató un estadio 🛢️",
-   "slotAt": "2026-11-23T20:30",
-   "durationS": 67.9,
-   "story": "Karel Soucek: Niágara en barril (2 jul 1984), murió tras el salto en el Astrodome (19 ene 1985) al golpear el borde del tanque.",
-   "media": "VID-20261123-035.mp4",
-   "engine": "v4",
-   "voice": "qwen-narrador",
-   "status": "programado",
-   "buffer_ids": {
-    "tt": "6b03dc6ea6de38de9ec44bc1",
-    "ig": "6b03dc6fcc364169c1b75f7d"
-   },
-   "yt": "pendiente (límite 2/día lun)",
-   "fb": "pendiente",
-   "copy_yt": "Sobrevivió al NIÁGARA… y lo mató un estadio 🛢️\nCanadá, 1984: Karel Soucek bajó las Cataratas del Niágara en un barril y salió vivo. En 1985 lo soltaron desde lo alto del Astrodome de Houston hacia un tanque de agua… y el barril golpeó el borde. ¿Tú te habrías subido otra vez?\nMuertes absurdas #35\nFuente: Wikipedia — Karel Soucek.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #shorts",
-   "fb_id": "1810077313446338"
+  "videos": {
+    "VID-20261110-001": {
+      "metricool_id": 424059293,
+      "uuid": "5135073865227911200",
+      "slot": "2026-11-11T07:30:00",
+      "title": "Una ola de CERVEZA mató a 8 personas 🍺",
+      "project": "cerveza3",
+      "media": "VID-20261110-001v5.mp4",
+      "qa": "v3 rebuild (1 attempt + forced publish rule)"
+    },
+    "VID-20261110-002": {
+      "metricool_id": 424070625,
+      "uuid": "68186798064357344",
+      "slot": "2026-11-11T13:00:00",
+      "title": "Sobrevivió al NIÁGARA en un barril… lo mató una naranja 🍊",
+      "project": "niagara3",
+      "media": "VID-20261110-002v3.mp4",
+      "qa": "v3 rebuild (1 attempt + forced publish rule)"
+    },
+    "VID-20261110-003": {
+      "metricool_id": 424086229,
+      "uuid": "-8440272518124780956",
+      "slot": "2026-11-11T19:30:00",
+      "title": "Saltó de la TORRE EIFFEL con un traje que él inventó 🪂",
+      "project": "eiffel3",
+      "media": "VID-20261110-003v3.mp4",
+      "qa": "v3 rebuild (1 attempt + forced publish rule)"
+    },
+    "VID-20261110-004": {
+      "metricool_id": 425183122,
+      "uuid": "-895177550353314362",
+      "slot": "2026-11-12T07:30:00",
+      "title": "Quiso demostrar que la ventana era IRROMPIBLE 🪟",
+      "project": "ventana3",
+      "media": "VID-20261110-004v3.mp4",
+      "qa": "v3 rebuild (1 attempt + forced publish rule)",
+      "slotAt": "2026-11-12T12:00"
+    },
+    "VID-20261110-005": {
+      "metricool_id": 425183134,
+      "uuid": "8367155208976941329",
+      "slot": "2026-11-12T13:00:00",
+      "title": "Una ola de JARABE de 8 metros arrasó Boston 🍯",
+      "project": "melaza3",
+      "media": "VID-20261110-005v3.mp4",
+      "qa": "v3 rebuild (1 attempt + forced publish rule)",
+      "slotAt": "2026-11-12T18:00"
+    },
+    "VID-20261110-006": {
+      "metricool_id": 426698481,
+      "uuid": "-8399659931806512481",
+      "slot": "2026-11-12T19:30:00",
+      "title": "Este abogado GANÓ el caso… demostrándolo en sí mismo ⚖️",
+      "project": "abogado3",
+      "media": "VID-20261110-006v4.mp4",
+      "qa": "v3 rebuild (1 attempt + forced publish rule)",
+      "slotAt": "2026-11-15T09:00",
+      "status": "programado",
+      "engine": "v2"
+    },
+    "VID-20261110-007": {
+      "metricool_id": 426486830,
+      "uuid": "2840333282246085581",
+      "slot": "2026-11-13T07:30:00",
+      "title": "Este músico murió por llevar el RITMO 🎼",
+      "project": "lully3",
+      "media": "VID-20261110-007v4.mp4",
+      "qa": "v3 rebuild (1 attempt + forced publish rule)",
+      "slotAt": "2026-11-13T12:00",
+      "status": "programado",
+      "engine": "v2",
+      "project_v2": "/home/claude/v2/lully"
+    },
+    "VID-20261110-008": {
+      "metricool_id": 426509420,
+      "uuid": "8884635062313372359",
+      "slot": "2026-11-13T13:00:00",
+      "title": "Inventó 2 de las peores cosas del siglo XX… y lo mató la tercera",
+      "project": "poleas3",
+      "media": "VID-20261110-008v4.mp4",
+      "qa": "v3 rebuild (1 attempt + forced publish rule)",
+      "slotAt": "2026-11-13T18:00",
+      "status": "programado",
+      "engine": "v2"
+    },
+    "VID-20261110-009": {
+      "metricool_id": 426551523,
+      "uuid": "-3832667063987846141",
+      "slot": "2026-11-13T19:30:00",
+      "title": "Le pusieron ALAS a un carro… y lo hicieron volar ✈️🚗",
+      "project": "pinto3",
+      "media": "VID-20261110-009v4.mp4",
+      "qa": "v3 rebuild (1 attempt + forced publish rule)",
+      "slotAt": "2026-11-13T20:30",
+      "status": "programado",
+      "engine": "v2"
+    },
+    "VID-20261110-010": {
+      "metricool_id": 426575408,
+      "uuid": "-2443161876793048730",
+      "slot": "2026-11-14T09:30:00",
+      "title": "Su barba medía 1.4 metros… y fue lo que lo mató 🧔",
+      "project": "barba3",
+      "media": "VID-20261110-010v4.mp4",
+      "qa": "v3 rebuild (1 attempt + forced publish rule)",
+      "slotAt": "2026-11-14T11:00",
+      "status": "programado",
+      "engine": "v2"
+    },
+    "VID-20261110-011": {
+      "metricool_id": 426612828,
+      "uuid": "-4743505066469406067",
+      "slot": "2026-11-14T13:00:00",
+      "title": "Un genio de la ciencia murió por rellenar un pollo con NIEVE 🐔❄️",
+      "project": "pollo3",
+      "media": "VID-20261110-011v4.mp4",
+      "qa": "v3 rebuild (1 attempt + forced publish rule)",
+      "slotAt": "2026-11-14T17:00",
+      "status": "programado",
+      "engine": "v2",
+      "reposts": [
+        {
+          "at": "2026-11-25T12:00-06:00",
+          "tt": "6b071e1d4f460a8675e6e92c",
+          "ig": "6b071e1d4c1d32a74c13ab37",
+          "why": "slot 12:00 sin cubrir a <20 min"
+        }
+      ]
+    },
+    "VID-20261110-012": {
+      "metricool_id": 426653074,
+      "uuid": "717286113889374008",
+      "slot": "2026-11-14T19:30:00",
+      "title": "Una de las primeras personas en morir por un AUTO… en 1869 🚂",
+      "project": "vapor3",
+      "media": "VID-20261110-012v4.mp4",
+      "qa": "v3 rebuild (1 attempt + forced publish rule)",
+      "slotAt": "2026-11-14T20:00",
+      "status": "programado",
+      "engine": "v2"
+    },
+    "VID-20261110-013": {
+      "metricool_id": 423833327,
+      "uuid": "6679017619232410139",
+      "slot": "2026-11-10T19:30:00",
+      "title": "Construyó un faro de MADERA con velas… y pidió vivir la peor tormenta 🌊",
+      "project": "faro3",
+      "media": "VID-20261110-013c.mp4",
+      "qa": "CALIDAD 7.1 / PEGADA 7.0 PUBLICAR"
+    },
+    "VID-20261115-014": {
+      "project": "/home/claude/v2/tycho",
+      "title": "Este astrónomo tenía NARIZ DE METAL… y lo mató la cortesía 👃",
+      "metricool_id": 427588590,
+      "uuid": "-3182287624977233691",
+      "slotAt": "2026-11-15T13:00",
+      "status": "programado",
+      "media": "VID-20261115-014.mp4",
+      "engine": "v2.1-rick",
+      "hookA": "Este astrónomo tenía NARIZ DE METAL… y lo mató la cortesía",
+      "hookB": "Murió por no levantarse de la mesa",
+      "note": "moved 19:00→13:00 on 13 Nov so the Hunley short (own-invention mechanism) is not adjacent to the lawyer video (09:00)"
+    },
+    "VID-20261115-015": {
+      "project": "/home/claude/v2/hunley",
+      "title": "Su SUBMARINO ya había fallado… y se subió él mismo 🌊",
+      "metricool_id": 427588680,
+      "uuid": "-2316692729028067145",
+      "slotAt": "2026-11-15T19:00",
+      "status": "programado",
+      "media": "VID-20261115-015.mp4",
+      "engine": "v2.1-rick",
+      "hookA": "Su SUBMARINO ya había fallado… y se subió él mismo",
+      "hookB": "Probó su submarino MORTAL él mismo… y no volvió",
+      "burned": "B (sign YA SE HUNDIÓ)",
+      "durationS": 66.9,
+      "story": "H. L. Hunley, Charleston 1863-64",
+      "scores": {
+        "preprod": 8,
+        "stills": 6.5,
+        "post_v1": {
+          "CALIDAD": 6.8,
+          "PEGADA": 7.0,
+          "verdict": "REHACER"
+        },
+        "post_v2": "redo applied (partial re-render of 11 phrases), published per 1 attempt + 1 redo rule"
+      }
+    },
+    "VID-20261116-016": {
+      "title": "Ganó la final OLÍMPICA… y ya estaba muerto 🏛️",
+      "slotAt": "2026-11-16T12:00",
+      "slot": null,
+      "status": "programado",
+      "metricool_id": 428097798,
+      "uuid": "-1459378806221355926",
+      "project": "/home/claude/v2/arra",
+      "media": "VID-20261116-016.mp4",
+      "durationS": 72.5,
+      "engine": "v2",
+      "hookA": "Ganó la final OLÍMPICA… y ya estaba muerto 🏛️",
+      "hookB": "Lo declararon CAMPEÓN… y ya no respiraba 🫒",
+      "burned": "A (sign CAMPEÓN)",
+      "scores": {
+        "preprod": 8,
+        "stills": "6 → fixes applied (3 rounds)",
+        "post_v1": {
+          "CALIDAD": 6.8,
+          "PEGADA": 7.0,
+          "verdict": "REHACER"
+        },
+        "post_v2": "redo applied (partial re-render of 8 phrases + bigger/lower subs), published per 1 attempt + 1 redo rule"
+      }
+    },
+    "VID-20261116-017": {
+      "title": "Inspiró a Hemingway… y lo mató un PALILLO 🍸",
+      "slotAt": "2026-11-16T18:00",
+      "status": "programado",
+      "metricool_id": 428422128,
+      "uuid": "-6303144973101216901",
+      "project": "/home/claude/v2/s17",
+      "media": "VID-20261116-017.mp4",
+      "durationS": 74.9,
+      "engine": "v2",
+      "hookA": "Inspiró a Hemingway… y lo mató un PALILLO 🍸",
+      "hookB": "Murió por tragarse un PALILLO de martini 🫒",
+      "burned": "B (sign 1 PALILLO)",
+      "scores": {
+        "preprod": 8,
+        "stills": "2 rounds (hook glass, framing, signs)",
+        "post_v1": {
+          "CALIDAD": 8,
+          "PEGADA": 8,
+          "verdict": "PUBLICAR (subs moved below faces, re-encode only)"
+        }
+      }
+    },
+    "VID-20261116-018": {
+      "title": "Le puso una HÉLICE de avión a un tren 🚆",
+      "slotAt": "2026-11-16T20:30",
+      "status": "programado",
+      "metricool_id": 428450010,
+      "uuid": "9077227582155279251",
+      "project": "/home/claude/v2/s18",
+      "media": "VID-20261116-018.mp4",
+      "durationS": 69.2,
+      "engine": "v2",
+      "hookA": "Le puso una HÉLICE de avión a un tren 🚆",
+      "hookB": "Su tren con HÉLICE era rapidísimo… demasiado 🌀",
+      "burned": "A (sign TREN + HÉLICE)",
+      "scores": {
+        "preprod": 8,
+        "stills": "3 rounds (prop size, station light, tree occlusion)",
+        "post_v1": {
+          "CALIDAD": 7.3,
+          "PEGADA": 7.5,
+          "verdict": "REHACER"
+        },
+        "post_v2": "redo: hook/loop reframed with sign on wagon, cab light, propeller+wreck shot; partial re-render 400 frames; published per 1+1 rule"
+      }
+    },
+    "VID-20261116-019": {
+      "slot": "2026-11-17T12:00",
+      "status": "programado",
+      "title": "Fue rey de Suecia… y lo mató el POSTRE 🍰",
+      "hookA": "Fue rey de Suecia… y lo mató el POSTRE 🍰",
+      "hookB": "El rey que pidió OTRO postre… y otro… 🍮",
+      "burned": "B",
+      "project": "postre",
+      "media": "VID-20261116-019.mp4",
+      "engine": "v2.2",
+      "durationS": 64.4,
+      "route": "buffer+make",
+      "buffer_ids": {
+        "yt": "6afb81c5e71931620ba24cac",
+        "tt": "6afb81c7c6b697e19187b356",
+        "ig": "6afb81c8e71931620ba24e90"
+      },
+      "make_record": "4f038eadaa92",
+      "qa": {
+        "preprod": 8.25,
+        "calidad": 8,
+        "pegada": 8
+      },
+      "fb_id": "3018318091856096",
+      "fb_via": "zapier"
+    },
+    "VID-20261117-020": {
+      "slot": "2026-11-17T18:00",
+      "status": "programado",
+      "title": "Empezó a BAILAR… y no pudo parar en días 💃",
+      "hookA": "Empezó a BAILAR… y no pudo parar en días 💃",
+      "hookB": "La cura para el baile mortal: bailar MÁS 🎻",
+      "burned": "A",
+      "project": "baile",
+      "media": "VID-20261117-020.mp4",
+      "engine": "v2.2",
+      "durationS": 67.7,
+      "route": "buffer (FB pausado)",
+      "buffer_ids": {
+        "yt": "6afcd979c68ceea50aac2645",
+        "tt": "6afcd97a8e2194ed032c15f2",
+        "ig": "6afcd97b30b9befce2b5a86d"
+      },
+      "qa": {
+        "preprod": 8.25,
+        "calidad": 8,
+        "pegada": 8
+      },
+      "fb_id": "1140026231908635",
+      "fb_via": "zapier"
+    },
+    "VID-20261117-021": {
+      "slot": "2026-11-17T20:30",
+      "status": "programado",
+      "title": "Murió en el escenario… y el público SE RIÓ 🎭",
+      "hookA": "Murió en el escenario… y el público SE RIÓ 🎭",
+      "hookB": "Hacía de ENFERMO… y murió de verdad 🎭",
+      "burned": "B",
+      "project": "moliere",
+      "media": "VID-20261117-021.mp4",
+      "engine": "v2.2",
+      "durationS": 64.9,
+      "route": "buffer (FB pausado)",
+      "buffer_ids": {
+        "yt": "6afce514bb12698d1581c55f",
+        "tt": "6afce51593fa11d37df0eaea",
+        "ig": "6afce516bb12698d1581c5ba"
+      },
+      "qa": {
+        "preprod": 8.25,
+        "calidad": 8,
+        "pegada": 8
+      },
+      "fb_id": "1459975589440569"
+    },
+    "VID-20261117-022": {
+      "slot": "2026-11-18T12:00",
+      "status": "programado",
+      "title": "Lo mató una TORTUGA que cayó del cielo 🐢",
+      "hookA": "Lo mató una TORTUGA que cayó del cielo 🐢",
+      "hookB": "Un oráculo le dijo: cuidado con el CIELO… 🦅",
+      "burned": "A",
+      "project": "esquilo",
+      "media": "VID-20261117-022.mp4",
+      "engine": "v2.2",
+      "durationS": 62.9,
+      "route": "buffer (FB pausado)",
+      "buffer_ids": {
+        "yt": "6afceeb6bb12698d15858b73",
+        "tt": "6afceeb7ab47737bddb6031b",
+        "ig": "6afceeb8bb12698d15858bdd"
+      },
+      "qa": {
+        "preprod": 8.25,
+        "calidad": 7.5,
+        "pegada": 8
+      },
+      "fb_id": "1087263124366383",
+      "fb_via": "zapier"
+    },
+    "VID-20261118-023": {
+      "title": "Inauguró el TREN… y el tren lo atropelló 🚂",
+      "status": "publicado",
+      "media": "VID-20261118-023.mp4",
+      "durationS": 72.9,
+      "engine": "v2.2 + v3 system",
+      "story": "William Huskisson, Liverpool–Manchester 1830",
+      "hookA": "Inauguró el TREN… y el tren lo atropelló 🚂",
+      "hookB": "Lo atropelló su PROPIO tren 🚂",
+      "buffer_drafts": {
+        "yt": "6afd19b5aa3b065dd96cf28a",
+        "tt": "6afd19b69f3765f6ab2ac204"
+      },
+      "qa100": {
+        "hook": 17,
+        "retencion": 14,
+        "visual": 10,
+        "narracion": 12,
+        "edicion": 6,
+        "originalidad": 8,
+        "titulo": 8,
+        "total": 75,
+        "note": "1 fix round applied (punch-ins, mute hook text, bigger captions)"
+      },
+      "slot": "2026-11-18T20:30:00-06:00",
+      "buffer_ids": {
+        "youtube": "6afe3446c69bd1cb888d698e",
+        "tiktok": "6afe3452ebd4409dc902de6d",
+        "instagram": "6afe3452ebd4409dc902de9f"
+      },
+      "fb_id": "1848380159620466",
+      "ig_url": "https://www.instagram.com/reel/Df6AuiiEYDX/"
+    },
+    "VID-20261118-024": {
+      "num": 24,
+      "series": 24,
+      "title": "Abrió la tumba de TUTANKAMÓN… y lo mató un mosquito 🦟",
+      "hookA": "Abrió la tumba de TUTANKAMÓN… y lo mató un mosquito 🦟",
+      "hookB": "Lo mató un MOSQUITO… tras abrir la tumba de Tutankamón 🦟",
+      "burned": "A",
+      "slotAt": "2026-11-18T18:00",
+      "status": "publicado",
+      "durationS": 72.2,
+      "qa100": {
+        "hook": 16,
+        "retencion": 13,
+        "visual": 11,
+        "narracion": 12,
+        "edicion": 7,
+        "originalidad": 8,
+        "titulo": 9,
+        "total": 76,
+        "note": "1 fix round (hook mosquito, shaving, extra cuts, trench blocking)"
+      },
+      "project": "/home/claude/v2/carnarvon",
+      "engine": "v3",
+      "mechanism": "picadura/infección + leyenda maldición",
+      "set": "Egipto tumba/desierto, hotel Cairo",
+      "buffer_ids": {
+        "yt": "6afe2fc401ba7c5e791c692b",
+        "tt": "6afe2fc54cace847b37dcf26",
+        "ig": "6afe2fc6c462756e9e267f92"
+      },
+      "media": "VID-20261118-024.mp4",
+      "fb_id": "1496991189289758",
+      "ig_url": "https://www.instagram.com/reel/Df5vluZgKoX/"
+    },
+    "VID-20261118-025": {
+      "num": 25,
+      "series": 25,
+      "title": "Dijo en la TELE que viviría 100 años… y murió ahí 📺",
+      "hookA": "Dijo en la TELE que viviría 100 años… y murió ahí 📺",
+      "hookB": "Prometió vivir 100 AÑOS… y murió en pleno programa 📺",
+      "burned": "B",
+      "slotAt": "2026-11-19T12:00",
+      "status": "publicado TT+IG; YT falló (límite diario YouTube = 2 por día UTC) → yt_pending",
+      "durationS": 69.7,
+      "qa100": {
+        "hook": 17,
+        "retencion": 14,
+        "visual": 11,
+        "narracion": 13,
+        "edicion": 8,
+        "originalidad": 9,
+        "titulo": 9,
+        "total": 81,
+        "note": "1 fix round (hook line ≤10 words, mid-phrase cuts)"
+      },
+      "project": "/home/claude/v2/rodale",
+      "engine": "v3",
+      "mechanism": "muerte en directo / ironía",
+      "set": "plató TV 1971, Nueva York, granja",
+      "buffer_ids": {
+        "yt": null,
+        "tt": "6afe4b42c462756e9e305a08",
+        "ig": "6afe4b43a588bd6687ad2292"
+      },
+      "media": "VID-20261118-025.mp4",
+      "note": "moved from 20:30 (slot taken by VID-023 from interactive session)",
+      "copy_yt": "Dijo en la TELE que viviría 100 años… y murió ahí 📺\n1971: J. I. Rodale, el gurú de la comida orgánica, presumió en un programa de entrevistas que llegaría a los cien. Minutos después se quedó inmóvil en el sofá, con las cámaras grabando. El episodio nunca se emitió.\nMuertes absurdas #25\nFuente: The New York Times (9 jun 1971) — \"J. I. Rodale Dies at 72\"; Encyclopaedia Britannica.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #shorts",
+      "yt_pending": true,
+      "fb_id": "1513897710788460"
+    },
+    "VID-20261118-026": {
+      "num": 26,
+      "series": 26,
+      "title": "Este REY murió de risa… literalmente 😂",
+      "hookA": "Este REY murió de risa… literalmente 😂",
+      "hookB": "Lo mató un CHISTE… y se acabó su dinastía 😂",
+      "burned": "A",
+      "slotAt": "2026-11-19T18:00",
+      "status": "programado",
+      "durationS": 64.3,
+      "qa100": {
+        "hook": 16,
+        "retencion": 14,
+        "visual": 11,
+        "narracion": 12,
+        "edicion": 7,
+        "originalidad": 7,
+        "titulo": 9,
+        "total": 76,
+        "note": "1 fix round (vineyard cuts)"
+      },
+      "project": "/home/claude/v2/risa",
+      "engine": "v3",
+      "mechanism": "risa / chiste (leyenda)",
+      "set": "banquete Aragón, alcoba, viña, salón del trono",
+      "buffer_ids": {
+        "yt": "6afe560259eff0b616d090d5",
+        "tt": "6afe5604b16549e9b81700b0",
+        "ig": "6afe5605b16549e9b81700df"
+      },
+      "media": "VID-20261118-026.mp4",
+      "fb_id": "914984211604968"
+    },
+    "VID-20261119-027": {
+      "num": 27,
+      "series": 27,
+      "title": "Inventó una MÁQUINA… y su máquina lo atrapó ⚙️",
+      "hookA": "Inventó una MÁQUINA… y su máquina lo atrapó ⚙️",
+      "hookB": "Lo mató una PATADA a su propio invento 🦶",
+      "burned": "B",
+      "slotAt": "2026-11-19T20:30",
+      "status": "programado (TT+IG); YT pendiente: Buffer limita YouTube a 2 posts/día",
+      "durationS": 71.4,
+      "story": "William Bullock, prensa rotativa, Filadelfia 1867",
+      "project": "/home/claude/v2/bullock",
+      "media": "VID-20261119-027.mp4",
+      "engine": "v2.2 + v3",
+      "route": "buffer",
+      "buffer_ids": {
+        "tt": "6afefd8003dff68ab45c85ab",
+        "ig": "6afefd8003dff68ab45c85ff",
+        "yt": null
+      },
+      "yt_pending": true,
+      "qa100": {
+        "hook": 16,
+        "retencion": 15,
+        "visual": 11,
+        "narracion": 12,
+        "edicion": 6,
+        "originalidad": 8,
+        "titulo": 9,
+        "total": 77
+      },
+      "copy_yt": "Inventó una MÁQUINA… y su máquina lo atrapó ⚙️\nFiladelfia, 1867: William Bullock, inventor de la imprenta rotativa que imprimía 12.000 hojas por hora, quiso meter una correa en su sitio de una patada mientras la máquina giraba. Su pierna quedó atrapada… y días después murió en plena operación.\nMuertes absurdas #27\nFuente: Wikipedia — William Bullock (inventor); historyofinformation.com.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #shorts",
+      "fb_id": "4458999741079992"
+    },
+    "VID-20261119-028": {
+      "num": 28,
+      "series": 28,
+      "title": "Sus FANS lo querían tanto… que lo asfixiaron 🎭",
+      "hookA": "Sus FANS lo querían tanto… que lo asfixiaron 🎭",
+      "hookB": "Lo mató una lluvia de ROPA… por cariño 🧥",
+      "burned": "A",
+      "slotAt": "2026-11-20T12:00",
+      "status": "programado",
+      "durationS": 68.4,
+      "story": "Dracón, teatro de Egina (leyenda, Suda)",
+      "project": "/home/claude/v2/dracon",
+      "media": "VID-20261119-028.mp4",
+      "engine": "v2.2 + v3",
+      "route": "buffer",
+      "buffer_ids": {
+        "tt": "6aff090b03dff68ab463488f",
+        "ig": "6aff090bcac0791c5d92e735",
+        "yt": "6aff60c3fceb0935ef162b1d"
+      },
+      "yt_pending": false,
+      "qa100": {
+        "hook": 18,
+        "retencion": 15,
+        "visual": 12,
+        "narracion": 12,
+        "edicion": 6,
+        "originalidad": 8,
+        "titulo": 9,
+        "total": 80
+      },
+      "copy_yt": "Sus FANS lo querían tanto… que lo asfixiaron 🎭\nGrecia, hace 2.600 años: Dracón, el autor de las leyes más duras de Atenas (de ahí \"draconiano\"), fue recibido en el teatro de Egina con la costumbre de la época: lanzarle capas y sombreros. Fueron tantos que lo sepultaron. Así lo cuenta la leyenda.\nMuertes absurdas #28\nFuente: Suda (enciclopedia bizantina, entrada Δράκων); Wikipedia — Draco (legislator).\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #shorts",
+      "fb_id": "1460999085425726"
+    },
+    "VID-20261119-029": {
+      "num": 29,
+      "series": 29,
+      "title": "Quería ser INMORTAL… y su remedio lo mató 💊",
+      "hookA": "Quería ser INMORTAL… y su remedio lo mató 💊",
+      "hookB": "Tomaba píldoras para NO MORIR… y lo mataron 💊",
+      "burned": "B",
+      "hook_text": "PÍLDORAS PARA|NO MORIR",
+      "slotAt": "2026-11-22T19:00",
+      "status": "programado YT+TT+IG Dom 22 19:00 (reprogramado tras bloqueo)",
+      "durationS": 68.7,
+      "story": "Qin Shi Huang, píldoras de la inmortalidad (mercurio), carretas de pescado (Shiji)",
+      "project": "/home/claude/v2/qin",
+      "media": "VID-20261119-029.mp4",
+      "engine": "v2.2 + v3",
+      "mechanism": "buscar la inmortalidad / remedio que mata",
+      "set": "laboratorio alquimista, palacio rojo, Gran Muralla + ejército, muelle, camino de bambú",
+      "route": "buffer",
+      "buffer_ids": {
+        "yt": "6aff788def915da8dbc4ac56",
+        "tt": "6aff788eef915da8dbc4acb0",
+        "ig": "6b0033ca0c6d6b905283272b"
+      },
+      "copy_ig": "Tomaba píldoras para NO MORIR… y lo mataron 💊\nEl primer emperador de China quería vivir para siempre… y para esconder su muerte lo rodearon de carretas de pescado. ¿Tú te habrías tomado esas píldoras?\nGuárdalo para contárselo a alguien 👀\nMuertes absurdas #29\nFuente: Sima Qian, Shiji; Encyclopaedia Britannica.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #curiosidadeshistoricas #datoscuriosos #malfinal",
+      "copy_yt": "Quería ser INMORTAL… y su remedio lo mató 💊\nChina, 210 a.C.: Qin Shi Huang, el primer emperador, mandó flotas a buscar la isla de los inmortales y tomaba las píldoras de sus alquimistas. Murió de viaje a los 49 y sus ministros escondieron su muerte entre carretas de pescado. Se cree que las píldoras tenían mercurio.\nMuertes absurdas #29\nFuente: Sima Qian, Shiji (Memorias históricas); Encyclopaedia Britannica — Qin Shi Huang.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #shorts",
+      "copy_tt": "Tomaba píldoras para NO MORIR… y lo mataron 💊 ¿Tú te habrías tomado esas píldoras? Historia real (China, 210 a.C.). Animación hecha con apoyo de IA. #muertesabsurdas #historiasreales #datososcuros #curiosidades #malfinal",
+      "fb_id": "4876504769249030",
+      "qa100": {
+        "hook": 16,
+        "retencion": 14,
+        "visual": 11,
+        "narracion": 13,
+        "edicion": 6,
+        "originalidad": 10,
+        "titulo": 9,
+        "total": 79,
+        "note": "1 fix round (cartel MERCURIO, trono iluminado, cámaras muelle/carroza); gates OK, -14.8 LUFS"
+      },
+      "fb_duplicado": "1786733999074803"
+    },
+    "VID-20261119-030": {
+      "num": 30,
+      "series": 30,
+      "title": "Su BUFANDA la hizo famosa… y la mató 🧣",
+      "hookA": "Su BUFANDA la hizo famosa… y la mató 🧣",
+      "hookB": "Gritó «me voy a la GLORIA»… y se fue 🧣",
+      "burned": "A",
+      "hook_text": "OJO CON|LA BUFANDA",
+      "slotAt": "2026-11-23T12:00",
+      "status": "publicado TT+IG Lun 23 12:00; YT reprogramado Mié 25 18:15 (ventana 24 h móvil)",
+      "durationS": 64.6,
+      "story": "Isadora Duncan, Niza 1927: bufanda de seda en la rueda de radios",
+      "project": "/home/claude/v2/duncan",
+      "media": "VID-20261119-030.mp4",
+      "engine": "v2.2 + v3",
+      "mechanism": "accesorio/ropa atrapado (bufanda)",
+      "set": "escenario teatro, calle nocturna con carteles, paseo de Niza",
+      "route": "buffer",
+      "buffer_ids": {
+        "yt": "6b035663c72676f5e95ca5fb",
+        "tt": "6b0033cb3d025b9e58aaa66c",
+        "ig": "6b0033cc3d025b9e58aaa6a8"
+      },
+      "copy_yt": "Su BUFANDA la hizo famosa… y la mató 🧣\nNiza, 1927: Isadora Duncan, la madre de la danza moderna, subió a un auto deportivo descapotable con su larguísima bufanda de seda. Gritó «¡Adiós, amigos, me voy a la gloria!»… y la bufanda se enredó en los radios de la rueda.\nMuertes absurdas #30\nFuente: Encyclopaedia Britannica — Isadora Duncan; The New York Times (15 sep 1927).\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #shorts",
+      "copy_tt": "Gritó «me voy a la GLORIA»… y se fue 🧣 ¿Tú te habrías puesto esa bufanda? Historia real (Niza, 1927). Animación hecha con apoyo de IA. #muertesabsurdas #historiasreales #datososcuros #curiosidades #malfinal",
+      "copy_ig": "Gritó «me voy a la GLORIA»… y se fue 🧣\nIsadora Duncan cambió la danza para siempre… y su bufanda de seda acabó atrapada en la rueda de un descapotable. ¿Tú te habrías puesto esa bufanda?\nGuárdalo para contárselo a alguien 👀\nMuertes absurdas #30\nFuente: Encyclopaedia Britannica — Isadora Duncan.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #curiosidadeshistoricas #datoscuriosos #malfinal",
+      "fb_id": "994309653747621",
+      "qa100": {
+        "hook": 16,
+        "retencion": 14,
+        "visual": 11,
+        "narracion": 13,
+        "edicion": 8,
+        "originalidad": 9,
+        "titulo": 9,
+        "total": 80,
+        "note": "publicar; plano 15 algo lavado"
+      },
+      "yt_pending": false
+    },
+    "VID-20261120-031": {
+      "num": 31,
+      "series": 31,
+      "title": "Conquistó ITALIA… y lo mató una PUERTA 🚪",
+      "hookA": "Conquistó ITALIA… y lo mató una PUERTA 🚪",
+      "hookB": "Este REY no se agachó… y una puerta lo mató 🚪",
+      "burned": "B",
+      "hook_text": "REY VS|PUERTA",
+      "slotAt": "2026-11-23T18:00",
+      "durationS": 69.7,
+      "story": "Carlos VIII de Francia, Amboise 1498: dintel de una puerta baja camino al jeu de paume (Commynes)",
+      "project": "/home/claude/v2/carlos",
+      "media": "VID-20261120-031.mp4",
+      "engine": "v2.2 + v3",
+      "mechanism": "golpe con el dintel de una puerta",
+      "set": "galería de piedra, cancha jeu de paume, castillo Amboise/Loira, Alpes nevados + Nápoles",
+      "route": "buffer",
+      "copy_yt": "Conquistó ITALIA… y lo mató una PUERTA 🚪\nFrancia, 1498: Carlos VIII, el rey que cruzó los Alpes y entró en Nápoles, iba con la reina Ana a ver un partido de pelota (el abuelo del tenis) en su castillo de Amboise. En una galería vieja no se agachó… y se dio en la frente con el dintel de una puerta. Horas después se desplomó y murió esa misma noche.\nMuertes absurdas #31\nFuente: Philippe de Commynes, Memorias; Encyclopaedia Britannica — Charles VIII.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #shorts",
+      "copy_tt": "Este REY no se agachó… y una puerta lo mató 🚪 ¿Tú te habrías agachado? Historia real (Francia, 1498). Animación hecha con apoyo de IA. #muertesabsurdas #historiasreales #datososcuros #curiosidades #malfinal",
+      "copy_ig": "Este REY no se agachó… y una puerta lo mató 🚪\nConquistó medio Italia y, de camino a ver un partido de pelota, se dio con el marco de una puerta. ¿Tú te habrías agachado?\nGuárdalo para contárselo a alguien 👀\nMuertes absurdas #31\nFuente: Commynes, Memorias; Encyclopaedia Britannica.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #curiosidadeshistoricas #datoscuriosos #malfinal",
+      "buffer_ids": {
+        "yt": "6b00693516b7fc947dff1428",
+        "tt": "6b006936d94183983ed6d720",
+        "ig": "6b035665cc364169c1848451"
+      },
+      "fb_id": "1863135308194324",
+      "status": "publicado TT+IG Lun 23 18:00; YT falló (límite diario) → reprogramado Mié 25 12:15",
+      "qa100": {
+        "hook": 16,
+        "retencion": 14,
+        "visual": 11,
+        "narracion": 13,
+        "edicion": 7,
+        "originalidad": 9,
+        "titulo": 9,
+        "total": 79,
+        "note": "1 ronda de arreglo (rey de 3/4 en el golpe, re-render frases 0/13/19); gates OK, -14.9 LUFS"
+      }
+    },
+    "VID-20261120-032": {
+      "num": 32,
+      "series": 32,
+      "title": "Era EMPERADOR de Roma… y lo mató su enojo 😡",
+      "hookA": "Era EMPERADOR de Roma… y lo mató su enojo 😡",
+      "hookB": "Se ENOJÓ tanto… que se murió 😡",
+      "burned": "A",
+      "hook_text": "LO MATÓ|SU ENOJO",
+      "slotAt": "2026-11-24T18:00",
+      "durationS": 66.1,
+      "story": "Valentiniano I, Brigetio (Danubio) 375: ataque de ira ante embajadores cuados (Amiano Marcelino 30.6); osas Mica Aurea e Innocentia (29.3.9)",
+      "project": "/home/claude/v2/valen",
+      "media": "VID-20261120-032.mp4",
+      "engine": "v2.2 + v3",
+      "mechanism": "ataque de ira / grito",
+      "set": "tienda roja de audiencias, campamento del Danubio, salón de mármol con jaulas de osas",
+      "route": "buffer",
+      "copy_yt": "Era EMPERADOR de Roma… y lo mató su enojo 😡\nAño 375, a orillas del Danubio: Valentiniano I, emperador famoso por su mal genio (tenía dos osas junto a su cuarto, «Migaja de Oro» e «Inocencia»), recibió a unos embajadores que le dijeron que la guerra era culpa de Roma. Se enfureció tanto, gritando, que se desplomó ahí mismo y murió.\nMuertes absurdas #32\nFuente: Amiano Marcelino, Historia (libros 29–30); Encyclopaedia Britannica — Valentinian I.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #shorts",
+      "copy_tt": "Se ENOJÓ tanto… que se murió 😡 ¿Tú te habrías aguantado el coraje? Historia real (Roma, año 375). Animación hecha con apoyo de IA. #muertesabsurdas #historiasreales #datososcuros #curiosidades #malfinal",
+      "copy_ig": "Se ENOJÓ tanto… que se murió 😡\nUn emperador romano escuchó «la culpa es de Roma»… y gritó hasta caer fulminado. ¿Tú te habrías aguantado el coraje?\nGuárdalo para contárselo a alguien 👀\nMuertes absurdas #32\nFuente: Amiano Marcelino, Historia; Encyclopaedia Britannica.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #curiosidadeshistoricas #datoscuriosos #malfinal",
+      "buffer_ids": {
+        "yt": "6b042d952e056481c05897a2",
+        "ig": "6b042d947e433fe9cac76551",
+        "tt": "6b042d8666ef504f454dd2bc"
+      },
+      "fb_id": "1393965770474989",
+      "status": "programado YT+TT+IG Mar 24 18:00",
+      "qa100": {
+        "hook": 15,
+        "retencion": 14,
+        "visual": 12,
+        "narracion": 13,
+        "edicion": 8,
+        "originalidad": 9,
+        "titulo": 9,
+        "total": 80,
+        "note": "1 ronda de arreglo (cámara frases 9 y 16); gates OK, -14.9 LUFS"
+      },
+      "fb": "publicado 24 nov 20:45 (atrasado)"
+    },
+    "VID-20261120-033": {
+      "num": "033",
+      "series": 33,
+      "title": "Lo mordió un MONO… y cambió la historia de Grecia 🐒",
+      "hookA": "Lo mordió un MONO… y cambió la historia de Grecia 🐒",
+      "hookB": "Un MONO mordió al REY… y Grecia lo pagó 🐒",
+      "burned": "B",
+      "hook_text": "UN MONO|MORDIÓ AL REY",
+      "slotAt": "2026-11-24T20:30",
+      "durationS": 69.7,
+      "story": "Alejandro I de Grecia (1920): su perro Fritz atacó al mono del encargado de los viñedos de Tatoi; al separarlos, otro mono lo mordió; la herida se infectó y murió a los 27. Churchill: 'un cuarto de millón de personas murieron por la mordida de este mono'.",
+      "project": "/home/claude/v2/alejandro",
+      "media": "VID-20261120-033.mp4",
+      "engine": "v2",
+      "mechanism": "mordida de animal / infección",
+      "set": "viñedo Tatoi, palacio blanco Atenas, salón del trono con mapa, alcoba con capilla, despacho Londres",
+      "route": "Buffer TT+IG (Sáb ya tiene 2 YT: 031, 032) + FB Zapier; YT pendiente",
+      "copy_yt": "Lo mordió un MONO… y cambió la historia de Grecia 🐒\nGrecia, 1920: el joven rey Alejandro paseaba con su perro Fritz por los viñedos de Tatoi. Fritz atacó al mono mascota del encargado y, cuando el rey intentó separarlos, otro mono lo mordió. La herida se infectó y murió a los 27 años; su muerte desató una crisis política en plena guerra.\nMuertes absurdas #33\nFuente: Encyclopaedia Britannica — Alexander (king of Greece); W. Churchill, The World Crisis: The Aftermath.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #shorts",
+      "copy_tt": "Un MONO mordió al REY… y Grecia lo pagó 🐒 ¿Tú habrías separado al perro y al mono? Historia real (Grecia, 1920). Animación hecha con apoyo de IA. #muertesabsurdas #historiasreales #datososcuros #curiosidades #malfinal",
+      "copy_ig": "Un MONO mordió al REY… y Grecia lo pagó 🐒\nEl rey Alejandro quiso separar a su perro de un mono… y un segundo mono lo mordió. ¿Tú los habrías separado?\nGuárdalo para contárselo a alguien 👀\nMuertes absurdas #33\nFuente: Encyclopaedia Britannica; Churchill, The World Crisis.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #curiosidadeshistoricas #datoscuriosos #malfinal",
+      "buffer_ids": {
+        "ig": "6b042d9c6b6de5028259b7a1",
+        "tt": "6b042d966b6de5028259b41e",
+        "yt": null
+      },
+      "fb_id": "2362738414567436",
+      "status": "programado TT+IG Mar 24 20:30; YT pendiente (límite 2/día UTC)",
+      "qa100": {
+        "hook": 15,
+        "retencion": 14,
+        "visual": 11,
+        "narracion": 13,
+        "edicion": 6,
+        "originalidad": 9,
+        "titulo": 9,
+        "total": 77,
+        "note": "gates OK, -14.9 LUFS, 69.7 s; hook box tapa la cara del rey 2.6 s; estático máx 7.2 s. Sin ronda de arreglo (Buffer bloqueado). Publicable por regla ≥70 si el slot está a <8 h."
+      },
+      "yt_pending": true,
+      "fb": "publicado 24 nov 20:45"
+    },
+    "VID-20261122-034": {
+      "num": "034",
+      "series": 34,
+      "title": "Prometió usar un MUÑECO… y saltó él 🪂",
+      "hookA": "Prometió usar un MUÑECO… y saltó él 🪂",
+      "slotAt": "2026-11-22T21:02",
+      "durationS": 68.8,
+      "story": "Franz Reichelt, sastre, 4 feb 1912: pidió permiso para lanzar un muñeco desde el 1er piso de la Torre Eiffel (57 m) y saltó él con su traje-paracaídas.",
+      "media": "VID-20261122-034.mp4",
+      "engine": "v4",
+      "voice": "qwen-narrador",
+      "status": "publicado",
+      "buffer_ids": {
+        "yt": "6b03acb7c72676f5e97ecfc9",
+        "tt": "6b03acbad864a011051722f4",
+        "ig": "6b03acc5846b0ee907da90d8"
+      },
+      "fb": "publicado 23 nov",
+      "copy_fb": "Prometió usar un MUÑECO… y saltó él de la Torre Eiffel 🪂\nParís, 1912: el sastre Franz Reichelt inventó un abrigo-paracaídas, pidió permiso para lanzar un muñeco desde la torre… y el 4 de febrero saltó él mismo. ¿Tú habrías saltado?\nMuertes absurdas #34\nFuente: Wikipedia — Franz Reichelt.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal",
+      "fb_id": "1872161340463175",
+      "fb_duplicado": "1157456793491446",
+      "reposts": [
+        {
+          "slot": "2026-11-26T21:00:00-06:00",
+          "tt": "6b08ee09776ce21276dc1083",
+          "ig": "6b08ee0a049983dcfb7ee0f4",
+          "motivo": "slot 21:00 vacío a <20 min; reutilizado (regla <2 h). YT no (24 h móvil llena). FB ya tenía."
+        }
+      ]
+    },
+    "VID-20261123-035": {
+      "num": "035",
+      "series": 35,
+      "title": "Sobrevivió al NIÁGARA… y lo mató un estadio 🛢️",
+      "slotAt": "2026-11-23T20:30",
+      "durationS": 67.9,
+      "story": "Karel Soucek: Niágara en barril (2 jul 1984), murió tras el salto en el Astrodome (19 ene 1985) al golpear el borde del tanque.",
+      "media": "VID-20261123-035.mp4",
+      "engine": "v4",
+      "voice": "qwen-narrador",
+      "status": "programado",
+      "buffer_ids": {
+        "tt": "6b03dc6ea6de38de9ec44bc1",
+        "ig": "6b03dc6fcc364169c1b75f7d"
+      },
+      "yt": "pendiente (límite 2/día lun)",
+      "fb": "pendiente",
+      "copy_yt": "Sobrevivió al NIÁGARA… y lo mató un estadio 🛢️\nCanadá, 1984: Karel Soucek bajó las Cataratas del Niágara en un barril y salió vivo. En 1985 lo soltaron desde lo alto del Astrodome de Houston hacia un tanque de agua… y el barril golpeó el borde. ¿Tú te habrías subido otra vez?\nMuertes absurdas #35\nFuente: Wikipedia — Karel Soucek.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #shorts",
+      "fb_id": "1810077313446338"
+    },
+    "VID-20261123-036": {
+      "num": "036",
+      "series": 36,
+      "title": "Le daban miedo los CARRUAJES… y volaba con FUEGOS 🎈🔥",
+      "slotAt": "2026-11-24T12:00",
+      "durationS": 73.8,
+      "story": "Sophie Blanchard, Tivoli, París, 6 jul 1819: fuegos artificiales bajo globo de hidrógeno; el globo ardió y la canasta chocó con un techo de la rue de Provence.",
+      "media": "VID-20261123-036.mp4",
+      "engine": "v4",
+      "voice": "qwen-narrador",
+      "status": "programado",
+      "buffer_ids": {
+        "yt": "6b03e13bc72676f5e991a842",
+        "tt": "6b03e13cc72676f5e991a872",
+        "ig": "6b03e13ca6de38de9ec5f7a8"
+      },
+      "fb": "publicado 24 nov 11:45",
+      "fb_id": "1128249980188808"
+    },
+    "VID-20261125-037": {
+      "slot": "2026-11-25T18:00:00-06:00",
+      "title": "Mató al ELEFANTE… y el elefante lo mató a él 🐘",
+      "project": "eleazar",
+      "media": "VID-20261125-037.mp4",
+      "engine": "v4",
+      "durationS": 67.4,
+      "source": "1 Macabeos 6:43-46; Josefo, Antigüedades XII.9.4",
+      "fb_id": "1318794323711995",
+      "buffer_ids": {
+        "tt": "6b07262d5e4da1697fd880a4",
+        "ig": "6b07262eacb19363a0d3b348",
+        "yt": "6b07776cb96dd8d351727905"
+      },
+      "yt": "yt_pendiente (límite 2/día; hoy ya 031 y 030)",
+      "qa100": {
+        "hook": 16,
+        "retencion": 14,
+        "visual": 12,
+        "narracion": 13,
+        "edicion": 7,
+        "originalidad": 10,
+        "titulo": 9,
+        "total": 81,
+        "note": "gates OK, -15.0 LUFS, 67.4 s; subtítulo se cruza con texto en P1; elefante caído P15 algo confuso"
+      },
+      "status": "programado TT+IG Mié 25 18:00; YT Jue 26 18:30",
+      "story": "Eleazar Avarán, Bet Zacarías 162 a.C.: se metió bajo el elefante real y murió aplastado (1 Mac 6:43-46)"
+    },
+    "VID-20261125-038": {
+      "slot": "2026-11-25T21:00:00-06:00",
+      "title": "No quiso esperar la TORMENTA… y Escocia perdió a su rey ⛈️",
+      "media": "VID-20261125-038.mp4",
+      "fb_id": "3734465610055049",
+      "buffer_ids": {
+        "tt": "6b07775ed4eda4b659c03f93",
+        "ig": "6b07775fb8e2338b85743637",
+        "yt": "6b07776b9f6dda31cca9f5f7"
+      },
+      "qa100": {
+        "hook": 15,
+        "retencion": 14,
+        "visual": 11,
+        "narracion": 13,
+        "edicion": 7,
+        "originalidad": 10,
+        "titulo": 9,
+        "total": 79,
+        "note": "v4, 68.2 s, -14.6 LUFS; subtítulos se cruzan con texto en pantalla en 4 planos (GRANIZO/YOLANDA/SOLO/TROPEZÓ); sin ronda de arreglo"
+      },
+      "status": "programado TT+IG Mié 25 21:00; YT Jue 26 12:30",
+      "engine": "v4",
+      "story": "Alejandro III de Escocia, 18-19 mar 1286: salió de Edimburgo en tormenta para ir con la reina Yolanda, cruzó el Forth (barquero: \"moriré con gusto con el hijo de tu padre\"), perdió a sus guías y apareció muerto en la playa de Kinghorn; caballo tropezó. (Crónica de Lanercost; Britannica)"
+    },
+    "VID-20261125-039": {
+      "num": 39,
+      "title": "Le dijeron que no tomara el AGUA… y se la tomó 💧",
+      "hookA": "Quiso demostrar que el AGUA era segura… y se la tomó 💧",
+      "hookB": "Le dijeron que no tomara el AGUA… y se la tomó 💧",
+      "story": "Arnold Bennett, agua de la llave en París (ene 1931), tifoidea, muere en Londres 27 mar 1931; paja en la calle",
+      "source": "Wikipedia/Britannica — Arnold Bennett",
+      "slot": "2026-11-26T12:00:00-06:00",
+      "fb_id": "1660829855822258",
+      "buffer_ids": {
+        "tt": "6b07a34cd4eda4b659d2608e",
+        "ig": "6b07a34db96dd8d351845c06",
+        "yt": null
+      },
+      "yt_pending": true,
+      "status": "programado TT+IG Jue 26 12:00; YT pendiente (ventana 24 h móvil llena)",
+      "qa100": {
+        "hook": 15,
+        "retencion": 14,
+        "visual": 11,
+        "narracion": 13,
+        "edicion": 7,
+        "originalidad": 10,
+        "titulo": 9,
+        "total": 79,
+        "note": "v4, 63.2 s, -14.8 LUFS; 4 sets (comedor repetido en 6 planos), sin ronda de arreglo"
+      },
+      "fb": "publicado 26 nov 11:45"
+    },
+    "VID-20261126-040": {
+      "num": 40,
+      "series": 40,
+      "title": "Eligió la ESPADA para vivir… y lo mató su TRONO 👑",
+      "hookA": "Eligió la ESPADA para vivir… y lo mató su TRONO 👑",
+      "hookB": "Le dieron a elegir: CORONA o ESPADA… 👑⚔️",
+      "slot": "2026-11-26T18:00:00-06:00",
+      "media": "VID-20261126-040.mp4",
+      "engine": "v4",
+      "voice": "qwen-narrador",
+      "durationS": 63.3,
+      "story": "Béla I de Hungría: prueba de la corona y la espada en Tiszavárkony (c.1060, Crónica iluminada); rey 1060; en Dömös (1063) su trono de madera se rompió, herido murió camino a la frontera junto al arroyo Kanyapatak, 11 sep 1063.",
+      "source": "Wikipedia / Encyclopaedia Britannica — Béla I de Hungría; Crónica iluminada",
+      "buffer_ids": {
+        "tt": "6b0874d6f0a96d0f217b8566",
+        "ig": "6b0874d63accdac92ceac9f0",
+        "yt": null
+      },
+      "yt_pending": true,
+      "fb_id": "4558227387724018",
+      "copy_yt": "Eligió la ESPADA para vivir… y lo mató su TRONO 👑\nHungría, 1060: el rey Andrés puso ante su hermano Bela una corona y una espada; le advirtieron que si tomaba la corona lo matarían. Eligió la espada, luego conquistó el reino… y en 1063 su trono de madera se rompió bajo él en Dömös. ¿Tú qué habrías elegido?\nMuertes absurdas #40\nFuente: Wikipedia / Encyclopaedia Britannica — Béla I de Hungría; Crónica iluminada.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #shorts",
+      "status": "programado TT+IG Jue 26 18:00; YT pendiente (ventana 24 h móvil llena: 038 12:30, 037 18:30)",
+      "qa100": {
+        "hook": 15,
+        "retencion": 14,
+        "visual": 12,
+        "narracion": 13,
+        "edicion": 7,
+        "originalidad": 10,
+        "titulo": 9,
+        "total": 80,
+        "note": "v4, 63.3 s, -15.1 LUFS; 12 sets; subtítulos se cruzan con texto en pantalla en 3 planos; caballo simple; sin ronda de arreglo"
+      }
+    },
+    "VID-20261126-041": {
+      "num": "041",
+      "series": 41,
+      "slot": "2026-11-27T12:00:00-06:00",
+      "title": "Quiso inventar el CONGELADOR… y se congeló él ❄️",
+      "hookA": "Quiso inventar el CONGELADOR… y se congeló él ❄️",
+      "story": "Francis Bacon, abril 1626, Highgate: rellenó una gallina con nieve para probar si conservaba la carne; se enfrió, cama húmeda en casa del conde de Arundel, murió de neumonía el 9 abr 1626.",
+      "sources": "Encyclopaedia Britannica / Wikipedia — Francis Bacon; John Aubrey, Brief Lives",
+      "media": "VID-20261126-041.mp4",
+      "engine": "v4",
+      "voice": "qwen-narrador",
+      "durationS": 70.1,
+      "buffer_ids": {
+        "tt": "6b08f5f1e94385a8fd6beb42",
+        "ig": "6b08f5f21fd46e62e70aa520",
+        "yt": "6b08f5f3658222306cd944d5"
+      },
+      "fb_id": "2691020464644087",
+      "yt_pending": null,
+      "status": "programado TT+IG Vie 27 12:00; YT Vie 27 12:45 (ventana 24 h móvil)",
+      "qa100": {
+        "hook": 15,
+        "retencion": 14,
+        "visual": 12,
+        "narracion": 13,
+        "edicion": 7,
+        "originalidad": 10,
+        "titulo": 9,
+        "total": 80,
+        "note": "v4, 70.1 s, -15.1 LUFS, gates OK (hook 8 palabras tras 1 ronda de arreglo); 8 sets; estático máx 12.8 s según score.py (fondos de nieve parecidos); subtítulo roza texto en P1b/P14"
+      }
+    },
+    "VID-20261127-042": {
+      "num": "042",
+      "series": 42,
+      "slot": "2026-11-27T18:00:00-06:00",
+      "title": "Una adivina lo mandó a PARÍS… y París lo mató 🔮",
+      "hookA": "Una adivina lo mandó a PARÍS… y París lo mató 🔮",
+      "story": "Ödön von Horváth: una adivina en Ámsterdam le dijo que en París viviría su mayor aventura; 1 jun 1938, tormenta en los Campos Elíseos, una rama de castaño cayó sobre él frente al Théâtre Marigny (36 años).",
+      "sources": "Encyclopaedia Britannica / Wikipedia — Ödön von Horváth",
+      "media": "VID-20261127-042.mp4",
+      "engine": "v4",
+      "voice": "qwen-narrador",
+      "durationS": 68.7,
+      "buffer_ids": {
+        "tt": "6b09c6c9c4601a3566a412f9",
+        "ig": "6b09c6ca446d2e47aaab3cfb",
+        "yt": "6b09c6cbd5bf252ef5413480"
+      },
+      "fb_id": "1899501121079991",
+      "yt_pending": null,
+      "status": "programado TT+IG Vie 27 18:00; YT Vie 27 18:45 (ventana 24 h móvil)",
+      "qa100": {
+        "hook": 15,
+        "retencion": 14,
+        "visual": 12,
+        "narracion": 13,
+        "edicion": 6,
+        "originalidad": 10,
+        "titulo": 9,
+        "total": 79,
+        "note": "v4, 68.7 s, -15.0 LUFS, gates OK tras 1 ronda (hook a 10 palabras); 8 sets; estático máx 20 s según score.py; '1901–1938' roza el letrero del teatro en P17"
+      }
+    },
+    "VID-20261127-043": {
+      "num": "043",
+      "slot": "2026-11-27T21:00:00-06:00",
+      "fb_id": "29574972052132286",
+      "status": "programado TT+IG Vie 27 21:00; YT pendiente (ventana 24 h móvil llena: 041 12:45, 042 18:45)",
+      "qa100": {
+        "hook": 15,
+        "retencion": 14,
+        "visual": 12,
+        "narracion": 13,
+        "edicion": 7,
+        "originalidad": 10,
+        "titulo": 9,
+        "total": 80,
+        "note": "v4, 64.3 s, -15.1 LUFS, gates OK; 9 sets; 1 ronda (textos ¡A LA BOCA!/AQUÍ TODO SALIÓ MAL movidos arriba de subtítulos); muerte no mostrada (corte a frasco cayendo)"
+      },
+      "hookA": "Ganó dos PULITZER… y lo mató una tapita 🎭",
+      "hookB": "Ganó dos PULITZER… y lo mató una tapita 🎭💧",
+      "burned": "B",
+      "story": "Tennessee Williams, Hotel Elysée NY, 25 feb 1983: se ahogó con la tapita de un frasco de gotas",
+      "source": "CBS News; TIME (1983)",
+      "buffer_ids": {
+        "tt": "6b0a1a94eab081a3f509e368",
+        "ig": "6b0a1a94eada83daa6ace80b",
+        "yt": null
+      },
+      "yt_pending": true
+    }
   },
-  "VID-20261123-036": {
-   "num": "036",
-   "series": 36,
-   "title": "Le daban miedo los CARRUAJES… y volaba con FUEGOS 🎈🔥",
-   "slotAt": "2026-11-24T12:00",
-   "durationS": 73.8,
-   "story": "Sophie Blanchard, Tivoli, París, 6 jul 1819: fuegos artificiales bajo globo de hidrógeno; el globo ardió y la canasta chocó con un techo de la rue de Provence.",
-   "media": "VID-20261123-036.mp4",
-   "engine": "v4",
-   "voice": "qwen-narrador",
-   "status": "programado",
-   "buffer_ids": {
-    "yt": "6b03e13bc72676f5e991a842",
-    "tt": "6b03e13cc72676f5e991a872",
-    "ig": "6b03e13ca6de38de9ec5f7a8"
-   },
-   "fb": "publicado 24 nov 11:45",
-   "fb_id": "1128249980188808"
+  "next_num": 44,
+  "metricool_month_count": {
+    "2026-11": 19
   },
-  "VID-20261125-037": {
-   "slot": "2026-11-25T18:00:00-06:00",
-   "title": "Mató al ELEFANTE… y el elefante lo mató a él 🐘",
-   "project": "eleazar",
-   "media": "VID-20261125-037.mp4",
-   "engine": "v4",
-   "durationS": 67.4,
-   "source": "1 Macabeos 6:43-46; Josefo, Antigüedades XII.9.4",
-   "fb_id": "1318794323711995",
-   "buffer_ids": {
-    "tt": "6b07262d5e4da1697fd880a4",
-    "ig": "6b07262eacb19363a0d3b348",
-    "yt": "6b07776cb96dd8d351727905"
-   },
-   "yt": "yt_pendiente (límite 2/día; hoy ya 031 y 030)",
-   "qa100": {
-    "hook": 16,
-    "retencion": 14,
-    "visual": 12,
-    "narracion": 13,
-    "edicion": 7,
-    "originalidad": 10,
-    "titulo": 9,
-    "total": 81,
-    "note": "gates OK, -15.0 LUFS, 67.4 s; subtítulo se cruza con texto en P1; elefante caído P15 algo confuso"
-   },
-   "status": "programado TT+IG Mié 25 18:00; YT Jue 26 18:30",
-   "story": "Eleazar Avarán, Bet Zacarías 162 a.C.: se metió bajo el elefante real y murió aplastado (1 Mac 6:43-46)"
-  },
-  "VID-20261125-038": {
-   "slot": "2026-11-25T21:00:00-06:00",
-   "title": "No quiso esperar la TORMENTA… y Escocia perdió a su rey ⛈️",
-   "media": "VID-20261125-038.mp4",
-   "fb_id": "3734465610055049",
-   "buffer_ids": {
-    "tt": "6b07775ed4eda4b659c03f93",
-    "ig": "6b07775fb8e2338b85743637",
-    "yt": "6b07776b9f6dda31cca9f5f7"
-   },
-   "qa100": {
-    "hook": 15,
-    "retencion": 14,
-    "visual": 11,
-    "narracion": 13,
-    "edicion": 7,
-    "originalidad": 10,
-    "titulo": 9,
-    "total": 79,
-    "note": "v4, 68.2 s, -14.6 LUFS; subtítulos se cruzan con texto en pantalla en 4 planos (GRANIZO/YOLANDA/SOLO/TROPEZÓ); sin ronda de arreglo"
-   },
-   "status": "programado TT+IG Mié 25 21:00; YT Jue 26 12:30",
-   "engine": "v4",
-   "story": "Alejandro III de Escocia, 18-19 mar 1286: salió de Edimburgo en tormenta para ir con la reina Yolanda, cruzó el Forth (barquero: \"moriré con gusto con el hijo de tu padre\"), perdió a sus guías y apareció muerto en la playa de Kinghorn; caballo tropezó. (Crónica de Lanercost; Britannica)"
-  },
-  "VID-20261125-039": {
-   "num": 39,
-   "title": "Le dijeron que no tomara el AGUA… y se la tomó 💧",
-   "hookA": "Quiso demostrar que el AGUA era segura… y se la tomó 💧",
-   "hookB": "Le dijeron que no tomara el AGUA… y se la tomó 💧",
-   "story": "Arnold Bennett, agua de la llave en París (ene 1931), tifoidea, muere en Londres 27 mar 1931; paja en la calle",
-   "source": "Wikipedia/Britannica — Arnold Bennett",
-   "slot": "2026-11-26T12:00:00-06:00",
-   "fb_id": "1660829855822258",
-   "buffer_ids": {
-    "tt": "6b07a34cd4eda4b659d2608e",
-    "ig": "6b07a34db96dd8d351845c06",
-    "yt": null
-   },
-   "yt_pending": true,
-   "status": "programado TT+IG Jue 26 12:00; YT pendiente (ventana 24 h móvil llena)",
-   "qa100": {
-    "hook": 15,
-    "retencion": 14,
-    "visual": 11,
-    "narracion": 13,
-    "edicion": 7,
-    "originalidad": 10,
-    "titulo": 9,
-    "total": 79,
-    "note": "v4, 63.2 s, -14.8 LUFS; 4 sets (comedor repetido en 6 planos), sin ronda de arreglo"
-   },
-   "fb": "publicado 26 nov 11:45"
-  },
-  "VID-20261126-040": {
-   "num": 40,
-   "series": 40,
-   "title": "Eligió la ESPADA para vivir… y lo mató su TRONO 👑",
-   "hookA": "Eligió la ESPADA para vivir… y lo mató su TRONO 👑",
-   "hookB": "Le dieron a elegir: CORONA o ESPADA… 👑⚔️",
-   "slot": "2026-11-26T18:00:00-06:00",
-   "media": "VID-20261126-040.mp4",
-   "engine": "v4",
-   "voice": "qwen-narrador",
-   "durationS": 63.3,
-   "story": "Béla I de Hungría: prueba de la corona y la espada en Tiszavárkony (c.1060, Crónica iluminada); rey 1060; en Dömös (1063) su trono de madera se rompió, herido murió camino a la frontera junto al arroyo Kanyapatak, 11 sep 1063.",
-   "source": "Wikipedia / Encyclopaedia Britannica — Béla I de Hungría; Crónica iluminada",
-   "buffer_ids": {
-    "tt": "6b0874d6f0a96d0f217b8566",
-    "ig": "6b0874d63accdac92ceac9f0",
-    "yt": null
-   },
-   "yt_pending": true,
-   "fb_id": "4558227387724018",
-   "copy_yt": "Eligió la ESPADA para vivir… y lo mató su TRONO 👑\nHungría, 1060: el rey Andrés puso ante su hermano Bela una corona y una espada; le advirtieron que si tomaba la corona lo matarían. Eligió la espada, luego conquistó el reino… y en 1063 su trono de madera se rompió bajo él en Dömös. ¿Tú qué habrías elegido?\nMuertes absurdas #40\nFuente: Wikipedia / Encyclopaedia Britannica — Béla I de Hungría; Crónica iluminada.\nAnimación hecha con apoyo de IA.\n#muertesabsurdas #historiareal #shorts",
-   "status": "programado TT+IG Jue 26 18:00; YT pendiente (ventana 24 h móvil llena: 038 12:30, 037 18:30)",
-   "qa100": {
-    "hook": 15,
-    "retencion": 14,
-    "visual": 12,
-    "narracion": 13,
-    "edicion": 7,
-    "originalidad": 10,
-    "titulo": 9,
-    "total": 80,
-    "note": "v4, 63.3 s, -15.1 LUFS; 12 sets; subtítulos se cruzan con texto en pantalla en 3 planos; caballo simple; sin ronda de arreglo"
-   }
-  },
-  "VID-20261126-041": {
-   "num": "041",
-   "series": 41,
-   "slot": "2026-11-27T12:00:00-06:00",
-   "title": "Quiso inventar el CONGELADOR… y se congeló él ❄️",
-   "hookA": "Quiso inventar el CONGELADOR… y se congeló él ❄️",
-   "story": "Francis Bacon, abril 1626, Highgate: rellenó una gallina con nieve para probar si conservaba la carne; se enfrió, cama húmeda en casa del conde de Arundel, murió de neumonía el 9 abr 1626.",
-   "sources": "Encyclopaedia Britannica / Wikipedia — Francis Bacon; John Aubrey, Brief Lives",
-   "media": "VID-20261126-041.mp4",
-   "engine": "v4",
-   "voice": "qwen-narrador",
-   "durationS": 70.1,
-   "buffer_ids": {
-    "tt": "6b08f5f1e94385a8fd6beb42",
-    "ig": "6b08f5f21fd46e62e70aa520",
-    "yt": "6b08f5f3658222306cd944d5"
-   },
-   "fb_id": "2691020464644087",
-   "yt_pending": null,
-   "status": "programado TT+IG Vie 27 12:00; YT Vie 27 12:45 (ventana 24 h móvil)",
-   "qa100": {
-    "hook": 15,
-    "retencion": 14,
-    "visual": 12,
-    "narracion": 13,
-    "edicion": 7,
-    "originalidad": 10,
-    "titulo": 9,
-    "total": 80,
-    "note": "v4, 70.1 s, -15.1 LUFS, gates OK (hook 8 palabras tras 1 ronda de arreglo); 8 sets; estático máx 12.8 s según score.py (fondos de nieve parecidos); subtítulo roza texto en P1b/P14"
-   }
-  },
-  "VID-20261127-042": {
-   "num": "042",
-   "series": 42,
-   "slot": "2026-11-27T18:00:00-06:00",
-   "title": "Una adivina lo mandó a PARÍS… y París lo mató 🔮",
-   "hookA": "Una adivina lo mandó a PARÍS… y París lo mató 🔮",
-   "story": "Ödön von Horváth: una adivina en Ámsterdam le dijo que en París viviría su mayor aventura; 1 jun 1938, tormenta en los Campos Elíseos, una rama de castaño cayó sobre él frente al Théâtre Marigny (36 años).",
-   "sources": "Encyclopaedia Britannica / Wikipedia — Ödön von Horváth",
-   "media": "VID-20261127-042.mp4",
-   "engine": "v4",
-   "voice": "qwen-narrador",
-   "durationS": 68.7,
-   "buffer_ids": {
-    "tt": "6b09c6c9c4601a3566a412f9",
-    "ig": "6b09c6ca446d2e47aaab3cfb",
-    "yt": "6b09c6cbd5bf252ef5413480"
-   },
-   "fb_id": "1899501121079991",
-   "yt_pending": null,
-   "status": "programado TT+IG Vie 27 18:00; YT Vie 27 18:45 (ventana 24 h móvil)",
-   "qa100": {
-    "hook": 15,
-    "retencion": 14,
-    "visual": 12,
-    "narracion": 13,
-    "edicion": 6,
-    "originalidad": 10,
-    "titulo": 9,
-    "total": 79,
-    "note": "v4, 68.7 s, -15.0 LUFS, gates OK tras 1 ronda (hook a 10 palabras); 8 sets; estático máx 20 s según score.py; '1901–1938' roza el letrero del teatro en P17"
-   }
-  },
-  "VID-20261127-043": {
-   "num": "043",
-   "slot": "2026-11-27T21:00:00-06:00",
-   "fb_id": null,
-   "status": "programado TT+IG Vie 27 21:00; YT pendiente (ventana 24 h móvil llena: 041 12:45, 042 18:45)",
-   "qa100": {
-    "hook": 15,
-    "retencion": 14,
-    "visual": 12,
-    "narracion": 13,
-    "edicion": 7,
-    "originalidad": 10,
-    "titulo": 9,
-    "total": 80,
-    "note": "v4, 64.3 s, -15.1 LUFS, gates OK; 9 sets; 1 ronda (textos ¡A LA BOCA!/AQUÍ TODO SALIÓ MAL movidos arriba de subtítulos); muerte no mostrada (corte a frasco cayendo)"
-   },
-   "hookA": "Ganó dos PULITZER… y lo mató una tapita 🎭",
-   "hookB": "Ganó dos PULITZER… y lo mató una tapita 🎭💧",
-   "burned": "B",
-   "story": "Tennessee Williams, Hotel Elysée NY, 25 feb 1983: se ahogó con la tapita de un frasco de gotas",
-   "source": "CBS News; TIME (1983)",
-   "buffer_ids": {
-    "tt": "6b0a1a94eab081a3f509e368",
-    "ig": "6b0a1a94eada83daa6ace80b",
-    "yt": null
-   },
-   "yt_pending": true
+  "compilations": {
+    "2026-W46": {
+      "metricool_id": 426734023,
+      "uuid": "8657832633301552976",
+      "slotAt": "2026-11-15T13:00",
+      "media": "VID-COMP-20261115v2.mp4",
+      "thumb": "VID-COMP-20261115v2.jpg",
+      "items": [
+        "006",
+        "010",
+        "012",
+        "008",
+        "007",
+        "009",
+        "011"
+      ],
+      "number1": "011",
+      "status": "programado",
+      "engine": "v2"
+    }
   }
- },
- "next_num": 44,
- "metricool_month_count": {
-  "2026-11": 19
- },
- "compilations": {
-  "2026-W46": {
-   "metricool_id": 426734023,
-   "uuid": "8657832633301552976",
-   "slotAt": "2026-11-15T13:00",
-   "media": "VID-COMP-20261115v2.mp4",
-   "thumb": "VID-COMP-20261115v2.jpg",
-   "items": [
-    "006",
-    "010",
-    "012",
-    "008",
-    "007",
-    "009",
-    "011"
-   ],
-   "number1": "011",
-   "status": "programado",
-   "engine": "v2"
-  }
- }
 }
