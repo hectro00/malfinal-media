@@ -1109,9 +1109,38 @@
         "yt": null
       },
       "yt_pending": true
+    },
+    "VID-20261128-044": {
+      "num": "044",
+      "slot": "2026-11-28T12:00:00-06:00",
+      "fb_id": null,
+      "status": "programado TT+IG Sáb 28 12:00; YT Sáb 28 13:00 (ventana 24 h móvil)",
+      "qa100": {
+        "hook": 15,
+        "retencion": 14,
+        "visual": 12,
+        "narracion": 13,
+        "edicion": 7,
+        "originalidad": 10,
+        "titulo": 9,
+        "total": 80,
+        "note": "v4, 68.9 s, -15.0 LUFS, gates OK tras 1 ronda (hook 11→8 palabras, línea 1 re-sintetizada aparte); 6 sets (estadio repetido en muchos planos, estático máx 33 s según score.py); muerte no mostrada (puff + lentes deslizándose)"
+      },
+      "hookA": "Miraba PELOTAS de tenis… y una lo mató 🎾",
+      "hookB": "Lo mató un SAQUE que ni entró 🎾",
+      "burned": "A",
+      "story": "Dick Wertheim, juez de línea, US Open, 10 sep 1983: saque desviado de Stefan Edberg (juvenil) lo golpeó, cayó de la silla y se golpeó la cabeza; murió 15 sep 1983",
+      "source": "Wikipedia: Dick Wertheim; 1983 US Open",
+      "file": "VID-20261128-044.mp4",
+      "buffer_ids": {
+        "tt": "6b0a455823fb5b7700144802",
+        "ig": "6b0a45592a2e4f66caf4f84d",
+        "yt": "6b0a455a2a2e4f66caf4f88a"
+      },
+      "yt_pending": null
     }
   },
-  "next_num": 44,
+  "next_num": 45,
   "metricool_month_count": {
     "2026-11": 19
   },
